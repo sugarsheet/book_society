@@ -9,13 +9,16 @@ export default class extends Controller {
     console.log(this.listTarget);
     console.log(this.searchInputTarget);
   }
-}
 
   update() {
     const url = `${this.formTarget.action}?query=${this.searchInputTarget.value}`
     fetch(url, { headers: { 'Accept': 'text/plain' } })
       .then(response => response.text())
       .then((data) => {
+        console.log(data);
         this.listTarget.outerHTML = data;
       })
   }
+
+}
+
