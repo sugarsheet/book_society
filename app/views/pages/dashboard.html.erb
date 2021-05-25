@@ -1,15 +1,18 @@
-
-<div>
   <div data-controller="refresh-list">
-    <%= form_with url: books_path, method: :get  do |f| %>
+    <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
       <%= f.text_field :query,
                   class: "form-control",
                   placeholder: 'Find your book',
-                  value: params[:query]
-                    %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+                  value: params[:query],
+                  data: {
+                      refresh_list_target: 'searchInput',
+                      action: "keyup->refresh-list#update"
+                    } %>
+      <%#= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
-  </div>
+    <%#= render "list", books: @books %>
+    <div data-refresh-list-target="list">
+  <!-- [...] -->
 </div>
+  </div>
 
-<%= console %>
