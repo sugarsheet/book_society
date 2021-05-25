@@ -1,1 +1,47 @@
-// Specific CSS for your home-page
+Specific CSS for your home-page
+
+.main-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(237, 220, 210);
+  min-height: 100vh;
+  flex-grow: 1;
+
+}
+
+.main-content{
+
+  background-color: rgb(237, 220, 210);
+  min-height: 100vh;
+}
+
+.main-container-content {
+
+  align-items: center;
+  text-align: center;
+  background-color: rgb(237, 220, 210);
+  min-height: 100vh;
+
+}
+
+
+img {
+  width: 200px;
+  height: 200px;
+  margin-top: 180px;
+  justify-content: center;
+
+}
+
+
+
+h2 {
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  font-family: $body-font;
+
+}
+
