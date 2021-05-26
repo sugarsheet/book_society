@@ -14,4 +14,10 @@ class BooksController < ActionController::Base
     # end
   end
 
+  def recommended
+
+    # display recommendation
+
+  end
+
 end
