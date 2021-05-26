@@ -51,13 +51,11 @@ class ReviewsController < ApplicationController
     other_users.each do |user|
       user.books.each do |book|
         unless @user.books.include? book or @recommended_books.include? book
-          score = []
-        book.reviews.each do |review|
-          if review.top
-            score += 1
-          end
+        # book.reviews.each do |review|
+        #   if review.top
+        #     book.score += 1
+        #   end
         end
-
           @recommended_books << book
         end
       end
