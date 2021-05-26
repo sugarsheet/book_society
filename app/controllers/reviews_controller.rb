@@ -12,7 +12,6 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     if @review.save
     redirect_to book_path(@book), notice: "Your review is added!"
-
     else
     redirect_to dashboard_path(@book)
     end
