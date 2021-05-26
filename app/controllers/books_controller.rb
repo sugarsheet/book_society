@@ -15,7 +15,6 @@ class BooksController < ActionController::Base
   end
 
   def recommended
-
     # display recommendation
 
   end
