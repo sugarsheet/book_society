@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
 
   def create
-    @book = Book.find(params[:books_id])
+    @book = Book.find(params[:book_id])
     @review = Review.new(review_params)
     @review.book = @book
     @review.user = current_user
@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:books).permit(:title, :description, :isbn)
+    params.require(:review).permit(:title, :description, :isbn)
   end
 
 end
