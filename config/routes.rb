@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     collection do
       get :recommended
     end
+    resources :reviews, only: [:create, :new]
   end
-  resources :reviews, only: [:create]
+
   resources :wishlists
 end
