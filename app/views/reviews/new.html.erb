@@ -1,16 +1,16 @@
 <div class="main-container py-5">
   <div class="row">
       <div class="bg-white rounded p-3 shadow">
-        <h3 class="text-center mb-5 mt-3">Give your review</h3>
-        <%= simple_form_for @review do |f| %>
-          <%= f.input :content, placeholder: "what is your review?" %>
-          <%= f.input :rating , placeholder: "what is your rating?" %>
-          <%= f.input :top, placeholder: "what is your top book?" %>
+        <h3 class="text-center mb-5 mt-3"> Give your review </h3>
+        <%= simple_form_for [@book, @review] do |f| %>
+          <%= f.input :content, placeholder: "What is your review?" %>
+          <%= f.input :rating , placeholder: "What is your rating?" %>
+          <%= f.input :top, placeholder: "Put a heart if it's your favourite book" %>
           <%= f.input :photo, as: :file %>
 
 
           <%= f.submit class: 'btn-review mb-5' %>
-        <%= link_to 'Back', dashboard_path %>
+          <%= link_to 'Back', book_reviews_path %>
 
         <% end %>
 
