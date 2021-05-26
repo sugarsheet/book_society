@@ -16,7 +16,7 @@
   background-color: rgb(237, 220, 210);
   min-height: 100vh;
   margin-top: 100px;
-
+  padding: 20px;
 }
 
 
@@ -32,4 +32,24 @@
  justify-content: center;
  margin-top: 100px;
  padding: 10% 0% 10%;
+}
+
+.form-inputs-signup {
+width: fit-content;
+display: inline-grid;
+align-items: center;
+justify-content: center;
+}
+
+.simple-form {
+width: fit-content;
+display: inline-grid;
+align-items: center;
+justify-content: center;
+padding: 1em;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 59px;
 }
