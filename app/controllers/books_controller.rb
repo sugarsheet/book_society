@@ -1,4 +1,8 @@
 class BooksController < ActionController::Base
+ has_many :reviews
+ belongs_to :author
+
+
 
   def index
     # @books = Book.order(title: :desc)
