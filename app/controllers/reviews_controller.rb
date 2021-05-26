@@ -28,7 +28,30 @@ class ReviewsController < ApplicationController
   end
 
   def create_recommendation
-    # todo create recommendation
+    # si l'ID est égal au current_user.id on le met pas dans l'array
+    @user= User.find(2)
+    other_users = []
+    recommended_books = []
+    @user.books.each do|book|
+      book.reviews.each do |review|
+        unless review.user_id == @user.id
+          other_users << User.find(review.user_id)
+        end
+      end
+    end
+
+
+    p other_users
+
+    # si le book est déjà dans l'array, on le met pas dans l'array
+    other_users.each do |user|
+      user.books.each do |book|
+        unless recommended_books.include? book
+          recommended_books << book
+        end
+      end
+    end
+
   end
 
 end
