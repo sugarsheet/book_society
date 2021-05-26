@@ -1,0 +1,55 @@
+.main-container-signup {
+
+  align-items: center;
+  text-align: center;
+  background-color: rgb(237, 220, 210);
+  min-height: 100vh;
+  flex: content;
+
+}
+
+
+.main-container-signup {
+
+  align-items: center;
+  text-align: center;
+  background-color: rgb(237, 220, 210);
+  min-height: 100vh;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+
+.card-content {
+  overflow: hidden;
+  border-radius: 15px;
+  height: 300px;
+  width: 300px;
+  background: #f0efeb;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: inline-grid;
+  align-items: center;
+ justify-content: center;
+ margin-top: 100px;
+ padding: 10% 0% 10%;
+}
+
+.form-inputs-signup {
+width: fit-content;
+display: inline-grid;
+align-items: center;
+justify-content: center;
+}
+
+.simple-form {
+width: fit-content;
+display: inline-grid;
+align-items: center;
+justify-content: center;
+padding: 1em;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 59px;
+}

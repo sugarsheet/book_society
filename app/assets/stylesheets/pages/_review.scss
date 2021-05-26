@@ -6,13 +6,6 @@
   background-color: white;
 }
 
-.heart-div > input:checked ~ label {
-  color: darkolivegreen;    
-}
-.heart-div:not(:checked) > label:hover,
-.heart-div:not(:checked) > label:hover ~ label {
-  color: blue;  
-}
 .heart-div > input:checked + label:hover,
 .heart-div > input:checked + label:hover ~ label,
 .heart-div > input:checked ~ label:hover,
