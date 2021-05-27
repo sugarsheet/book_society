@@ -1,0 +1,10 @@
+<!-- app/views/pages/_list.html.erb -->
+
+<div data-refresh-list-target="list">
+  <ol>
+  <% @books.each do |book| %>
+    <li><%= book.title %> : <%= book.author.first_name %>, <%= book.author.last_name %></li>
+  <% end %>
+  </ol>
+</div>
+
