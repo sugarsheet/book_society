@@ -1,31 +1,29 @@
 class ReviewsController < ApplicationController
-  has_many :books
-  belongs_to :users
 
   def new
-   @review = review.all
+    @book = Book.find(params[:book_id])
+    @review = Review.new
   end
 
 
   def create
-    @book = Book.find(params[:books_id])
+
+    @book = Book.find(params[:book_id])
     @review = Review.new(review_params)
     @review.book = @book
     @review.user = current_user
     if @review.save
-      create_recommendation
-      delete_recommendation_from_base
-      redirect_to book_path(@book), notice: "Your review is added!"
-
+      redirect_to dashboard_path
     else
-      redirect_to dashboard_path(@book)
+      render :new
+
     end
   end
 
   private
 
   def review_params
-    params.require(:books).permit(:title, :description, :isbn)
+    params.require(:review).permit(:title, :description, :isbn)
   end
 
   def delete_recommendation_from_base

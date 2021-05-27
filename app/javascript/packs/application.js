@@ -31,6 +31,11 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  
 });
 
 import "controllers"
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();
