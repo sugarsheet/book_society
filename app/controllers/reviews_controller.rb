@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
+
   def create
     @book = Book.find(params[:book_id])
     @review = Review.new(review_params)
