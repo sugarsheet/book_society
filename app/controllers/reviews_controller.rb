@@ -33,7 +33,7 @@ class ReviewsController < ApplicationController
 
   def create_recommendation
     # si l'ID est égal au current_user.id on le met pas dans l'array
-    @user= current_user
+    @user = current_user
     other_users = []
     @recommended_books = []
     @user.books.each do|book|
