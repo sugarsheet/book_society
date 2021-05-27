@@ -18,15 +18,12 @@ class PagesController < ApplicationController
     # end
   end
 
-  # def signup
-  #   if user_signed_in?
-  #     redirect_to dashboard_path(@book)
-
-  #   else
-
-  #    redirect_to signup_path
-
-  #   end
-  # end
+  def signup
+    if user_signed_in?
+      redirect_to dashboard_path(@book)
+    else
+     redirect_to signup_path
+    end
+  end
 
 end
