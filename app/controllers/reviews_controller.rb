@@ -16,7 +16,6 @@ class ReviewsController < ApplicationController
       redirect_to dashboard_path
     else
       render :new
-
     end
   end
 
@@ -28,7 +27,7 @@ class ReviewsController < ApplicationController
 
   def delete_recommendation_from_base
     reco = RecommendedBook.find_by(user_id:@user.id, book_id:@Book.id)
-    reco ? reco.destroy
+    reco.destroy if reco
   end
 
 
@@ -54,8 +53,7 @@ class ReviewsController < ApplicationController
         #     book.score += 1
         #   end
         end
-          @recommended_books << book
-        end
+        @recommended_books << book
       end
     end
     p @recommended_books
