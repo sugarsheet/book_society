@@ -16,8 +16,7 @@ class BooksController < ActionController::Base
 
   def show
     @book = Book.find(params[:id])
-
-   @review = Review.new
+    @review = Review.new
   end
 
 end
