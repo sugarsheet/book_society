@@ -1,0 +1,5 @@
+<h1>My recommended books</h1>
+
+<%  @recommended_books.each do |recommended_book| %>
+   <li><%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %></li>
+<% end  %>

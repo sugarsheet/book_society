@@ -1,6 +1,9 @@
-<h1>My wonderful Index</h1>
+<h1>My books</h1>
 <ol>
 <% @books.each do |book| %>
   <li><%= book.title %> : <%= book.author.first_name %>, <%= book.author.last_name %></li>
 <% end %>
 </ol>
+
+
+<%= console %>
