@@ -2,7 +2,10 @@
 
 
     <h1 class="h1-dashboard py-5">My Book Library</h1>
-      <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
+
+
+
+
             <div data-controller="refresh-list">
 
               <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
@@ -14,16 +17,18 @@
                     refresh_list_target: 'searchInput',
                     action: "keyup->refresh-list#update"
                         } %>
-                <%= submit_tag "Search", class: "btn btn-dash" %>
+                  <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
               <% end %>
+              <div>
 
+               </div>
               <div data-refresh-list-target="list">
               </div>
             </div>
 
                      <%# ---navbar---- %>
 
-    <div class="nav nav-tabs">
+    <%# <div class="nav nav-tabs">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h1> Books </h1></a>
@@ -48,12 +53,12 @@
             <ul class="navbar-nav mr-auto">
             <i>My profile</i>
               <li>
-                <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg') %>"/>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <%# <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg')"/>" %>
+                <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
-                  <a class="dropdown-item" href="#">Another action</a>
+                  <%# <a class="dropdown-item" href="#">Another action</a>
                 </div>
               </li>
             </ul>
           </div>
-        </div>
+        </div> %>
