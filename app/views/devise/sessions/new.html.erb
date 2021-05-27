@@ -1,22 +1,25 @@
 <div class="main-container-content py-5">
 
-  <h1> Welcome to Book Society, where the great minds rejoice </h1>
+  <h1 class="session-title"> Welcome to Book Society, where the great minds rejoice!</h1>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs-signup">
+        <%# <div class="form-control-signup"> %>
         <%= f.input :email,
                     required: false,
                     autofocus: true,
-                    input_html: { autocomplete: "email" } %>
+                    input_html: { autocomplete: "email", class: "form-control-signup" }
+                    %>
+
         <%= f.input :password,
                     required: false,
-                    input_html: { autocomplete: "current-password" } %>
+                    input_html: { autocomplete: "current-password", class: "form-control-signup"} %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
       </div>
 
-
       <div class="form-actions">
-        <%= f.button :submit, "Log in", class: "btn btn-signup" %>
+        <%= f.button :submit, "Log in", class: "btn btn-signup3" %>
       </div>
   <% end %>
 
