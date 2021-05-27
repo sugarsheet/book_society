@@ -29,7 +29,8 @@ Specific CSS for your home-page
 img {
   width: 200px;
   height: 200px;
-  margin-top: 180px;
+  margin-top: px;
+  margin-bottom: 20px;
   justify-content: center;
 }
 
@@ -43,4 +44,14 @@ h2 {
 
 .dashboard {
   font-family: $body-font;
+}
+
+a {
+  color: darkslategray;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h1, .h1 {
+  font-size: 1.8rem;
 }
