@@ -1,19 +1,21 @@
-<div class="main-container py-5">
-  <div class="row">
-      <div class="bg-white rounded p-3 shadow">
-        <h3 class="text-center mb-5 mt-3"> Give your review </h3>
-        <%= simple_form_for [@book, @review] do |f| %>
-          <%= f.input :content, placeholder: "What is your review?" %>
-          <%= f.input :rating , placeholder: "What is your rating?" %>
-          <%= f.input :top, placeholder: "Put a heart if it's your favourite book" %>
-          <%= f.input :photo, as: :file %>
+<div class="main-container">
+  <div class="review-form">
+    <div class="bg-white rounded p-3">
+      <h3 class="text-center mb-5 mt-5"> <%= svg("edit_icon") %>Leave a review</h3>
+      <%= simple_form_for [@book, @review] do |f| %>
 
+        <%= f.input :content, placeholder: "What did you think of this book?" %>
+        <%#= f.radio_button :top, label: "Add to my favorite" %>
+          <div class="heart-div">
+            <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
+            <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites</label>
+          </div>
 
-          <%= f.submit class: 'btn-review mb-5' %>
-          <%= link_to 'Back', book_reviews_path %>
+        <%= f.submit class: 'btn-review mb-5' %><br>
+        <%= link_to 'Back', recommended_books_path(@book) %>
 
-        <% end %>
+      <% end %>
 
-      </div>
+    </div>
   </div>
 </div>
