@@ -1,4 +1,4 @@
-class BooksController < ActionController::Base
+class BooksController < ApplicationController
 
   def index
     @user = current_user
