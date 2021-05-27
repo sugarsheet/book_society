@@ -1,7 +1,9 @@
 class User < ApplicationRecord
-has_many :reviews
-has_many :books, through: :reviews
-has_many :recommended_books
+  acts_as_favoritor
+
+  has_many :reviews
+  has_many :books, through: :reviews
+  has_many :recommended_books
 
 
   # Include default devise modules. Others available are:
