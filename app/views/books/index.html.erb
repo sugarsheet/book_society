@@ -1,7 +1,12 @@
-<h1>My wonderful Index</h1>
-<ol>
-<% @books.each do |book| %>
-  <li><%= book.title %> : <%= book.author.first_name %>, <%= book.author.last_name %></li>
-
-<% end %>
-</ol>
+<div class="main-container">
+  <div class="dashboard">
+      <h1>INDEX - My Books</h1>
+        <ol>
+          <% @books.each do |book| %>
+            <li><%= book.title %> : <%= book.author.first_name %>, <%= book.author.last_name %></li>
+          <% end %>
+        <%# <%= f.submit class: 'btn-review mb-5' %>
+          <%# <%= link_to 'Edit', reviews_path %>
+        </ol>
+  </div>    
+</div>
