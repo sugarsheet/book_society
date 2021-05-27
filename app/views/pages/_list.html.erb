@@ -3,7 +3,7 @@
 <div data-refresh-list-target="list">
   <ol>
   <% @books.each do |book| %>
-    <li><%= link_to book_path(book) do
+    <li class="text-list"><%= link_to book_path(book) do
      %><%= book.title %> : <%= book.author.first_name %>, <%= book.author.last_name %>
      <% end %>
      </li>

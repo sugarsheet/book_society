@@ -1,7 +1,7 @@
 .form-control-dash {
     display: inline;
-    width: 265px;
-    margin-left: 27px;
+    width: 269px;
+    margin-left: 36px;
     justify-content: center;
     height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
@@ -21,4 +21,13 @@
 
 .collapse {
   display: block !important;
+}
+
+.text-list {
+  width: 308px;
+
+}
+
+.text-list a {
+  color: hsla(357, 88%, 32%, 0.932);
 }

@@ -14,29 +14,45 @@
   background: #b08968;
   color: white;
   width: 200px;
-  height: 40px;
+  height: 36px;
   font-size: 18px;
   border-radius: 6px;
   text-align: center;
   justify-content: center;
   font-family: "jost";
-  margin-top: 8px;
+  margin-top: 10px;
 &:hover {
   background: lightgray;
 }
 }
 
 .btn-signup2 {
-  background: #ddbea9;
-  color: white;
+  background:none;
+  border-color: none;
+  color: black;
   width: 200px;
-  height: 40px;
+  height: 36px;
+  font-size: 15px;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+&:hover {
+  background: lightgray;
+}
+}
+
+.btn-signup3 {
+  background:none;
+  border-color: black;
+  color: black;
+  width: 200px;
+  height: 36px;
   font-size: 18px;
   border-radius: 6px;
   text-align: center;
   justify-content: center;
-  font-family: "jost";
-  margin-top: 8px;
+  margin-top: 10px;
 &:hover {
   background: lightgray;
 }
@@ -48,6 +64,7 @@
   width: 145px;
   height: 38px;
   border-radius: 6px;
+  margin-top: 38px;
 &:hover {
   background: lightgray;
 }

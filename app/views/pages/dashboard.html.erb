@@ -28,7 +28,7 @@
 
                      <%# ---navbar---- %>
 
-    <%# <div class="nav nav-tabs">
+     <div class="nav nav-tabs">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h1> Books </h1></a>
@@ -53,12 +53,12 @@
             <ul class="navbar-nav mr-auto">
             <i>My profile</i>
               <li>
-                <%# <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg')"/>" %>
-                <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg') %>"/>
+                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
-                  <%# <a class="dropdown-item" href="#">Another action</a>
+                   <a class="dropdown-item" href="#">Another action</a>
                 </div>
               </li>
             </ul>
           </div>
-        </div> %>
+        </div>

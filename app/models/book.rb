@@ -6,6 +6,7 @@ class Book < ApplicationRecord
   has_one_attached :photo
 
 
+
   include PgSearch::Model
   pg_search_scope :global_search,
     against: [ :title, :description, :isbn],
