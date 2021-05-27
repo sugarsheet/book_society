@@ -3,6 +3,7 @@ class Book < ApplicationRecord
   has_many :reviews
   has_many :users, through: :reviews
   has_many :recommended_books
+  has_one_attached :photo
 
 
   include PgSearch::Model
