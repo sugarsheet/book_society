@@ -1,6 +1,21 @@
-class BooksController < ActionController::Base
+class BooksController < ApplicationController
 
   def index
+
+    @user = current_user
+    @books = @user.books
+    recommended
+  end
+
+  def recommended
+
+   @user = current_user
+   if  @user.recommended_books.exists?
+        @recommended_books = @user.recommended_books
+   else
+       @recommended_books = []
+   end
+
     @books = Book.order(title: :desc)
 
     if params[:query].present?
@@ -17,6 +32,7 @@ class BooksController < ActionController::Base
   def show
     @book = Book.find(params[:id])
     @review = Review.new
+
   end
 
   private

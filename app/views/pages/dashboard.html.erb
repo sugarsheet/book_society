@@ -1,19 +1,53 @@
-  <div data-controller="refresh-list">
-    <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
-      <%= f.text_field :query,
-                  class: "form-control",
-                  placeholder: 'Find your book',
-                  value: params[:query],
-                  data: {
-                      refresh_list_target: 'searchInput',
-                      action: "keyup->refresh-list#update"
-                    } %>
-      <%#= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
-    <%#= render "list", books: @books %>
-    <div data-refresh-list-target="list">
-  <!-- [...] -->
-  <%= button_to "logout", destroy_user_session_path, method: :delete %>
-</div>
+<div class="main-container-content">
+
+  <div class="navbar">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <i>My profile</i>
+        <img src="<%= image_path('icons/profile_icon.svg') %>" alt="profile" class="profile_icon">
+          <li class="nav-item dropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
+
+
+    <h1 class="h1-dashboard py-5">My Book Library</h1>
+      <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
+            <div data-controller="refresh-list">
+
+              <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
+                <%= f.text_field :query,
+                    class: "form-control-dash mb-5",
+                    placeholder: 'Find your book',
+                    value: params[:query],
+                    data: {
+                    refresh_list_target: 'searchInput',
+                    action: "keyup->refresh-list#update"
+                        } %>
+                <%= submit_tag "Search", class: "btn btn-dash" %>
+              <% end %>
+
+              <div data-refresh-list-target="list">
+              </div>
+            </div>
+
+
+
+    <div class="nav nav-tabs">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h1> Books </h1></a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h1> My reco </h1></a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h1> Wishlist </h1></a>
+        </li>
+      </ul>
+    </div>
 
