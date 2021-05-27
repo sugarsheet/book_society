@@ -4,5 +4,7 @@
    <li><%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %> <img src="<%= image_path('icons/wishlist_icon.svg') %>" alt="whishlist" class="whishlist_diamant"></li>
 <% end  %>
 
-<%=  %>
+
+
+<%= link_to 'Back', _path(@book) %>
 
