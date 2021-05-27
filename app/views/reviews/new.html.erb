@@ -12,7 +12,7 @@
           </div>
           <%= f.input :rating, collection: (1..5).to_a, label: "Your rating" %>                
         <%= f.submit class: 'btn-review mb-5' %><br>
-        <%= link_to 'Back', dashboard_path(@book) %>
+        <%= link_to 'Back', book_reviews_path(@book) %>
 
       <% end %>
 
