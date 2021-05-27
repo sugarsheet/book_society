@@ -1,5 +1,6 @@
 class Book < ApplicationRecord
   belongs_to :author
+  has_one_attached :photo
 
   include PgSearch::Model
   pg_search_scope :global_search,

@@ -1,6 +1,8 @@
 <div class="main-container">
   <div class="flex-box-office-show">
     <div class="bg-white rounded p-3">
+      <% @book.photo.attached? %>
+      <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
       <h1>Review of <%= @book.title %></h1>
       <h2>Reviews <%= @review.content %></h2>
       <%# <h2>Rating: <%= @review.rating %>

@@ -19,4 +19,9 @@ class BooksController < ActionController::Base
     @review = Review.new
   end
 
+  private
+
+  def book_params
+    params.require(:book).permit(:title, :description, :isbn, :author_id, :photo)
+  end
 end
