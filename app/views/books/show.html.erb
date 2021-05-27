@@ -1,12 +1,14 @@
-<div class="main-container">
-  <div class="flex-box-office-show">
-    <div class="bg-white rounded p-3">
-      <h1>Review of <%= @book.title %></h1>
-      <h2>Reviews <%= @review.content %></h2>
-      <h2>Rating: <%= @review.rating %>
-      <h2>Your favorites <%= @review.top %></h2>
-    </div>
-  </div>
-</div>
+<div class="main-container-content">
 
-<%= link_to "Add a review", new_book_review_path(@book) %>
+  <div class="flex-box-book-show">
+      <div class="col rounded p-3">
+        <h1>Review of <%= @book.title %></h1>
+        <h2>Reviews <%= @review.content %></h2>
+        <h2>Rating <%= @review.rating %>
+        <h2>Your favorites <%= @review.top %></h2>
+      </div>
+  </div>
+
+  <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
+
+</div>
