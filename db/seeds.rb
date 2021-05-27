@@ -1,3 +1,7 @@
+require 'open-uri'
+require 'nokogiri'
+
+
 User.destroy_all
 Book.destroy_all
 Author.destroy_all
@@ -91,3 +95,53 @@ tori_amos_review_the_sandman.book = the_sandman
 tori_amos_review_the_sandman.save!
 
 puts 'Finished!'
+
+
+
+
+url = 'http://www.revish.com/search/reviews/?minrating=4'
+html = Nokogiri::HTML(open(url).read)
+
+  html.search(".searchresult h4 a").each do |res|
+    book_comments = []
+    review_url = 'http://www.revish.com' + res.attributes['href'].value
+    review_html = Nokogiri::HTML(open(review_url).read)
+    p '------------------ BOOK TITLE -------------------'
+    p book_title = review_html.search("#content h2 a").text
+    p '------------------ BOOK DESCRIPTION -------------------'
+    p book_description = review_html.search("#review p").first.text
+    p '----------------- ISBN ----------------'
+    p book_isbn = review_html.search("#bookdata ul li").first.text
+    p '----------------- BOOK COVER ------------------'
+    p book_cover = review_html.search("#bookdata .photo").first.attributes['src'].value
+    p '------------------ AUTHOR --------------------'
+    author = review_html.search("#content .item .fn").text.split("by ")[1]
+    p first_name, last_name = author.split(" ")
+    p '---------------- USER NICKNAME -------------------'
+    p user_nickname = review_html.search(".reviewer a").text
+    p '------------------ REVIEW -------------------'
+    review_html.search(".comments dd").each do |comment|
+      c = comment.text.gsub('\n\n', '')
+      book_comments << c
+    end
+    p book_comments.first
+
+    unless book_title.nil? || book_description.nil? || book_isbn.nil? || book_cover.nil? || author.nil? || user.nil? || user_nickname.nil? || book_comments.nil?
+
+    ratings = [1, 2, 3, 4, 5]
+    top = [true, false]
+
+    user = User.new(email: "user#{rand}@gmail.com", password: "123456", first_name: "#{user_nickname}", last_name:"")
+    user.save!
+
+    author = Author.new(first_name: "#{first_name}", last_name:"#{last_name}", bio: "")
+    author.save!
+
+    book = Book.new(title: "#{book_title}", description:"#{book_description}", isbn: "#{book_isbn}", author: author)
+    book.save!
+
+    review = Review.new(content: "#{book_comments}", rating:"#{ratings.sample}", top: top.sample, user: user, book: book)
+    review.save!
+
+    end
+  end
