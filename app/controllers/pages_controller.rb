@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-
   end
 
   def dashboard
@@ -19,14 +18,14 @@ class PagesController < ApplicationController
     end
   end
 
-  def signup
-    if user_signed_in?
-      redirect_to dashboard_path(@book)
+  # def signup
+  #   if user_signed_in?
+  #     redirect_to dashboard_path(@book)
 
-    else
+  #   else
 
-     redirect_to signup_path
+  #    redirect_to signup_path
 
-    end
-  end
+  #   end
+  # end
 end

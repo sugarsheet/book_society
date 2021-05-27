@@ -1,5 +1,5 @@
 .btn-review {
-  background: peachpuff;
+  background: #b08968;
   color: white;
   width: 100px;
   height: 50px;
@@ -26,7 +26,6 @@
 }
 }
 
-
 .btn-signup2 {
   background: #ddbea9;
   color: white;
@@ -38,6 +37,17 @@
   justify-content: center;
   font-family: "jost";
   margin-top: 8px;
+&:hover {
+  background: lightgray;
+}
+}
+
+.btn-dash {
+  background: #b08968;
+  color: white;
+  width: 74px;
+  height: 35px;
+  border-radius: 6px;
 &:hover {
   background: lightgray;
 }
