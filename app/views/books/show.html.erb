@@ -2,6 +2,9 @@
 
   <div class="flex-box-book-show">
       <div class="col rounded p-3">
+        <% if @book.photo.attached? %>
+          <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
+        <% end %>
         <h1>Review of <%= @book.title %></h1>
         <h2>Reviews <%= @review.content %></h2>
         <h2>Rating <%= @review.rating %>
