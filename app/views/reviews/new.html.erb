@@ -1,19 +1,16 @@
 <div class="main-container">
   <div class="review-form">
     <div class="bg-white rounded p-3">
-      <h3 class="text-center mb-5 mt-5"> <%= svg("edit_icon") %>Leave a review</h3>
+      <h3 class="text-center mb-5 mt-5"><%= svg("edit_icon") %>Leave a review</h3>
       <%= simple_form_for [@book, @review] do |f| %>
-
         <%= f.input :content, placeholder: "What did you think of this book?" %>
-        <%#= f.radio_button :top, label: "Add to my favorite" %>
-          <div class="heart-div">
-            <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
-            <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites</label>
-          </div>
-          <%= f.input :rating, collection: (1..5).to_a, label: "Your rating" %>                
+        <div class="heart-div">
+          <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
+          <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites</label>
+        </div>
+        <%= f.input :rating, collection: (1..5).to_a, label: "Your rating" %>
         <%= f.submit class: 'btn-review mb-5' %><br>
         <%= link_to 'Back', dashboard_path(@book) %>
-
       <% end %>
 
     </div>

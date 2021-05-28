@@ -7,11 +7,11 @@ class ReviewsController < ApplicationController
 
 
   def create
-
+    @user = current_user
     @book = Book.find(params[:book_id])
     @review = Review.new(review_params)
     @review.book = @book
-    @review.user = current_user
+    @review.user = @user
     if @review.save
       redirect_to dashboard_path
     else
@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:title, :description, :isbn)
+    params.require(:review).permit(:content, :rating, :top)
   end
 
   def delete_recommendation_from_base

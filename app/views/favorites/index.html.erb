@@ -1,0 +1,14 @@
+
+<div>
+<h1>My favorites books</h1>
+
+
+<% current_user.favorited_by_type('Book').each do |book| %>
+<%= book.title %>
+<% end %>
+</ul>
+
+</div>
+
+
+<% console %>

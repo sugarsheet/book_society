@@ -3,25 +3,36 @@
 
     <h1 class="h1-dashboard py-5">My book library</h1>
 
-            <div data-controller="refresh-list">
+    <!-- SEARCH -->
+    <div data-controller="refresh-list">
 
-              <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
-                <%= f.text_field :query,
-                    class: "form-control-dash mb-5",
-                    placeholder: 'Find your book',
-                    value: params[:query],
-                    data: {
-                    refresh_list_target: 'searchInput',
-                    action: "keyup->refresh-list#update"
-                        } %>
-                  <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
-              <% end %>
-              <div>
+      <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
+        <%= f.text_field :query,
+            class: "form-control-dash mb-5",
+            placeholder: 'Find your book',
+            value: params[:query],
+            data: {
+            refresh_list_target: 'searchInput',
+            action: "keyup->refresh-list#update"
+                } %>
+          <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
+      <% end %>
+      <div>
 
-               </div>
-              <div data-refresh-list-target="list">
-              </div>
-            </div>
+       </div>
+      <div data-refresh-list-target="list">
+      </div>
+    </div>
+    <!-- END OF SEARCH -->
+    <ul>
+      <% @my_read_books.each do |book| %>
+        <li>
+          <%= link_to book_path(book) do %>
+            <strong><%= book.title %></strong>
+          <% end %>
+          | <%= book.author.name %> | my review (<%= @user.reviews.find_by(book_id: book.id).rating %> stars)</li>
+      <% end %>
+    </ul>
 
                      <%# ---navbar---- %>
 
