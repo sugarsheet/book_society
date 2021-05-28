@@ -12,14 +12,6 @@
 }
 
 
-.nav-tabs {
-
-  padding-left: 0.5rem;
-  font-size: x-large;
-  margin-top: 169px;
-  background-color: white;
-}
-
 .nav-links {
   display: block;
   padding: 0.5rem 1rem;
@@ -44,6 +36,8 @@
     right: 0;
     justify-content: space-around;
     height: 30px;
+    background-color: white;
+    z-index: 666;
 }
 
 
