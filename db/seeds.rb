@@ -139,39 +139,39 @@ html = Nokogiri::HTML(open(url).read)
     book_comments = []
     review_url = 'http://www.revish.com' + res.attributes['href'].value
     review_html = Nokogiri::HTML(open(review_url).read)
-    '------------------ BOOK TITLE -------------------'
-    book_title = review_html.search("#content h2 a").text
-    '------------------ BOOK DESCRIPTION -------------------'
-    if review_html.search("#review p").first
-      book_description = review_html.search("#review p").first.text
-    end
-    '----------------- ISBN ----------------'
-    if review_html.search("#bookdata ul li").first
-      book_isbn = review_html.search("#bookdata ul li").first.text
-    end
-    '----------------- BOOK COVER ------------------'
-    if review_html.search("#bookdata .photo").first
-      book_cover = review_html.search("#bookdata .photo").first.attributes['src'].value
-    end
-    '------------------ AUTHOR --------------------'
-    author = review_html.search("#content .item .fn").text.split("by ")[1]
-    if author
-    a = author.split(" ")
-     first_name = a[0]
-     last_name = a[1]
-    end
-    '---------------- USER NICKNAME -------------------'
-    if review_html.search(".reviewer a")
-      user_nickname = review_html.search(".reviewer a").text
-    end
-    '------------------ REVIEW -------------------'
+    p '------------------ BOOK TITLE -------------------'
+    p book_title = review_html.search("#content h2 a").text
+    p '------------------ BOOK DESCRIPTION -------------------'
+    p if review_html.search("#review p").first
+    p   book_description = review_html.search("#review p").first.text
+    p end
+    p '----------------- ISBN ----------------'
+    p if review_html.search("#bookdata ul li").first
+    p   book_isbn = review_html.search("#bookdata ul li").first.text
+    p end
+    p '----------------- BOOK COVER ------------------'
+    p if review_html.search("#bookdata .photo").first
+    p   book_cover = review_html.search("#bookdata .photo").first.attributes['src'].value
+    p end
+    p '------------------ AUTHOR --------------------'
+    p author = review_html.search("#content .item .fn").text.split("by ")[1]
+    p if author
+    p a = author.split(" ")
+    p  first_name = a[0]
+    p  last_name = a[1]
+    p end
+    p '---------------- USER NICKNAME -------------------'
+    p if review_html.search(".reviewer a")
+    p   user_nickname = review_html.search(".reviewer a").text
+    p end
+    p '------------------ REVIEW -------------------'
     review_html.search(".comments dd").each do |comment|
       c = comment.text.gsub('\n\n', '')
       book_comments << c
     end
-    book_comments.first
+    p book_comments.first
 
-    unless book_title.nil? || book_description.nil? || book_isbn.nil? || book_cover.nil? || author.nil? || user_nickname.nil? || book_comments.nil?
+    unless book_title.nil? || book_description.nil? || book_isbn.nil? || book_cover.nil? || author.nil? || user_nickname.nil? || book_comments.empty?
 
     ratings = [1, 2, 3, 4, 5]
     top = [true, false]
@@ -188,9 +188,9 @@ html = Nokogiri::HTML(open(url).read)
     book.photo.attach(io: file, filename: 'book_title.jpg', content_type: 'image/jpg')
 
 
-    review = Review.new(content: "#{book_comments}", rating:"#{ratings.sample}", top: top.sample, user: user, book: book)
+    review = Review.new(content: book_comments.first, rating:"#{ratings.sample}", top: top.sample, user: user, book: book)
     review.save!
-
+    p '------------------ finished -------------------'
     end
   end
 end
