@@ -8,14 +8,13 @@
 
         <%# <% if @book.reviews.empty? %>
           <%# <p>There is nos review for this book</p> %>
-          <% else %>
+          <%# <% else %>
             <h1 class="title-book-show">Review of <%= @book.title %></h1>
-            <%= @book.reviews.each do |book| %>
-            <h2>Reviews <%= book.review.content %></h2>
-            <h2>Rating <%= book.review.rating %>
-            <h2>Your favorites books<%= book.review.top %></h2>
-            <% end %>
-        <% end %>
+        <%#   <%= @book.each do |book| %> 
+            <h2>Reviews <%= @review.content %></h2>
+            <h2>Rating <%= @review.rating %>
+            <h2>Your favorites books<%= @review.top %></h2>
+    
       </div>
   </div>
 
