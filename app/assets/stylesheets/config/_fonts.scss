@@ -1,11 +1,13 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">');
 
 // Define fonts for body and headers
 // $body-font: "Work Sans", "Helvetica", "sans-serif";
 // $headers-font: "Nunito", "Helvetica", "sans-serif";
-$body-font: 'Jost', "sans-serif";
+$body-font: 'Montserrat', "sans-serif";
+$body-font-weight: 400;
 $headers-font: 'Jost', "sans-serif";
+$headings-font-weight: 700;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
