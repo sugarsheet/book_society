@@ -1,14 +1,14 @@
 
-<div>
-<h1>My favorites books</h1>
-
-
-<% current_user.favorited_by_type('Book').each do |book| %>
-<%= book.title %>
-<% end %>
-</ul>
-
+<div class="main-container-content">
+  <h1>My favorites books</h1>
+    <ul>
+      <% current_user.favorited_by_type('Book').each do |book| %>
+        <li>
+        <%=book.title%> , <%=book.author.first_name%> <%=book.author.last_name%>
+        <%= link_to book_path(book) do %>
+        <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my books" class="whishlist_diamant">
+        <% end %>
+        </li>
+      <% end %>
+    </ul>
 </div>
-
-
-<% console %>
