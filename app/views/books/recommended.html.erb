@@ -1,8 +1,18 @@
 <h1>My recommended books</h1>
+<ul>
+  <%  @recommended_books.each do |recommended_book| %>
+    <li>
+      <%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %>
 
-<%  @recommended_books.each do |recommended_book| %>
-   <li><%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %> <img src="<%= image_path('icons/wishlist_icon.svg') %>" alt="whishlist" class="whishlist_diamant"></li>
-<% end  %>
+      <%= link_to toggle_favorite_book_path(recommended_book.book) do %>
+        <% if current_user.favorited?(recommended_book.book) %>
+          <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="whishlist" class="whishlist_diamant">
+            <% else  %>
+          <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="whishlist" class="whishlist_diamant">
+        <% end  %>
 
-<%=  %>
+      <% end  %>
 
+    </li>
+  <% end  %>
+</ul>

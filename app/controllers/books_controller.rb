@@ -19,7 +19,7 @@ class BooksController < ApplicationController
     @books = Book.order(title: :desc)
 
     if params[:query].present?
-      @books = @books.where('title ILIKE ?', "%#{params[:query]}%")
+      # @books = @books.where('title ILIKE ?', "%#{params[:query]}%")
       @books = Book.global_search(params[:query])
     end
 
@@ -32,7 +32,17 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @review = Review.new
+  end
 
+  def toggle_favorite
+    @user = current_user
+    @book = Book.find(params[:id])
+    if @user.favorited?(@book)
+      @user.unfavorite(@book)
+    else
+      @user.favorite(@book)
+    end
+    redirect_to recommended_books_path
   end
 
   private
