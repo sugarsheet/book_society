@@ -28,3 +28,27 @@
   margin-top: 30px;
   color:#b08968;
 }
+
+.nav-tabs {
+    padding-left: 0rem;
+    font-size: x-large;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    height: 40px;
+}
+
+
+.profile-title {
+ display: flex;
+ margin: 0px;
+}
+
