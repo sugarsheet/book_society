@@ -34,39 +34,3 @@
       <% end %>
     </ul>
 
-                     <%# ---navbar---- %>
-
-     <div class="nav nav-tabs">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h1> Books </h1></a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h1> My reco </h1></a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h1> Wishlist </h1></a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="navbar navbar-expand-sm">
-
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <i>My profile</i>
-              <li>
-                <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg') %>"/>
-                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
-                   <a class="dropdown-item" href="#">Another action</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>

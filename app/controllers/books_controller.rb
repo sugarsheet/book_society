@@ -32,6 +32,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @review = Review.new
+
   end
 
   def toggle_favorite
@@ -43,6 +44,7 @@ class BooksController < ApplicationController
       @user.favorite(@book)
     end
     redirect_to recommended_books_path
+
   end
 
   private
