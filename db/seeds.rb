@@ -139,37 +139,37 @@ html = Nokogiri::HTML(open(url).read)
     book_comments = []
     review_url = 'http://www.revish.com' + res.attributes['href'].value
     review_html = Nokogiri::HTML(open(review_url).read)
-    p '------------------ BOOK TITLE -------------------'
-    p book_title = review_html.search("#content h2 a").text
-    p '------------------ BOOK DESCRIPTION -------------------'
+    '------------------ BOOK TITLE -------------------'
+    book_title = review_html.search("#content h2 a").text
+    '------------------ BOOK DESCRIPTION -------------------'
     if review_html.search("#review p").first
-      p book_description = review_html.search("#review p").first.text
+      book_description = review_html.search("#review p").first.text
     end
-    p '----------------- ISBN ----------------'
+    '----------------- ISBN ----------------'
     if review_html.search("#bookdata ul li").first
-      p book_isbn = review_html.search("#bookdata ul li").first.text
+      book_isbn = review_html.search("#bookdata ul li").first.text
     end
-    p '----------------- BOOK COVER ------------------'
+    '----------------- BOOK COVER ------------------'
     if review_html.search("#bookdata .photo").first
-      p book_cover = review_html.search("#bookdata .photo").first.attributes['src'].value
+      book_cover = review_html.search("#bookdata .photo").first.attributes['src'].value
     end
-    p '------------------ AUTHOR --------------------'
+    '------------------ AUTHOR --------------------'
     author = review_html.search("#content .item .fn").text.split("by ")[1]
     if author
     a = author.split(" ")
-    p first_name = a[0]
-    p last_name = a[1]
+     first_name = a[0]
+     last_name = a[1]
     end
-    p '---------------- USER NICKNAME -------------------'
+    '---------------- USER NICKNAME -------------------'
     if review_html.search(".reviewer a")
-      p user_nickname = review_html.search(".reviewer a").text
+      user_nickname = review_html.search(".reviewer a").text
     end
-    p '------------------ REVIEW -------------------'
+    '------------------ REVIEW -------------------'
     review_html.search(".comments dd").each do |comment|
       c = comment.text.gsub('\n\n', '')
       book_comments << c
     end
-    p book_comments.first
+    book_comments.first
 
     unless book_title.nil? || book_description.nil? || book_isbn.nil? || book_cover.nil? || author.nil? || user_nickname.nil? || book_comments.nil?
 
