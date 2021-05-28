@@ -12,16 +12,14 @@
             <h1 class="title-book-show"><%= @book.title %></h1>
         <%#   <%= @book.each do |book| %> 
   
-          
-<%= @book.reviews.each do |review| %>
-
-            <%= review.content %>
-           <%= review.rating %>
-            <%= review.top %>
-<% end  %>
+            
+        <%= @book.reviews.each do |review| %>
+          <%= review.content %>
+          <%= review.rating %>
+          <%= review.top %>
+        <% end  %>
       </div>
   </div>
 
   <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
-
 </div>
