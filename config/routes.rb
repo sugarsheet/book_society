@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
   get '/signup', to: 'pages#signup'
   resources :books, only: [:index, :show] do
+    member do
+      get :toggle_favorite
+    end
     collection do
       get :recommended
     end
     resources :reviews, only: [:create, :new]
   end
 
-  resources :wishlists
+  resources :favorites
 end
