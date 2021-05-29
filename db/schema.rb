@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_27_134556) do
+ActiveRecord::Schema.define(version: 2021_05_29_221437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,15 @@ ActiveRecord::Schema.define(version: 2021_05_27_134556) do
     t.index ["scope"], name: "index_favorites_on_scope"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.bigint "book_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_likes_on_book_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "recommended_books", force: :cascade do |t|
     t.bigint "book_id", null: false
     t.bigint "user_id", null: false
@@ -108,6 +117,8 @@ ActiveRecord::Schema.define(version: 2021_05_27_134556) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "authors"
+  add_foreign_key "likes", "books"
+  add_foreign_key "likes", "users"
   add_foreign_key "recommended_books", "books"
   add_foreign_key "recommended_books", "users"
   add_foreign_key "reviews", "books"
