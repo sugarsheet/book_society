@@ -38,6 +38,9 @@ gem 'simple_form'
 # gem for whishlist
 gem 'acts_as_favoritor'
 
+#gem for tab bar logo and description
+gem 'meta-tags'
+
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'

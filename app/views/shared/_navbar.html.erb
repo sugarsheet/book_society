@@ -2,28 +2,36 @@
   <%= link_to "#", class: "navbar-brand" do %>
     <%#  %>
      <div class="nav nav-tabs">
-      <div class="link"><%= link_to 'Books', dashboard_path %></div>
-      <div class="link"><%= link_to 'Reco', recommended_books_path %></div>
-      <div class="link"><%= link_to 'Favorites', favorites_path %></div>
+      <div class="link">
+        <%= link_to dashboard_path do %>
+          <i class="fas fa-book-open"></i>
+        <% end %>
+      </div>
+      
+      <div class="link">
+        <%= link_to recommended_books_path do %>
+          <i class="fas fa-smile"></i>
+        <% end %>
+      </div>
 
-    </div>
+      <div class="link">
+      <%= link_to favorites_path do %></div>
+          <i class="fas fa-heart"></i>
+        <% end %>
+      </div>
 
-    <div class="navbar navbar-expand-sm">
-
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-      </button>
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <i class="profile-title">My profile</i>
+            <i class="profile-title">Book Society</i>
               <li>
-                <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg') %>"/>
-                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
-                   <a class="dropdown-item" href="#">Another action</a>
-                </div>
+               <%#  <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg')"/> %>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
+                    <a class="dropdown-item" href="#">Home</a>
+                  </div>
               </li>
             </ul>
           </div>

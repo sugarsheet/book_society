@@ -1,7 +1,6 @@
 <div class="main-container-content">
 
-
-    <h1 class="h1-dashboard py-5">My book library</h1>
+    <h1 class="h1-dashboard py-5">What are you reading? </h1>
 
     <!-- SEARCH -->
     <div data-controller="refresh-list">
@@ -30,7 +29,7 @@
           <%= link_to book_path(book) do %>
             <strong><%= book.title %></strong>
           <% end %>
-          | <%= book.author.name %> | my review (<%= @user.reviews.find_by(book_id: book.id).rating %> stars)</li>
+          | <%= book.author.name %> <%# | my review (<%= @user.reviews.find_by(book_id: book.id).rating %></li>
       <% end %>
     </ul>
 

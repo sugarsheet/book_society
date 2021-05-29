@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookSociety</title>
+    <title>Book Society</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= display_meta_tags site: 'Book Society • Discover & review books you read',
+                          keywords: %w[book society review],
+                          description: "Track the books you read, discover great titles thanks to the reviews left by people you trust."%>
 
     <meta http-equiv="home" content="_top">
 
@@ -13,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag 'logo.png' %>
   </head>
 
   <body>
