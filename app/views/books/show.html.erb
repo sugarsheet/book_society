@@ -13,11 +13,13 @@
         <%#   <%= @book.each do |book| %> 
   
             
-        <%= @book.reviews.each do |review| %>
+        <% @book.reviews.each do |review| %>
           <%= review.content %>
           <%= review.rating %>
-          <%= review.top %>
-        <% end  %>
+          <% review.top %>
+
+        <%# RAJOUTER UN SYMBOLE COEUR POUR AJOUTER AUX FAVORIS %>
+        <% end %>
       </div>
   </div>
 

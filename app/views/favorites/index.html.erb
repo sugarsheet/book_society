@@ -1,13 +1,17 @@
 
 <div class="main-container-content">
-  <h1>My favorites books</h1>
+ <%# <%= image_tag avatar_url(@users), width: '152', height: '152', class: "round-img" %>
+<img width="130" height="130" class="round-img" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
+  
+  
+  <h1>my bookshelf</h1>
     <ul>
       <% current_user.favorited_by_type('Book').each do |book| %>
         <li>
-        <%=book.title%> , <%=book.author.first_name%> <%=book.author.last_name%>
-        <%= link_to book_path(book) do %>
-        <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my books" class="whishlist_diamant">
-        <% end %>
+          <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
+          <%= link_to book_path(book) do %>
+          <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my books" class="whishlist_diamant">
+          <% end %>
         </li>
       <% end %>
     </ul>
