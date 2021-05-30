@@ -103,6 +103,8 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (4.0.7)
+      tilt
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -272,6 +274,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
+  haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   meta-tags
