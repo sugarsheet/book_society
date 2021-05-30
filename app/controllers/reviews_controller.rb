@@ -12,8 +12,9 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.book = @book
     @review.user = @user
+    @user = current_user
     if @review.save
-      redirect_to book_path(@book)
+      redirect_to favorites_path(@book)
     else
       render :new
     end
@@ -26,7 +27,7 @@ class ReviewsController < ApplicationController
   end
 
   def delete_recommendation_from_base
-    reco = RecommendedBook.find_by(user_id:@user.id, book_id:@Book.id)
+    reco = RecommendedBook.find_by(user_id: @user.id, book_id: @Book.id)
     reco.destroy if reco
   end
 
@@ -65,7 +66,5 @@ class ReviewsController < ApplicationController
         r.save!
       end
     end
-
   end
-
 end

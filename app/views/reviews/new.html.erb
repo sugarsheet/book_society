@@ -1,24 +1,47 @@
-<div class="main-container">
+<div class="main-container-content">
   <div class="review-form">
-    <div class="bg-white rounded p-3">
-    
-      <% current_user.favorited_by_type('Book').each do |book| %>
-          <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
+    <div class="rounded py-3">
+
+      <% current_user.favorited_by_type('Book').each do |book|%>
+          <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name %>
           <%  end %>
 
       <h3 class="text-center mb-5 mt-5"> <%= svg("edit_icon") %>Leave a review</h3>
       <%= simple_form_for [@book, @review] do |f| %>
 
-        <%= f.input :content, placeholder: "What did you think of this book?" %>
-        <%#= f.radio_button :top, label: "Add to my favorite" %>
-          <div class="heart-div">
-            <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
-            <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites</label>
+
+        <%= f.input :content, placeholder: "What did you think of this book?", label: "Your review" %>
+
+
+        <%= f.radio_button :top, label: "Add to my favorite" %>
+
+        <div class="heart-div mt-3">
+          <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
+          <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites </label>
+          <%# ----test favorite----- %>
+              <ul>
+                <%  @book.reviews.each do |favorite| %>
+                    <%= link_to toggle_favorite_book_path(favorite.book) do %>
+                      <% if current_user.favorited?(favorite.book) %>
+                        <label for="heart"><i class="fas fa-heart"></i></label>
+                          <% else %>
+                        ><i class="bi bi-heart"></i>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+              </ul>
+                <%# ----test favorite----- %>
           </div>
-          <%= f.input :rating, collection: (1..5).to_a, label: "Your rating" %>                
-        <%= f.submit class: 'btn-review mb-5' %><br>
-       <%#  <%= link_to 'Back', dashboard_path(@book) %>
-      <% end %>
+
+
+          <div class="rating mt-3">
+          <%= f.input :rating, collection: (1..5).to_a, label: "Your rating"%>
+          </div>
+
+        <%= f.submit class: 'btn-review mt-3', value: "Submit review"%>
+        <% end %>
+
+
 
     </div>
   </div>
