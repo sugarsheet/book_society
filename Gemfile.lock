@@ -103,8 +103,6 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    haml (4.0.7)
-      tilt
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -132,9 +130,9 @@ GEM
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.7)
-    nokogiri (1.11.5-x86_64-darwin)
+    nokogiri (1.11.6-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.11.5-x86_64-linux)
+    nokogiri (1.11.6-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
@@ -154,7 +152,7 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-proxy (0.6.5)
+    rack-proxy (0.7.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -252,7 +250,7 @@ GEM
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
-    websocket-driver (0.7.3)
+    websocket-driver (0.7.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     xpath (3.2.0)
@@ -274,7 +272,6 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
-  haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   meta-tags
