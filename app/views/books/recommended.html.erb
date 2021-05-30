@@ -8,12 +8,12 @@
         <%= link_to toggle_favorite_book_path(recommended_book.book) do %>
           <% if current_user.favorited?(recommended_book.book) %>
             <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="wishlist" class="wishlist_diamant">
-              <% else  %>
+              <% else %>
             <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="wishlist" class="wishlist_diamant">
-          <% end  %>
-        <% end  %>
+          <% end %>
+        <% end %>
       </li>
-    <% end  %>
+    <% end %>
   </ul>
   <%= link_to 'Favorites', favorites_path %>
 </div>

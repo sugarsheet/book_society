@@ -6,6 +6,7 @@
           <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
         <% end %>
 
+  <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
         <%# <% if @book.reviews.empty? %>
           <%# <p>There is nos review for this book</p> %>
           <%# <% else %>
@@ -23,5 +24,4 @@
       </div>
   </div>
 
-  <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
 </div>
