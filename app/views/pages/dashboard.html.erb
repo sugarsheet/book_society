@@ -1,7 +1,7 @@
 <div class="main-container-content">
       <div class="link-dashboard">
       <img class="round-img-dashboard" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
-      <a class="h1-dashboard py-5">Hi Jiwon</a>
+      <a class="h1-dashboard py-5">Hi Ji-won!</a>
       </div>
 
 
@@ -27,13 +27,27 @@
       </div>
     </div>
     <!-- END OF SEARCH -->
-    <ul>
-      <% @my_read_books.each do |book| %>
-        <li>
-          <%= link_to book_path(book) do %>
-            <strong><%= book.title %></strong>
-          <% end %>
-          | <%= book.author.name %> <%# | my review (<%= @user.reviews.find_by(book_id: book.id).rating %></li>
-      <% end %>
-    </ul>
+    <h1>My bookshelf</h1>
 
+
+
+
+      <div class="card-product-bookshelf">
+          <% @reviews.each do |review| %>
+              <div class="card-product-book">
+                <% if review.book.photo.attached? %>
+                  <%= cl_image_tag review.book.photo.key, height: 150, crop: :fill %>
+                <% end %>
+                  <ul class="bookshelf-list">
+                    <li>
+                      <%= link_to book_path(review.book) do %>
+                        <strong><%= review.book.title %></strong>
+                      <% end %>
+                      <br><%= review.book.author.name %></br>
+                        <br> Rating : <%= review.rating %></br>
+                      </li>
+                    </ul>
+              </div>
+          <% end %>
+      </div>
+  </div>
