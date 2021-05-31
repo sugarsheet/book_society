@@ -6,8 +6,7 @@ class Book < ApplicationRecord
   has_many :users, through: :reviews
   has_many :recommended_books
   has_one_attached :photo
-
-
+  validates :book, uniqueness: true
 
   include PgSearch::Model
   pg_search_scope :global_search,

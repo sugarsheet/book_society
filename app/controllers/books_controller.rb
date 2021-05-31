@@ -1,7 +1,6 @@
 class BooksController < ApplicationController
 
   def index
-
     @user = current_user
     @books = @user.books
     recommended
