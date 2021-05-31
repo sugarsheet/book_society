@@ -20,7 +20,7 @@ Specific CSS for your home-page
 
   align-items: center;
   text-align: center;
-  background-color: rgb(237, 220, 210);
+  background-color: whitesmoke;
   min-height: 100vh;
   max-height: 90vh;
   overflow: scroll;
@@ -37,13 +37,13 @@ Specific CSS for your home-page
   justify-content: center;
 }
 
-h2 {
+/* h2 {
   justify-content: center;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 25px;
   font-size: 18px;
   font-family: $body-font;
-}
+} */
 
 .dashboard {
   font-family: $body-font;
@@ -57,5 +57,51 @@ a {
 
 h1, .h1 {
   font-size: 1.8rem;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.mytabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.mytabs input[type="radio"] {
+  display: none;
+}
+
+.mytabs label {
+  padding: 15px;
+  background-color: beige;
+  font-weight: bold;
+}
+
+.mytabs .tab {
+  width: 100%;
+  padding: 20px;
+  background: white;
+  order: 1;
+  display: none;
+}
+
+.mytabs .tab h2 {
+  font-size: 1.2em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+  display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+  background: burlywood;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: left;
 }

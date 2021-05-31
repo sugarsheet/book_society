@@ -35,7 +35,7 @@ gem 'pg_search', '~> 2.3.0'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
-# gem for whishlist
+# gem for wishlist
 gem 'acts_as_favoritor'
 
 #gem for tab bar logo and description
