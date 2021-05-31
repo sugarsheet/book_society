@@ -2,21 +2,23 @@
 <div class="main-container-content">
   <div class="review-form">
     <div class="rounded py-3">
+      <div class="card-product">
+        <img height="150" src="http://res.cloudinary.com/drojktwel/image/upload/c_fill,h_300/bgoc6fvd34yydusdlb6ocrjyjpzk">
+        <p><%=@book.title%>, <%=@book.author.first_name%> <%=@book.author.last_name %></p>
+      </div>
 
-      <% current_user.favorited_by_type('Book').each do |book|%>
-          <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name %>
-          <%  end %>
-
-        <h3 class="text-center mb-5 mt-5"> Add to bookshelf </h3>
+        <h3 class="text-center mb-5 mt-5"> Add to bookshelf</h3>
+      <div class="review-input">
         <%= simple_form_for [@book, @review] do |f| %>
-            <div class="rating mt-3">
-              <%= f.input :rating, collection: (1..5).to_a, label: "Rating"%>
-            </div>
-        <%= f.input :content, placeholder: "Min 20 characters", label: "Thoughts" %>
-        <%= f.submit class: 'btn-review mt-3', value: "Submit review"%>
-
-        <% end %>
-
+        <div class="rating mt-3">
+          <%= f.input :rating, collection: (1..5).to_a, label: "Rating"%>
+        </div>
+        <div class="review-form">
+            <%= f.input :content, placeholder: "Min 30 characters", label: "Review" %>
+            <%= f.submit class: 'btn-review mt-3', value: "Post"%>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

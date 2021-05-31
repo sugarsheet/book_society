@@ -7,6 +7,8 @@ class Book < ApplicationRecord
   has_many :recommended_books
   has_one_attached :photo
   has_many :likes, dependent: :destroy
+  validates :isbn, uniqueness: true
+  validates :title, uniqueness: true
 
 
   include PgSearch::Model
@@ -19,6 +21,5 @@ class Book < ApplicationRecord
       tsearch: { prefix: true }
     }
 
+
 end
-
-

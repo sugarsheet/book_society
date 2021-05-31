@@ -6,34 +6,22 @@
   background-color: white;
 }
 
-.rating {
-  height: 100pxpx;
-}
-
-textarea.form-control {
-  height: 200px;
-}
-
-.card-product {
-  background-color: #FBFEF9;
-  border-radius: 15px;
-}
-
-.card-product {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-  background: white;
-  border: 1px solid rgb(235,235,235);
-}
-
-.card-product .card-content {
-  flex-grow: 1;
-}
-
 .br-theme-css-stars .br-widget {
     height: 28px;
     white-space: nowrap;
     margin-left: 128px;
     margin-top: 13px;
+}
+
+.card-product {
+  background-color: #EBEBD3;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+  justify-content: space-evenly;
 }
