@@ -11,17 +11,26 @@
           <%# <p>There is nos review for this book</p> %>
           <%# <% else %>
             <h1 class="title-book-show"><%= @book.title %></h1>
+
         <%#   <%= @book.each do |book| %> 
-            
+
         <% @book.reviews.each do |review| %>
           <%= review.content %>
           <%= review.rating %>
           <% review.top %>
-        <%# RAJOUTER UN SYMBOLE COEUR POUR AJOUTER AUX FAVORIS %>
+
         <% end %>
         <%= button_to 'Like', book_likes_path(@book), method: :book %>
         <p><%= @book.likes.count %> <%= (@book.likes.count) == 1 ? 'Like' : 'Likes'%></p>
       </div>
   </div>
 
+  <% unless current_user.books.include?(@book) %>
+    <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
+  <%# else %>
+  <%#= link_to "Edit my review", update_book_review_path(@book), class: "btn btn-primary"  %>
+  <% end %>
+
 </div>
+
+<%= console %>
