@@ -44,6 +44,7 @@
                         <strong><%= review.book.title %></strong>
                       <% end %>
                       <br><%= review.book.author.name %></br>
+                      <br><i><%= review.book.created_at.strftime("%B %d %Y")%></i></br>
                         <br> Rating : <%= review.rating %></br>
                       </li>
                     </ul>
