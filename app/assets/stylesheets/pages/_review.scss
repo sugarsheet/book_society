@@ -6,16 +6,27 @@
   background-color: white;
 }
 
-.heart-div > input:checked + label:hover,
-.heart-div > input:checked + label:hover ~ label,
-.heart-div > input:checked ~ label:hover,
-.heart-div > input:checked ~ label:hover ~ label,
-.heart-div > label:hover ~ input:checked ~ label {
-  color: red;
+.rating {
+  height: 100pxpx;
 }
 
-.heart-div{
-  input {
-    display: none;
-  }
+textarea.form-control {
+  height: 200px;
+}
+
+.card-product {
+  background-color: #FBFEF9;
+  border-radius: 15px;
+}
+
+.card-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  border: 1px solid rgb(235,235,235);
+}
+
+.card-product .card-content {
+  flex-grow: 1;
 }

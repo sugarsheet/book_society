@@ -1,24 +1,24 @@
-<div class="main-container">
+<div class="container">
   <div class="review-form">
     <div class="bg-white rounded p-3">
-    
-      <% current_user.favorited_by_type('Book').each do |book| %>
-          <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
-      <%  end %>
+      <div class="card-product">
+        <div class="image">
+          <%= cl_image_tag @book.photo.key, height: 150, crop: :fill %>
+        </div>
+        <div class="card-content">
+          <p><%=@book.title%>, <%=@book.author.first_name%> <%=@book.author.last_name%></p>
+        </div>
+      </div>
 
-      <h3 class="text-center mb-5 mt-5"> <%= svg("edit_icon") %>Leave a review</h3>
-      <%= simple_form_for [@book, @review] do |f| %>
+        <h3 class="text-center mb-5 mt-5"> Add to bookshelf </h3>
+        <%= simple_form_for [@book, @review] do |f| %>
+            <div class="rating mt-3">
+              <%= f.input :rating, collection: (1..5).to_a, label: "Rating"%>
+            </div>
+        <%= f.input :content, placeholder: "Min 20 characters", label: "Thoughts" %>
+        <%= f.submit class: 'btn-review mt-3', value: "Submit review"%>
 
-        <%= f.input :content, placeholder: "What did you think of this book?" %>
-        <%#= f.radio_button :top, label: "Add to my favorite" %>
-          <div class="heart-div">
-            <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
-            <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites</label>
-          </div>
-          <%= f.input :rating, collection: (1..5).to_a, label: "Your rating" %>                
-        <%= f.submit class: 'btn-review mb-5' %><br>
-       <%#  <%= link_to 'Back', dashboard_path(@book) %>
-      <% end %>
+        <% end %>
 
     </div>
   </div>
