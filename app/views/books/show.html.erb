@@ -5,23 +5,27 @@
         <% if @book.photo.attached? %>
           <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
         <% end %>
-
+    <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
         <%# <% if @book.reviews.empty? %>
           <%# <p>There is nos review for this book</p> %>
           <%# <% else %>
           <h1 class="title-book-show"><strong><%= @book.title %></strong><br>
           <%= @book.author.first_name %> <%= @book.author.last_name %></h1>
+          <br>
   <%#         <p>   STARS   </p>  %>
+
+          <p><strong>Reviews</strong></p>
             <% @book.reviews.each do |review| %>
               <div class="review-card">
-                <%= review.content %>
-                - <%= review.user.first_name %>
-                <%= review.rating %>
-                <% review.top %>
+                <div class="review-content">
+                  <%= review.content %>
+                  - <strong><%= review.user.first_name %></strong>
+                  <%= review.rating %>
+                  <% review.top %>
+                </div>
               </div>
-            <% end %>
-              
-  </div>
+            <% end %>     
+    </div>
 
   <% unless current_user.books.include?(@book) %>
     <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>

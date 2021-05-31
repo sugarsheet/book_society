@@ -18,16 +18,24 @@
 }
 
 .review-card {
-  border: 0.5px solid lightgray;
+  border: 0.25px solid darkgrey;
   background-color: white;
-  border-radius: 10px;
+  border-top-right-radius:18px;
+  border-bottom-right-radius:18px;
+  border-bottom-left-radius:18px;
   margin-bottom: 5px;
 }
 
-.review-card body {
-  word-break: keep-all;
+.review-content {
+  margin: 0.9em;
 }
 
 .p-5 {
   padding: 1.75rem !important;
+}
+
+
+// Ce bouton va disparaitre pour laisser place au bouton central + //
+.btn-book {
+  margin-top: 15px;
 }
