@@ -6,27 +6,7 @@
 
 
 
-    <!-- SEARCH -->
-    <div data-controller="refresh-list">
 
-      <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
-        <%= f.text_field :query,
-            class: "form-control-dash mb-5",
-            placeholder: 'Find your book',
-            value: params[:query],
-            data: {
-            refresh_list_target: 'searchInput',
-            action: "keyup->refresh-list#update"
-                } %>
-          <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
-      <% end %>
-      <div>
-
-       </div>
-      <div data-refresh-list-target="list">
-      </div>
-    </div>
-    <!-- END OF SEARCH -->
     <ul>
       <% @my_read_books.each do |book| %>
         <li>
