@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
   get '/signup', to: 'pages#signup'
+  get '/search', to: 'pages#search'
   resources :books, only: [:index, :show] do
     member do
       get :toggle_favorite

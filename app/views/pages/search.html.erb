@@ -1,0 +1,28 @@
+
+<div class="main-container-content">
+  <div data-controller="refresh-list" class="search-bar">
+    <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
+      <div class="space-header">
+        <%= f.text_field :query,
+          class: "form-control-dash",
+          placeholder: 'Find your book',
+          value: params[:query],
+          autocomplete: "off",
+          data: {
+          refresh_list_target: 'searchInput',
+          action: "keyup->refresh-list#update"
+              } %>
+        <img src="<%= image_path('icons/search_celia.svg') %>" alt="search" class="search_icon">
+      </div>
+    <% end %>
+    <div data-refresh-list-target="list">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
