@@ -17,7 +17,6 @@ class PagesController < ApplicationController
       format.html # Follow regular flow of Rails
       format.text { render partial: 'list.html', locals: { books: @books } }
     end
-
   end
 
   def signup

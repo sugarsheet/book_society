@@ -80,6 +80,7 @@ puts 'Finished!'
 puts 'Creating reviews...'
 john_irving_review_great_expectations = Review.new(content: "That Pip imagines the cruel Miss Havisham is his benefactor, when all the while it is the good-hearted escaped convict Magwitch, is absolutely convincing, yet stunning. A salient point of the novel is how disappointing Pip is. He does not live up to his own expectations or ours", rating:5, top: true)
 john_irving_review_great_expectations.user = user_1_john_irving
+p john_irving_review_great_expectations
 john_irving_review_great_expectations.book = great_expectations
 john_irving_review_great_expectations.save!
 
