@@ -1,9 +1,23 @@
 
 <div class="main-container-content">
-        <div class="link-dashboard">
-          <img class="round-img-dashboard" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="firstname">
-          <a class="h1-dashboard py-5">Hi <%=current_user.first_name%></a>
-        </div>
+  <div data-controller="refresh-list" class="search-bar">
+    <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
+      <div class="space-header">
+        <%= f.text_field :query,
+          class: "form-control-dash",
+          placeholder: 'Find your book',
+          value: params[:query],
+          autocomplete: "off",
+          data: {
+          refresh_list_target: 'searchInput',
+          action: "keyup->refresh-list#update"
+              } %>
+        <img src="<%= image_path('icons/search_celia.svg') %>" alt="search" class="search_icon">
+      </div>
+    <% end %>
+    <div data-refresh-list-target="list">
+    </div>
+  </div>
 </div>
 
 
