@@ -7,9 +7,9 @@
 
         <%= link_to toggle_favorite_book_path(recommended_book.book) do %>
           <% if current_user.favorited?(recommended_book.book) %>
-            <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="whishlist" class="whishlist_diamant">
+            <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="wishlist" class="wishlist_diamant">
               <% else  %>
-            <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="whishlist" class="whishlist_diamant">
+            <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="wishlist" class="wishlist_diamant">
           <% end  %>
         <% end  %>
       </li>

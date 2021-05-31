@@ -1,8 +1,8 @@
 require 'open-uri'
 require 'nokogiri'
 
-
 Review.destroy_all
+RecommendedBook.destroy_all
 Book.destroy_all
 Author.destroy_all
 User.destroy_all
@@ -28,7 +28,7 @@ user_6_tim_cook = User.new(email: "user6@gmail.com", password: "123456", first_n
 user_6_tim_cook.save!
 
 
-user_7_mister_king = User.new(email: "user7@gmail.com", password: "123456", first_name: "mister", last_name:"King")
+user_7_mister_king = User.new(email: "user7@gmail.com", password: "123456", first_name: "User", last_name:"King")
 user_7_mister_king.save!
 
 puts 'Finished!'
@@ -127,7 +127,8 @@ puts 'Finished!'
 
 
 
-for i in (1..3)
+for i in (1..6)
+  sleep 0.5
   url = "http://www.revish.com/search/reviews/?minrating=4&offset=#{i*10}"
   html = Nokogiri::HTML(open(url).read)
   links = html.search(".searchresult h4 a")
@@ -153,9 +154,9 @@ for i in (1..3)
     '------------------ AUTHOR --------------------'
     author = review_html.search("#content .item .fn").text.split("by ")[1]
     if author
-    a = author.split(" ")
-     first_name = a[0]
-     last_name = a[1]
+      a = author.split(" ")
+      first_name = a[0]
+      last_name = a[1]
     end
     '---------------- USER NICKNAME -------------------'
     if review_html.search(".reviewer a")
@@ -168,7 +169,7 @@ for i in (1..3)
     end
     book_comments.first
 
-    unless book_title.nil? || book_description.nil? || book_isbn.nil? || book_cover.nil? || author.nil? || user_nickname.nil? || book_comments.nil?
+    unless book_title.nil? || book_description.nil? || book_isbn.nil? || book_cover.nil? || author.nil? || user_nickname.nil? || book_comments.empty?
 
     ratings = [1, 2, 3, 4, 5]
     top = [true, false]
@@ -184,10 +185,50 @@ for i in (1..3)
     file = URI.open(book_cover)
     book.photo.attach(io: file, filename: 'book_title.jpg', content_type: 'image/jpg')
 
-
-    review = Review.new(content: "#{book_comments}", rating:"#{ratings.sample}", top: top.sample, user_id: user.id, book_id: book.id)
+    review = Review.new(content: book_comments.first, rating:"#{ratings.sample}", top: top.sample, user: user, book: book)
     review.save!
-
     end
   end
 end
+
+'---------- FAKE MATCHING -----------'
+
+ratings = [1, 2, 3, 4, 5]
+top = [true, false]
+r_book = Book.find_by title: 'Hard Times'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book.id)
+
+book_reviewed1 = Book.find_by title: 'One Hundred Years of Solitude'
+review_1_user1 = Review.create(content: 'A breathless family epic that made me, like many, fall in love with the style of "Gabo"', rating:"#{ratings.sample}", top: top.sample, user: user_1_john_irving, book: book_reviewed1)
+
+book_reviewed2 = Book.find_by title: 'The Alchemist'
+review_2_user1 = Review.create(content: 'The Alchemist is a fantastic book and the storytelling is beautiful. The choice of words are impeccable, full of wisdom and philosophy . I totally loved it.', rating:"#{ratings.sample}", top: top.sample, user: user_1_john_irving, book: book_reviewed2)
+
+book_reviewed3 = Book.find_by title: 'March (Trilogy)'
+review_3_user1 = Review.create(content: 'This is a MUST have for anyone desiring to learn the truth regarding the Civil Rights Movement from and eye witness. Having been involved myself in a different southern state...the astonishing way Congressman Lewis brings everything up close and personal has left me speechless.', rating:"#{ratings.sample}", top: top.sample, user: user_1_john_irving, book: book_reviewed3)
+
+r_book_1_user1 = Book.find_by title: 'Skin'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_1_user1.id)
+
+r_book_2_user1 = Book.find_by title: 'Blue Bloods'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_2_user1.id)
+
+r_book_3_user1 = Book.find_by title: 'The Beautiful Things That Heaven Bears'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_3_user1.id)
+
+r_book_4_user1 = Book.find_by title: 'Peter and the Starcatchers'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_4_user1.id)
+
+r_book_5_user1 = Book.find_by title: 'The Thirteenth Tale: A Novel'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_5_user1.id)
+
+r_book_6_user1 = Book.find_by title: 'Stiff: The Curious Lives of Human Cadavers'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_6_user1.id)
+
+r_book_7_user1 = Book.find_by title: 'Anansi Boys'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_7_user1.id)
+
+r_book_8_user1 = Book.find_by title: 'The Looking Glass Wars'
+reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_8_user1.id)
+
+p '------------------ finished -------------------'

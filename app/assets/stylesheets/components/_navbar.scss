@@ -7,18 +7,10 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+/* .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
-
-.nav-tabs {
-
-  padding-left: 0.5rem;
-  font-size: x-large;
-  margin-top: 169px;
-  background-color: white;
-}
+ */
 
 .nav-links {
   display: block;
@@ -43,12 +35,20 @@
     left: 0;
     right: 0;
     justify-content: space-around;
-    height: 30px;
+    height: 80px;
+    background-color: white;
+    z-index: 666;
+}
+
+.link {
+size: 40px;
 }
 
 
 .profile-title {
  display: flex;
  margin: inherit;
+ position: fixed;
+ font-style: normal ;
 }
 

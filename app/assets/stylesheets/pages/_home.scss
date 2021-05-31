@@ -22,6 +22,9 @@ Specific CSS for your home-page
   text-align: center;
   background-color: rgb(237, 220, 210);
   min-height: 100vh;
+  max-height: 90vh;
+  overflow: scroll;
+  padding-bottom: 80px;
 
 }
 

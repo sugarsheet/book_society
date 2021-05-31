@@ -11,13 +11,17 @@
           <%# <% else %>
             <h1 class="title-book-show"><%= @book.title %></h1>
         <%#   <%= @book.each do |book| %> 
-            <h2>Reviews <%= @review.content %></h2>
-            <h2>Rating <%= @review.rating %>
-            <h2>Favorites<%= @review.top %></h2>
-    
+  
+            
+        <% @book.reviews.each do |review| %>
+          <%= review.content %>
+          <%= review.rating %>
+          <% review.top %>
+
+        <%# RAJOUTER UN SYMBOLE COEUR POUR AJOUTER AUX FAVORIS %>
+        <% end %>
       </div>
   </div>
 
   <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
-
 </div>
