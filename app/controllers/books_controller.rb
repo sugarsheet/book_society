@@ -42,9 +42,11 @@ class BooksController < ApplicationController
     else
       @user.favorite(@book)
     end
-    redirect_to recommended_books_path
+    redirect_to new_book_review_path(@book)
 
   end
+
+
 
   private
 

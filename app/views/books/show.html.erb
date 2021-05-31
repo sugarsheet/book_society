@@ -6,25 +6,31 @@
           <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
         <% end %>
 
+  <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
         <%# <% if @book.reviews.empty? %>
           <%# <p>There is nos review for this book</p> %>
           <%# <% else %>
             <h1 class="title-book-show"><%= @book.title %></h1>
-        <%#   <%= @book.each do |book| %>
 
+        <%#   <%= @book.each do |book| %> 
 
         <% @book.reviews.each do |review| %>
           <%= review.content %>
           <%= review.rating %>
           <% review.top %>
+
         <% end %>
+        <%= button_to 'Like', book_likes_path(@book), method: :book %>
+        <p><%= @book.likes.count %> <%= (@book.likes.count) == 1 ? 'Like' : 'Likes'%></p>
       </div>
   </div>
+
   <% unless current_user.books.include?(@book) %>
     <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
   <%# else %>
   <%#= link_to "Edit my review", update_book_review_path(@book), class: "btn btn-primary"  %>
   <% end %>
+
 </div>
 
 <%= console %>
