@@ -1,43 +1,20 @@
 
 <div class="main-container-content">
 
-<img width="130" height="130" class="round-img" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
+<img width="130" height="120" class="round-img" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
   
- <%#  NOM DE L'UTILISATEUR... (ERREUR - JIWON) %> 
-<%#   <%= current_user.each do |user|%>
-<%#   <%= user.first_name%>
-  <%# <% end %>
-
   <div class="mytabs">
-  <input type="radio" id="tabone" name="mytabs" checked="checked">
-    <label for="tabone">my bookshelf</label>
       <div class='tab'>
         <h2>my bookshelf</h2>
             <ul>
               <% current_user.favorited_by_type('Book').each do |book| %>
                 <li>
                   <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
-                  <%= link_to book_path(book) do %>
-                  <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my bookshelf" class="wishlist_diamant">
+                    <%= link_to book_path(book) do %>
+                    <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my bookshelf" class="wishlist_diamant">
                   <% end %>
                 </li>
               <% end %>
             </ul>
       </div>
-
-  <input type="radio" id="tabtwo" name="mytabs" checked="checked">
-  <label for="tabtwo">saved books</label>
-  <div class='tab'>
-    <h2>saved books</h2>
-        <ul>
-          <% current_user.favorited_by_type('Book').each do |book| %>
-            <li>
-              <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
-              <%= link_to book_path(book) do %>
-              <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my books" class="wishlist_diamant">
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
-    </div>
-</div>
+  </div>
