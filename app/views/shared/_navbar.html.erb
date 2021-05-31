@@ -1,44 +1,64 @@
 <%# <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
     <%#  %>
-     <div class="nav nav-tabs">
-      <div class="link">
-        <%= link_to dashboard_path do %>
-          <i class="fas fa-book-open"></i>
-        <% end %>
-      </div>
-      
-  <%#     <div class="link">
-        <%= link_to recommended_books_path do %>
-<%#           <i class="fas fa-heart"></i>
-        <% end %>
-<%#       </div> %>
 
-      <div class="link">
-      <%= link_to favorites_path do %></div>
-          <i class="fas fa-smile"></i>
+    <div class="nav nav-tabs">
+
+        <div class="link">
+          <%= link_to dashboard_path do %>
+           <img src="<%= image_path('icons/book-open_celia.svg') %>" alt="search" class="book-open_celia">
         <% end %>
-      </div>
+        </div>
+
+        <div class="link">
+          <%= link_to recommended_books_path do %>
+          <img src="<%= image_path('icons/heart_celia.svg') %>" alt="search" class="heart_celia">
+          <% end %>
+        </div>
+
+
+        <button class="btn-nav" type="button"> + </button>
+
+        <div class="link">
+        <%= link_to favorites_path do %>
+        <img src="<%= image_path('icons/bookmarks_celia.svg') %>" alt="search" class="bookmarks_celia">
+        <% end %>
+        </div>
+
+        <div class="link">
+         <%= link_to books_path do %>
+          <img src="<%= image_path('icons/settings_celia.svg') %>" alt="search" class="settings_celia">
+          <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
+              <%# <a class="dropdown-item" href="#">Home</a> %>
+            <%# </div>
+           <% end %>
+           <% end %>
+        </div>
+    </div>
+      <%# <div class="link">
+      <img width="130" height="130" class="round-img-dashboard" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
+      </div> %>
 
 <%#     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent"> %>
 
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="container">
+    </button> %>
+    <%# <div class="container">
       <ul class="navbar-nav mr-auto">
-      <i class="profile-title">Book Society</i>
-        <li>
+      <i class="profile-title">Book Society</i> %>
+        <%# <li> %>
           <%#  <img class="profile_icon dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path('icons/profile_icon.svg')"/> %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
-              <a class="dropdown-item" href="#">Home</a>
-            </div>
-        </li>
-      </ul>
-    </div>
+              <%# <a class="dropdown-item" href="#">Home</a>
+            </div> %>
+        <%# </li> %>
+      <%# </ul>
+    </div> %>
 
 
 

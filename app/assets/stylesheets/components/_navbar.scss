@@ -35,13 +35,18 @@
     left: 0;
     right: 0;
     justify-content: space-around;
-    height: 60px;
+    height: 67px;
     background-color: white;
     z-index: 666;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 23px;
+    margin: 6px;
 }
 
 .link {
 size: 40px;
+
 }
 
 
@@ -51,4 +56,5 @@ size: 40px;
  position: fixed;
  font-style: normal ;
 }
+
 

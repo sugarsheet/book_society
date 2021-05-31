@@ -18,6 +18,7 @@
         <div class="heart-div mt-3">
           <%= f.radio_button :top, class: "heart-radio", type: "radio"%>
           <label for="heart" title="text"><i class="fas fa-heart"></i>  Add to favorites </label>
+
           <%# ----test favorite----- %>
               <ul>
                 <%  @book.reviews.each do |favorite| %>
