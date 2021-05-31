@@ -3,16 +3,14 @@
   <div class="flex-box-book-show">
       <div class="col rounded p-5">
         <% if @book.photo.attached? %>
-          <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
+          <%= cl_image_tag @book.photo.key, height: 200, crop: :fill %>
         <% end %>
 
-  <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
+        <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
         <%# <% if @book.reviews.empty? %>
           <%# <p>There is nos review for this book</p> %>
           <%# <% else %>
             <h1 class="title-book-show"><%= @book.title %></h1>
-
-        <%#   <%= @book.each do |book| %> 
 
         <% @book.reviews.each do |review| %>
           <%= review.content %>
@@ -20,9 +18,6 @@
           <% review.top %>
 
         <% end %>
-        <%= button_to 'Like', book_likes_path(@book), method: :book %>
-        <p><%= @book.likes.count %> <%= (@book.likes.count) == 1 ? 'Like' : 'Likes'%></p>
-      </div>
   </div>
 
   <% unless current_user.books.include?(@book) %>
@@ -33,4 +28,3 @@
 
 </div>
 
-<%= console %>
