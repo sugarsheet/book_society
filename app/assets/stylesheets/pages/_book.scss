@@ -8,3 +8,26 @@
 
 }
 
+.reviews {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.review-card {
+  border: 0.5px solid lightgray;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.review-card body {
+  word-break: keep-all;
+}
+
+.p-5 {
+  padding: 1.75rem !important;
+}
