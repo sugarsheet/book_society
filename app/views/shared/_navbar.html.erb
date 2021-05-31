@@ -4,36 +4,50 @@
 
     <div class="nav nav-tabs">
 
-        <div class="link">
-          <%= link_to dashboard_path do %>
-           <img src="<%= image_path('icons/book-open_celia.svg') %>" alt="search" class="book-open_celia">
-        <% end %>
-        </div>
 
-        <div class="link">
-          <%= link_to recommended_books_path do %>
-          <img src="<%= image_path('icons/heart_celia.svg') %>" alt="search" class="heart_celia">
+
+        <%= link_to dashboard_path do %>
+            <% if params[:controller] == "pages" && params[:action] == "dashboard" %>
+                <img src="<%= image_path('icons/book-open_celia.svg') %>" alt="search" class="book-open_celia">
+            <% else %>
+                <img src="<%= image_path('icons/book-open-grey_celia.svg') %>" alt="search" class="book-open-grey_celia">
+            <% end %>
           <% end %>
-        </div>
 
 
-        <button class="btn-nav" type="button"> + </button>
 
-        <div class="link">
-        <%= link_to favorites_path do %>
-        <img src="<%= image_path('icons/bookmarks_celia.svg') %>" alt="search" class="bookmarks_celia">
+        <%= link_to recommended_books_path do %>
+            <% if params[:controller] == "books" && params[:action] == "recommended" %>
+                  <img src="<%= image_path('icons/heart_celia.svg') %>" alt="search" class="heart_celia">
+            <% else %>
+                  <img src="<%= image_path('icons/heart-grey_celia.svg') %>" alt="search" class="heart-grey_celia">
+            <% end %>
         <% end %>
-        </div>
+
+
+
+        <button class="btn-nav" type="button"> <%= link_to dashboard_path do %><img src="<%= image_path('icons/plus_celia.svg') %>" alt="search" class="plus_celia"><% end %></button>
+
+
+
+        <%= link_to favorites_path do %>
+
+            <% if params[:controller] == "favorites" && params[:action] == "index" %>
+                  <img src="<%= image_path('icons/bookmarks_celia.svg') %>" alt="search" class="bookmarks_celia">
+            <% else %>
+                  <img src="<%= image_path('icons/bookmarks-grey_celia.svg') %>" alt="search" class="bookmarks-grey_celia">
+            <% end %>
+        <% end %>
+
 
         <div class="link">
-         <%= link_to books_path do %>
-          <img src="<%= image_path('icons/settings_celia.svg') %>" alt="search" class="settings_celia">
+          <img src="<%= image_path('icons/settings-grey_celia.svg') %>" alt="search" class="settings-grey_celia">
           <%# <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "logout", destroy_user_session_path, method: :delete , class: "dropdown-item" %>
               <%# <a class="dropdown-item" href="#">Home</a> %>
             <%# </div>
            <% end %>
-           <% end %>
+
         </div>
     </div>
       <%# <div class="link">
