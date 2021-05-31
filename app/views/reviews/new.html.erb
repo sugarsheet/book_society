@@ -4,7 +4,7 @@
     
       <% current_user.favorited_by_type('Book').each do |book| %>
           <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
-          <%  end %>
+      <%  end %>
 
       <h3 class="text-center mb-5 mt-5"> <%= svg("edit_icon") %>Leave a review</h3>
       <%= simple_form_for [@book, @review] do |f| %>
