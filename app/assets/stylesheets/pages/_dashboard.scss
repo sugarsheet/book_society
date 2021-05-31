@@ -46,3 +46,34 @@ display: flex;
 justify-content:space-between;
 padding: 2rem;
 }
+
+.bookshelf-list {
+list-style:none;
+margin-left:18px;
+padding-left:0;
+margin-top: 20px;
+text-align: left;
+}
+
+.card-product-bookshelf {
+
+  display: block;
+  align-items: center;
+  margin: 5px;
+
+}
+
+
+.card-product-bookshelf img {
+  height: 100%;
+  width: 89px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.card-product-book {
+ padding: 16px;
+ display: inline-flex;
+ margin-left: 15px;
+}

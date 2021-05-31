@@ -20,3 +20,23 @@
     <% end %>
   </ul>
 </div>
+  <h1>My bookshelf</h1>
+      <div class="card-product-bookshelf">
+          <% @reviews.each do |review| %>
+              <div class="card-product-book">
+                <% if review.book.photo.attached? %>
+                  <%= cl_image_tag review.book.photo.key, height: 150, crop: :fill %>
+                <% end %>
+                  <ul class="bookshelf-list">
+                    <li>
+                      <%= link_to book_path(review.book) do %>
+                        <strong><%= review.book.title %></strong>
+                      <% end %>
+                      <br><%= review.book.author.name %></br>
+                        <br> Rating : <%= review.rating %></br>
+                      </li>
+                    </ul>
+              </div>
+          <% end %>
+      </div>
+  </div>

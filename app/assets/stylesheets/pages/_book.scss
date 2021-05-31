@@ -7,3 +7,35 @@
   margin-top: 20px;
 
 }
+
+.reviews {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.review-card {
+  border: 0.25px solid darkgrey;
+  background-color: white;
+  border-top-right-radius:18px;
+  border-bottom-right-radius:18px;
+  border-bottom-left-radius:18px;
+  margin-bottom: 5px;
+}
+
+.review-content {
+  margin: 0.9em;
+}
+
+.p-5 {
+  padding: 1.75rem !important;
+}
+
+
+// Ce bouton va disparaitre pour laisser place au bouton central + //
+.btn-book {
+  margin-top: 15px;
+}

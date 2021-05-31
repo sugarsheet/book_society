@@ -7,7 +7,8 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     @my_read_books = current_user.books
-    @books = Book.order(title: :desc)
+    @reviews = current_user.reviews
+    @books = Book.order(created_at: :desc)
     if params[:query].present?
       # @books = @books.where('title ILIKE ?', "%#{params[:query]}%")
       @books = Book.global_search(params[:query])

@@ -9,19 +9,39 @@
 .br-theme-css-stars .br-widget {
     height: 28px;
     white-space: nowrap;
-    margin-left: 128px;
     margin-top: 13px;
 }
 
 .card-product {
   background-color: #EBEBD3;
   border-radius: 15px;
-  margin: 10px;
+  margin: 5px;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
   background: white;
-  padding: 8px 16px;
+  padding: 8px 10px;
   border: 1px solid rgb(235,235,235);
   justify-content: space-evenly;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 10px;
+}
+
+textarea.form-control {
+  height: 200px;
+  margin-right: 20px;
+  justify-content: normal;
+}
+
+.review-input {
+  text-align: left;
+}
+
+.post-button {
+  text-align: right;
 }
