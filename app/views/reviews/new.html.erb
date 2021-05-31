@@ -1,14 +1,11 @@
-<div class="container">
+
+<div class="main-container-content">
   <div class="review-form">
-    <div class="bg-white rounded p-3">
-      <div class="card-product">
-        <div class="image">
-          <%= cl_image_tag @book.photo.key, height: 150, crop: :fill %>
-        </div>
-        <div class="card-content">
-          <p><%=@book.title%>, <%=@book.author.first_name%> <%=@book.author.last_name%></p>
-        </div>
-      </div>
+    <div class="rounded py-3">
+
+      <% current_user.favorited_by_type('Book').each do |book|%>
+          <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name %>
+          <%  end %>
 
         <h3 class="text-center mb-5 mt-5"> Add to bookshelf </h3>
         <%= simple_form_for [@book, @review] do |f| %>

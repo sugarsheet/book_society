@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   has_many :users, through: :reviews
   has_many :recommended_books
   has_one_attached :photo
-
+  has_many :likes, dependent: :destroy
 
 
   include PgSearch::Model

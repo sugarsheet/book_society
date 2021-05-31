@@ -13,4 +13,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :new]
   end
   resources :favorites, only: (:index)
+  resources :books do
+    resources :likes
+  end
 end

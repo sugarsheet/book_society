@@ -17,8 +17,6 @@
 
 }
 
-
-
 .collapse {
   display: block !important;
 }
@@ -30,4 +28,16 @@
 
 .text-list a {
   color: hsla(357, 88%, 32%, 0.932);
+}
+
+
+.round-img-dashboard {
+    border-radius: 73px;
+    height: 55px;
+    padding: 8px;
+}
+
+.link-dashboard {
+  size: 40px;
+  margin-right: 229px;
 }
