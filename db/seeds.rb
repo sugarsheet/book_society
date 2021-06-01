@@ -11,6 +11,9 @@ User.destroy_all
 puts 'Creating users...'
 user_1_john_irving = User.new(email: "user1@gmail.com", password: "123456", first_name: "John", last_name:"Irving")
 user_1_john_irving.save!
+file = URI.open("http://www.revish.com/usericons/JackP.jpg")
+user_1_john_irving.photo.attach(io: file, filename: "#{user_1_john_irving.email}.jpg", content_type: 'image/jpg')
+
 
 user_2_tori_amos = User.new(email: "user2@gmail.com", password: "123456", first_name: "Tori", last_name:"Amos")
 user_2_tori_amos.save!
@@ -162,6 +165,8 @@ for i in (1..6)
     '---------------- USER NICKNAME -------------------'
     if review_html.search(".reviewer a")
       user_nickname = review_html.search(".reviewer a").text
+      user_avatar = review_html.search(".usericon.logo").first.attributes['src'].value
+      user_avatar_url = /http/.match?(user_avatar) ? user_avatar : "http://www.revish.com#{user_avatar}"
     end
     '------------------ REVIEW -------------------'
     review_html.search(".comments dd").each do |comment|
@@ -177,6 +182,8 @@ for i in (1..6)
 
     user = User.new(email: "user#{rand}@gmail.com", password: "123456", first_name: "#{user_nickname}", last_name:"")
     user.save!
+    file = URI.open(user_avatar_url)
+    user.photo.attach(io: file, filename: "#{user.email}.jpg", content_type: 'image/jpg')
 
     author = Author.new(first_name: "#{first_name}", last_name:"#{last_name}", bio: "")
     author.save!
