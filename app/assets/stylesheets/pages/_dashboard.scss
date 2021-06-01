@@ -38,8 +38,13 @@
 }
 
 .link-dashboard {
-  size: 40px;
-  margin-right: 229px;
+
+}
+
+.space-header{
+display: flex;
+justify-content:space-between;
+padding: 2rem;
 }
 
 .bookshelf-list {

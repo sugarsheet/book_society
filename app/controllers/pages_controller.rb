@@ -16,6 +16,9 @@ class PagesController < ApplicationController
     if params[:query].present?
       # @books = @books.where('title ILIKE ?', "%#{params[:query]}%")
       @books = Book.global_search(params[:query])
+      @books = @books.select do |book|
+        !@user.books.include?(book)
+      end
     end
 
     respond_to do |format|

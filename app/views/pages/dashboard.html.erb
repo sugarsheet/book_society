@@ -1,32 +1,15 @@
 <div class="main-container-content">
-      <div class="link-dashboard">
+  <div class="space-header">
+    <div class="link-dashboard">
       <img class="round-img-dashboard" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
-      <a class="h1-dashboard py-5">Hi Ji-won!</a>
-      </div>
-
-
-
-    <!-- SEARCH -->
-    <div data-controller="refresh-list">
-
-      <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
-        <%= f.text_field :query,
-            class: "form-control-dash mb-5",
-            placeholder: 'Find your book',
-            value: params[:query],
-            data: {
-            refresh_list_target: 'searchInput',
-            action: "keyup->refresh-list#update"
-                } %>
-          <img src="<%= image_path('icons/search_icon.svg') %>" alt="search" class="search_icon">
-      <% end %>
-      <div>
-
-       </div>
-      <div data-refresh-list-target="list">
-      </div>
+      <a class="h1-dashboard py-5">Hi Jiwon</a>
     </div>
-    <!-- END OF SEARCH -->
+    <div>
+      <%= link_to search_path do %>
+        <img src="<%= image_path('icons/search_celia.svg') %>" alt="search" class="search_icon">
+      <% end %>
+    </div>
+
     <h1>My bookshelf</h1>
 
 
@@ -53,3 +36,4 @@
                  <% end %>
               </div>
         </div>
+

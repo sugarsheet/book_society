@@ -1,19 +1,24 @@
 <div class="main-container-content">
-  <h1>My recommended books</h1>
-  <ul>
-    <%  @recommended_books.each do |recommended_book| %>
-      <li>
-        <%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %>
+  <div class="container">
+    <div class="recommended-list">
+      <h1>Recommended books</h1>
+      <ul>
+        <%  @recommended_books.each do |recommended_book| %>
+          <li>
+            <%# <%= cl_image_tag recommended_book.book.photo.key, height: 150, crop: :fill %>
+            <%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %>
 
-        <%= link_to toggle_favorite_book_path(recommended_book.book) do %>
-          <% if current_user.favorited?(recommended_book.book) %>
-            <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="wishlist" class="wishlist_diamant">
-              <% else %>
-            <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="wishlist" class="wishlist_diamant">
-          <% end %>
+            <%= link_to toggle_favorite_book_path(recommended_book.book) do %>
+              <% if current_user.favorited?(recommended_book.book) %>
+                <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="wishlist" class="wishlist_diamant">
+                  <% else %>
+                <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="wishlist" class="wishlist_diamant">
+              <% end %>
+            <% end %>
+          </li>
         <% end %>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to 'Favorites', favorites_path %>
+      </ul>
+      <%= link_to 'Favorites', favorites_path %>
+    </div>
+  </div>
 </div>
