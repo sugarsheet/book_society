@@ -1,24 +1,25 @@
-<div class="main-container-content">
-  <div class="container">
+<div class="main-container">
+  <div class="container recommended-books px-4 mb-3">
+    <h1> <%= "You have #{@recommended_books.count} recommendations"%></h1>
+    <p> <%= "Good work #{current_user.first_name} ! Be inspired to read something you really like." %> </p>
     <div class="recommended-list">
-      <h1>Recommended books</h1>
-      <ul>
-        <%  @recommended_books.each do |recommended_book| %>
-          <li>
-            <%# <%= cl_image_tag recommended_book.book.photo.key, height: 150, crop: :fill %>
-            <%= recommended_book.book.title %> : <%= recommended_book.book.author.first_name %>, <%= recommended_book.book.author.last_name %>
-
-            <%= link_to toggle_favorite_book_path(recommended_book.book) do %>
-              <% if current_user.favorited?(recommended_book.book) %>
-                <img src="<%= image_path('icons/wishlist_icon_black.svg') %>" alt="wishlist" class="wishlist_diamant">
-                  <% else %>
-                <img src="<%= image_path('icons/wishlist_icon_blue.svg') %>" alt="wishlist" class="wishlist_diamant">
-              <% end %>
+      <% @recommended_books.each do |recommended_book| %>
+        <div class="card-recommended-book ">
+          <h1> <%= "#{recommended_book.book.title}"%></h1>
+          <p> <%= "#{recommended_book.book.author.first_name}, #{recommended_book.book.author.last_name}" %></p>
+            <% if recommended_book.book.reviews.count > 0 %>
+            <p><small><%= recommended_book.book.average_ratings %></small></p>
             <% end %>
-          </li>
-        <% end %>
-      </ul>
-      <%= link_to 'Favorites', favorites_path %>
+            <div class="row footer-card-recommended-book">
+              <%= link_to book_path(recommended_book.book), class:"col-6 text-center border-right border-light" do %>
+                Preview
+              <% end %>
+                <%= link_to favorites_path(recommended_book.book), class:"col-6 text-center border-left border-light" do %>
+                Wishlist
+              <% end %>
+            </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

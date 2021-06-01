@@ -4,10 +4,6 @@ class PagesController < ApplicationController
   def home
   end
 
-
-
-
-
   def dashboard
     @user = current_user
     @my_read_books = current_user.books
