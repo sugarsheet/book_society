@@ -12,16 +12,25 @@
     margin-top: 13px;
 }
 
-.card-product {
-  background-color: #EBEBD3;
+.card-product-review {
+  background-color: transparent;
   border-radius: 15px;
   margin: 5px;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  background: white;
   padding: 8px 10px;
   justify-content: space-evenly;
+}
+
+.review-img {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.subtitle-review-new {
+  font-size: 14px;
+  color: grey;
 }
 
 p {
@@ -32,7 +41,7 @@ p {
 }
 
 textarea.form-control {
-  height: 200px;
+  height: 118px;
   margin-right: 20px;
   justify-content: normal;
 }
@@ -42,7 +51,7 @@ textarea.form-control {
 }
 
 .post-button {
-  text-align: right;
+  text-align: left;
 }
 
 
