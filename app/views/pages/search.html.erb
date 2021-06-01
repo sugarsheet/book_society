@@ -4,7 +4,7 @@
     <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
       <div class="space-header">
         <%= f.text_field :query,
-          class: "form-control-dash",
+          class: "form-control-dash-search",
           placeholder: 'Find your book',
           value: params[:query],
           autocomplete: "off",
@@ -16,14 +16,6 @@
       </div>
     <% end %>
     <div data-refresh-list-target="list">
-
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
