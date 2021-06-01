@@ -18,12 +18,13 @@
 }
 
 .review-card {
-  border: 0.25px solid darkgrey;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);;
   background-color: white;
   border-top-right-radius:18px;
   border-bottom-right-radius:18px;
   border-bottom-left-radius:18px;
   margin-bottom: 5px;
+  padding:2px;
 }
 
 .review-content {

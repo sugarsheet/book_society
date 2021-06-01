@@ -18,6 +18,7 @@
   font-weight: bolder;
 }
 
+
 .recommended-list {
   display : flex;
   flex-direction: column;
@@ -42,10 +43,8 @@
 
 .card-recommended-book h1 {
   text-align: left;
+
 }
-
-
-// -------FOOTER---------
 
 .footer-card-recommended-book{
   margin-top: 35px;
@@ -68,3 +67,4 @@
   margin-left: 0px;
   margin-right: 0px;
 }
+
