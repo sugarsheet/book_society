@@ -1,10 +1,70 @@
-.wishlist_diamant {
-  max-width: 20px;
-  max-height: 20px;
+.recommended-books{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: justify;
+  margin-bottom: auto;
 }
 
-.recommended-list {
-  text-align: left;
-  padding: 30px;
-  font-weight: bold;
+.recommended-books p {
+  text-align: center;
+  margin-inline-start: 15px;
 }
+
+.recommended-list h1 {
+  margin-bottom: 15px;
+  margin-inline-start: 15px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+
+.recommended-list {
+  display : flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: justify;
+}
+// ---------CARD-----------
+
+.card-recommended-book{
+  background-color: white;
+  display: flex;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .1);
+  margin: 10px;
+  position: relative;
+  flex-direction: column;
+  align-items: left;
+}
+
+.card-recommended-book p {
+  text-align: left;
+}
+
+.card-recommended-book h1 {
+  text-align: left;
+
+}
+
+.footer-card-recommended-book{
+  margin-top: 35px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .1);
+}
+
+.footer-card-recommended-book a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-card-recommended-book a:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+

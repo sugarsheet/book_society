@@ -10,7 +10,6 @@ class Book < ApplicationRecord
   validates :isbn, uniqueness: true
   validates :title, uniqueness: true
 
-
   include PgSearch::Model
   pg_search_scope :global_search,
     against: [ :title, :description, :isbn],
@@ -21,5 +20,8 @@ class Book < ApplicationRecord
       tsearch: { prefix: true }
     }
 
-
+  def average_ratings
+    ratings = self.reviews.map { |reviews| reviews.rating }
+    ratings.sum / ratings.size
+  end
 end
