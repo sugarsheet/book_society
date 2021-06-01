@@ -29,4 +29,10 @@ class PagesController < ApplicationController
      redirect_to signup_path
     end
   end
+
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to dashboard_path
+  end
 end

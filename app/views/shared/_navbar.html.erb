@@ -1,6 +1,6 @@
-<%# <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%#  %>
+<% if user_signed_in?%>
+
+
 
     <div class="nav nav-tabs">
 
@@ -13,9 +13,6 @@
                 <img src="<%= image_path('icons/book-open-grey_celia.svg') %>" alt="search" class="book-open-grey_celia">
             <% end %>
           <% end %>
-
-
-
 
 
         <%= link_to recommended_books_path do %>
@@ -40,11 +37,14 @@
 
 
         <div class="link">
-          <%= link_to destroy_user_session_path, method: :delete do %>
-            <img src="<%= image_path('icons/settings-grey_celia.svg') %>" alt="search" class="settings-grey_celia">
-          <% end %>
+          <div class="dropdown dropup">
+          <img src="<%= image_path('icons/settings-grey_celia.svg') %>"  class="settings-grey_celia dropdown-toggle" data-toggle="dropdown">
+            <div class="dropdown-menu">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+            </div>
+          </div>
         </div>
     </div>
 
-
+<% end %>
 

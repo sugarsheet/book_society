@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
   get '/signup', to: 'pages#signup'
   get '/search', to: 'pages#search'
-  resources :books, only: [:index, :show] do
+  resources :books, only: [:index, :show, :destroy] do
     member do
       get :toggle_favorite
     end
@@ -14,7 +14,4 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :new]
   end
   resources :favorites, only: (:index)
-  resources :books do
-    resources :likes
-  end
 end

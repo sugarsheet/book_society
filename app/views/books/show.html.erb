@@ -3,7 +3,7 @@
   <div class="flex-box-book-show">
       <div class="col rounded p-5">
         <% if @book.photo.attached? %>
-          <%= cl_image_tag @book.photo.key, height: 300, crop: :fill %>
+          <%= cl_image_tag @book.photo.key, height: 300, crop: :fill, class: "photo-book-show" %>
         <% end %>
         <%# <% if @book.reviews.empty? %>
           <% unless current_user.books.include?(@book) %>
@@ -15,10 +15,12 @@
 
           <%# <p>There is nos review for this book</p> %>
           <%# <% else %>
-
-          <h1 class="title-book-show"><strong><%= @book.title %></strong><br>
-          <%= @book.author.first_name %> <%= @book.author.last_name %></h1>
-          <br>
+          <div class="title-review">
+          <h1><strong><%= @book.title %></strong></h1>
+          </div>
+          <br><div class="subtitle-review">
+          <%= @book.author.first_name %> <%= @book.author.last_name %>
+          </div>
   <%#         <p>   STARS   </p>  %>
 
           <p><strong>Reviews</strong></p>
