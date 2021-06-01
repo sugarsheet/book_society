@@ -1,4 +1,3 @@
-
 <div class="main-container-content">
   <div class="review-form">
     <div class="rounded py-3">
@@ -8,7 +7,7 @@
           <p><strong><%=@book.title%></strong>, <%=@book.author.first_name%> <%=@book.author.last_name %></p>
         </div>
 
-        <h3 class="text-center mb-4 mt-5"> + Add to bookshelf</h3>
+        <h3 class="text-center mb-4 mt-5"><strong> + Add to bookshelf</strong></h3>
 
         <div class="review-input">
           <%= simple_form_for [@book, @review] do |f| %>
