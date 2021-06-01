@@ -4,7 +4,7 @@ Specific CSS for your home-page
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: rgb(237, 220, 210);
+  background-color: #fdfdfd;
   min-height: 100vh;
   flex-grow: 1;
 
@@ -19,8 +19,13 @@ Specific CSS for your home-page
 .main-container-content {
 
   align-items: center;
+<<<<<<< HEAD
   text-align: left;
   background-color: whitesmoke;
+=======
+  text-align: center;
+  background-color: #fdfdfd;
+>>>>>>> 95afddc26e30308fdd1e83e404209fe36248a96c
   min-height: 100vh;
   max-height: 90vh;
   overflow: scroll;

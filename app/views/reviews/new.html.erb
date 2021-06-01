@@ -2,19 +2,25 @@
   <div class="review-form">
     <div class="rounded py-3">
       <div class="container">
-        <div class="card-product">
-          <img height="150" src="http://res.cloudinary.com/drojktwel/image/upload/c_fill,h_300/bgoc6fvd34yydusdlb6ocrjyjpzk">
-          <p><strong><%=@book.title%></strong>, <%=@book.author.first_name%> <%=@book.author.last_name %></p>
+        <div class="card-product-review">
+          <img height="150" src="http://res.cloudinary.com/drojktwel/image/upload/c_fill,h_300/bgoc6fvd34yydusdlb6ocrjyjpzk" class="review-img">
+          <div>
+          <strong><%=@book.title%></strong>
+          <br>
+            <div class="subtitle-review-new">
+            <%=@book.author.first_name%><%=@book.author.last_name %>
+            </div>
+          </div>
         </div>
 
-        <h3 class="text-center mb-4 mt-5"><strong> + Add to bookshelf</strong></h3>
+        <h3 class="text-center mb-4 mt-5"><strong> Add this book to your bookshelf !</strong></h3>
 
         <div class="review-input">
           <%= simple_form_for [@book, @review] do |f| %>
-            <%= f.input :rating, collection: (1..5).to_a, label: "Rating"%>
+            <%= f.input :rating, collection: (1..5).to_a, label: "Give a rating"%>
 
-          <div class="review-form">
-              <%= f.input :content, placeholder: "Min 30 characters", label: "Review" %>
+          <div class="review-form mt-4">
+              <%= f.input :content, placeholder: "Min 30 characters", label: "Your review" %>
               <div class="post-button">
                 <%= f.submit class: 'btn-review', value: "Post"%>
               </div>

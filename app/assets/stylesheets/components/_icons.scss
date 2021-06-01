@@ -16,10 +16,18 @@
 
 
 .bi-star-fill {
-  color: rgb(255, 230, 0);
+  color: #e9c46a;
 }
 
 
 .bi-star {
-  color: rgb(255, 230, 0);
+  color: #e9c46a;
+}
+
+.trash_celia {
+color: grey;
+&:hover {
+  color: black;
+  width: 15px;
+}
 }
