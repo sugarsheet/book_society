@@ -4,7 +4,12 @@
       <div class="container">
         <div class="card-product">
           <img height="150" src="http://res.cloudinary.com/drojktwel/image/upload/c_fill,h_300/bgoc6fvd34yydusdlb6ocrjyjpzk">
-          <p><strong><%=@book.title%></strong>, <%=@book.author.first_name%> <%=@book.author.last_name %></p>
+           <div class="title-review">
+          <p><strong><%=@book.title%></strong>
+           </div>
+           <br><div class="subtitle-review">
+          <%=@book.author.first_name%> <%=@book.author.last_name %></p>
+          </div>
         </div>
 
         <h3 class="text-center mb-4 mt-5"><strong> + Add to bookshelf</strong></h3>

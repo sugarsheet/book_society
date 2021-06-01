@@ -4,10 +4,6 @@ class PagesController < ApplicationController
   def home
   end
 
-
-
-
-
   def dashboard
     @user = current_user
     @my_read_books = current_user.books
@@ -32,5 +28,11 @@ class PagesController < ApplicationController
     else
      redirect_to signup_path
     end
+  end
+
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to dashboard_path
   end
 end

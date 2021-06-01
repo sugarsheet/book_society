@@ -2,9 +2,9 @@ class Book < ApplicationRecord
   acts_as_favoritable
 
   belongs_to :author
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   has_many :users, through: :reviews
-  has_many :recommended_books
+  has_many :recommended_books, dependent: :destroy
   has_one_attached :photo
   has_many :likes, dependent: :destroy
   validates :isbn, uniqueness: true
