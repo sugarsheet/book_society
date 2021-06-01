@@ -14,39 +14,28 @@
     border: 1px solid #ced4da;
     border-radius: 5px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
 }
-
 .collapse {
   display: block !important;
 }
-
 .text-list {
   width: 308px;
-
 }
-
 .text-list a {
   color: hsla(357, 88%, 32%, 0.932);
 }
-
-
 .round-img-dashboard {
     border-radius: 73px;
     height: 55px;
     padding: 8px;
 }
-
 .link-dashboard {
-
 }
-
 .space-header{
 display: flex;
 justify-content:space-between;
 padding: 2rem;
 }
-
 .bookshelf-list {
   list-style: none;
   margin-left: 18px;
@@ -56,28 +45,21 @@ padding: 2rem;
   font-size: 14px;
   font-family: 'Poppins';
 }
-
 .card-product-bookshelf {
-
   display: block;
   align-items: center;
   margin: 5px;
-
 }
-
-
 .card-product-bookshelf img {
-  height: 153px;
-  width: 120px;
+  height: 100%;
+  width: 89px;
   object-fit: cover;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
 }
-
 .card-product-book {
  padding: 16px;
  display: inline-flex;
  margin-left: 15px;
-align-items: center;
 }
 
