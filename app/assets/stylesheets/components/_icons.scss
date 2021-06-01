@@ -23,3 +23,11 @@
 .bi-star {
   color: #e9c46a;
 }
+
+.trash_celia {
+color: grey;
+&:hover {
+  color: black;
+  width: 15px;
+}
+}
