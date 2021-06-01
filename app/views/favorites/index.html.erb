@@ -1,20 +1,19 @@
-
 <div class="main-container-content">
-
-<img width="130" height="120" class="round-img" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
-  
-  <div class="mytabs">
-      <div class='tab'>
-        <h2>my bookshelf</h2>
-            <ul>
-              <% current_user.favorited_by_type('Book').each do |book| %>
-                <li>
-                  <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
-                    <%= link_to book_path(book) do %>
-                    <img src="<%= image_path('icons/edit_icon.svg') %>" alt="add to my bookshelf" class="wishlist_diamant">
-                  <% end %>
-                </li>
+  <div class="container">
+    <div class='tab'>
+      <h2><strong>Favorites</strong></h2>
+      <ul>
+        <% current_user.favorited_by_type('Book').each do |book| %>
+          <li>
+            <div class="card">
+              <%=book.title%>, <%=book.author.first_name%> <%=book.author.last_name%>
+                <%= link_to book_path(book) do %>
+                <img src="<%= image_path('icons/edit_icon.svg') %>" alt="Add to my bookshelf" class="wishlist_diamant">
               <% end %>
-            </ul>
-      </div>
+          </li>
+        <% end %>
+        </div>
+      </ul>
+    </div>
   </div>
+</div>

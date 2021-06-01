@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
     @review.user = @user
     @user = current_user
     if @review.save
-      redirect_to favorites_path(@book)
+      redirect_to dashboard_path
     else
       render :new
     end
