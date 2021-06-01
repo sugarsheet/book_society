@@ -1,7 +1,7 @@
-<div class="main-container-content">
-  <div class="container">
-    <div class='tab'>
-      <h2><strong>Favorites</strong></h2>
+<div class="container">
+  <div class="favorite-books">
+
+      <h2 class="favorite-title"><strong>Favorites</strong></h2>
       <ul>
         <% current_user.favorited_by_type('Book').each do |book| %>
           <li>
@@ -12,8 +12,8 @@
               <% end %>
           </li>
         <% end %>
-        </div>
+            </div>
       </ul>
-    </div>
   </div>
 </div>
+
