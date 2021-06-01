@@ -5,6 +5,9 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
+  def blank_stars
+  5 - rating.to_i
+  end
 
   def create
     @user = current_user
