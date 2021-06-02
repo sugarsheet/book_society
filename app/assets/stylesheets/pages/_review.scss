@@ -55,12 +55,22 @@ textarea.form-control {
   margin: 0;
 }
 
+.delete-book {
+    margin-top: 0;
+    display: flex;
+    width: 54px;
+    height: 15px;
+}
 
 .rating-stars-review {
   display: inline-flex;
 
 }
+.throw {
+  font-size: 12px;
+  color: grey;
 
+}
 .stars-css {
  font-size: 29px;
  width: 30%;

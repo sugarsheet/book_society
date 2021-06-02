@@ -1,11 +1,10 @@
 <div class="main-container-content">
-  <div class="space-header">
     <div class="link-dashboard">
       <div class="favorite-books">
 
 
 
-        <div class="title-favorite"><h1><strong>My favorites books</strong></h1></div>
+        <div class="title-favorite"><h1><strong>My favorite books</strong></h1></div>
         <div class="card-product-bookshelf">
           <% current_user.favorited_by_type('Book').each do |book| %>
             <div class="card-product-favorite">
@@ -35,5 +34,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
