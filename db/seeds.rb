@@ -122,6 +122,16 @@ jiwon_eun_review_meditations.user = user_1_jiwon_eun
 jiwon_eun_review_meditations.book = meditations
 jiwon_eun_review_meditations.save!
 
+jiwon_eun_review_steppenwolf = Review.new(content: "If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me. ", rating: 4, top: true)
+jiwon_eun_review_steppenwolf.user = user_1_jiwon_eun
+jiwon_eun_review_steppenwolf.book = steppenwolf
+jiwon_eun_review_steppenwolf.save!
+
+jiwon_eun_review_atomic_habits = Review.new(content: "The impact a 1% improvement per day can make may appear negligible at first, but Clear makes a compelling argument that in the case of habits, thinking small produces the biggest results over time. Habits are the compound interest of self-improvement.", rating: 5, top: true)
+jiwon_eun_review_atomic_habits.user = user_1_jiwon_eun
+jiwon_eun_review_atomic_habits.book = atomic_habits
+jiwon_eun_review_atomic_habits.save!
+
 
 audrey_lemoine_review_give_fuck = Review.new(content: "Save yourself some money and time. The only valuable lesson in this book is figure out the things that really matter, and not waste your time/energy getting upset about things that don't. There, done. Now you don't have to listen to a drunk dude rant about his explanation of buddhism and why he's so awesome.", rating:1, top: true)
 audrey_lemoine_review_give_fuck.user = user_2_audrey_lemoine
@@ -132,6 +142,16 @@ eliane_tang_review_meditations = Review.new(content: "It stands the test of time
 eliane_tang_review_meditations.user = user_3_eliane_tang
 eliane_tang_review_meditations.book = meditations
 eliane_tang_review_meditations.save!
+
+eliane_tang_review_atomic_habits = Review.new(content: "I will recommend this book for anyone who is eager to understand why habits are formed and how to nurture good habits and avoid bad ones.", rating:4, top: true)
+eliane_tang_review_atomic_habits.user = user_3_eliane_tang
+eliane_tang_review_atomic_habits.book = atomic_habits
+eliane_tang_review_atomic_habits.save!
+
+mathieu_chaplain_review_atomic_habits = Review.new(content: "I bought this book as I listened to an interview with James Clear on a podcast and found him interesting. His book, however was disappointing. It follows the typical self-help formula of common sense and old ideas combined with overly simplistic charts and celebrity anecdotes to remind you of what you already know.", rating: 3, top: true)
+mathieu_chaplain_review_atomic_habits.user = user_7_mathieu_chaplain
+mathieu_chaplain_review_atomic_habits.book = atomic_habits
+mathieu_chaplain_review_atomic_habits.save!
 
 mathieu_chaplain_review_meditations = Review.new(content: "There is no reason to feel unhappy, unfulfilled, or unappreciated and Meditations by Marcus Aurelius offers advice to anyone who is looking for self help, self love, and a rational way of directing life.", rating: 4, top: true)
 mathieu_chaplain_review_meditations.user = user_7_mathieu_chaplain
@@ -165,7 +185,7 @@ johann_bzaih_give_fuck.user = user_8_johann_bzaih
 johann_bzaih_give_fuck.book = give_fuck
 johann_bzaih_give_fuck.save!
 
-johann_bzaih_harry_potter = Review.new(content: "JK Rowling wrote a masterpiece and everyone will fall in love with the wizarding world.  The Harry Potter books are a must for any fantasy, magical readers.", rating: 5, top: true)
+johann_bzaih_harry_potter = Review.new(content: "JK Rowling wrote a masterpiece and everyone will fall in love with the wizarding world. The Harry Potter books are a must for any fantasy, magical readers.", rating: 5, top: true)
 johann_bzaih_harry_potter.user = user_8_johann_bzaih
 johann_bzaih_harry_potter.book = harry_potter
 johann_bzaih_harry_potter.save!
@@ -251,40 +271,40 @@ end
 
 ratings = [1, 2, 3, 4, 5]
 top = [true, false]
-r_book = Book.find_by title: 'Atomic Habits'
+r_book = Book.find_by title: 'Stillness is the Key'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book.id)
 
-book_reviewed1 = Book.find_by title: 'Letting go'
-review_1_user1 = Review.create(content: 'Over the years, thousands of students had asked for a practical technique by which to remove the inner blocks to happiness, success, health and, ultimately, Enlightenment. This book provides a mechanism for letting go of those blocks.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed1)
+book_reviewed1 = Book.find_by title: 'The Richest Man in Babylon'
+review_1_user1 = Review.create(content: 'The ancient Babylonians were the first people to discover the universal laws of prosperity. In his classic bestseller, "The Richest Man in Babylon," George S. Clason reveals their secrets for creating, growing, and preserving wealth.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed1)
 
-book_reviewed2 = Book.find_by title: 'Atomic Habits'
-review_2_user1 = Review.create(content: 'The best book I’ve read all year. Life changing.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed2)
+book_reviewed2 = Book.find_by title: 'Manual for Living'
+review_2_user1 = Review.create(content: 'The essence of perennial Stoic wisdom in aphorisms of stunning insight and simplicity. Book offers thoroughly contemporary and pragmatic reflections on how best to live with serenity and joy.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed2)
 
-book_reviewed3 = Book.find_by title: 'Steppenwolf'
-review_3_user1 = Review.create(content: 'If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed3)
+book_reviewed3 = Book.find_by title: 'Demian'
+review_3_user1 = Review.create(content: 'Emil, the main charater s entire existence can be summarized as a struggle between two worlds: the show world of illusion (related to the Hindu concept of maya) and the real world, the world of spiritual truth. In the course of the novel, accompanied and prompted by his mysterious classmate Max Demian, he detaches from and revolts against the superficial ideals of the world of appearances and eventually awakens into a realization of self.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed3)
 
-r_book_1_user1 = Book.find_by title: 'A promised Land'
+r_book_1_user1 = Book.find_by title: 'Dream Teams'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_1_user1.id)
 
-r_book_2_user1 = Book.find_by title: 'Blue Bloods'
+r_book_2_user1 = Book.find_by title: 'The Art of Profitability'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_2_user1.id)
 
-r_book_3_user1 = Book.find_by title: 'The Beautiful Things That Heaven Bears'
+r_book_3_user1 = Book.find_by title: 'Dream Teams'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_3_user1.id)
 
-r_book_4_user1 = Book.find_by title: 'Peter and the Starcatchers'
+r_book_4_user1 = Book.find_by title: 'Getting Things Done: The Art of Stress-Free Productivity'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_4_user1.id)
 
-r_book_5_user1 = Book.find_by title: 'The Thirteenth Tale: A Novel'
+r_book_5_user1 = Book.find_by title: 'Outliers: The Story of Success'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_5_user1.id)
 
-r_book_6_user1 = Book.find_by title: 'Stiff: The Curious Lives of Human Cadavers'
+r_book_6_user1 = Book.find_by title: 'Just Kids'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_6_user1.id)
 
-r_book_7_user1 = Book.find_by title: 'Anansi Boys'
+r_book_7_user1 = Book.find_by title: 'Intimations of Paradise'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_7_user1.id)
 
-r_book_8_user1 = Book.find_by title: 'The Looking Glass Wars'
+r_book_8_user1 = Book.find_by title: 'The Practicing Mind'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_8_user1.id)
 
-p '------------------ finished -------------------'
+'------------------ finished -------------------'
