@@ -1,8 +1,8 @@
 <div class="main-container-content">
   <div class="space-header">
     <div class="link-dashboard">
-
-      <div><%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
+      <% avatar_photo  = current_user.photo.attached? ? current_user.photo.key : "http://placehold.it/40x40" %>
+      <div><%= cl_image_tag avatar_photo, class:"avatar-user", crop: :fill %>
       </div>
         <div class="title-user">
           <a> Hi <%= current_user.first_name%>!</a>
