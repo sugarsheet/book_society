@@ -3,17 +3,18 @@
     <div class="rounded py-3">
       <div class="container">
         <div class="card-product-review">
-           <% if @book.photo.attached? %>
-          <%= cl_image_tag @book.photo.key, height: 300, crop: :fill, class: "review-img" %>
+          <% if @book.photo.attached? %>
+            <%= cl_image_tag @book.photo.key, height: 300, crop: :fill, class: "review-img" %>
           <% end %>
-          <% unless current_user.books.include?(@book) %>
+            <% unless current_user.books.include?(@book) %>
           <% end %>
           <div>
-          <h5><strong><%=@book.title%></strong></h5>
-          <br>
-            <div class="subtitle-review-new">
-            <%=@book.author.first_name%>             <span><%=@book.author.last_name %></span>
-            </div>
+              <h5><strong><%=@book.title%></strong></h5>
+              <br>
+                <div class="subtitle-review-new">
+                  <%=@book.author.first_name%>             
+                  <span><%=@book.author.last_name %></span>
+                </div>
           </div>
         </div>
 

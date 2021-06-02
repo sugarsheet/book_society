@@ -1,7 +1,7 @@
 <div class="main-container-content">
   <div class="space-header">
     <div class="link-dashboard">
-      <img class="round-img-dashboard" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
+    <%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
       <a class="title-user py-5"> Hi <%= current_user.first_name%>!</a>
     </div>
     <div>
