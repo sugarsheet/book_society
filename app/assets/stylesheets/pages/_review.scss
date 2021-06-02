@@ -26,6 +26,9 @@
 .review-img {
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 172px;
+  width: 120px;
+  margin: 5px;
 }
 
 .subtitle-review-new {
@@ -44,10 +47,12 @@ textarea.form-control {
   height: 118px;
   margin-right: 20px;
   justify-content: normal;
+  margin-top: 12px;
 }
 
 .review-input {
   text-align: left;
+  margin: 0;
 }
 
 .post-button {
@@ -72,4 +77,12 @@ textarea.form-control {
 .photo-book-show {
 border-radius: 5px;
 box-shadow: 0 0 15px rgba(0,0,0,0.2);
+width: 194px;
+height: 259px;
+}
+
+.text-center {
+  margin-top: 45px;
+  margin-bottom: 42px;
+  font-size: 20px;
 }

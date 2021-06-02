@@ -3,17 +3,21 @@
     <div class="rounded py-3">
       <div class="container">
         <div class="card-product-review">
-          <img height="150" src="http://res.cloudinary.com/drojktwel/image/upload/c_fill,h_300/bgoc6fvd34yydusdlb6ocrjyjpzk" class="review-img">
+           <% if @book.photo.attached? %>
+          <%= cl_image_tag @book.photo.key, height: 300, crop: :fill, class: "review-img" %>
+          <% end %>
+          <% unless current_user.books.include?(@book) %>
+          <% end %>
           <div>
-          <strong><%=@book.title%></strong>
+          <h5><strong><%=@book.title%></strong></h5>
           <br>
             <div class="subtitle-review-new">
-            <%=@book.author.first_name%><%=@book.author.last_name %>
+            <%=@book.author.first_name%>             <span><%=@book.author.last_name %></span>
             </div>
           </div>
         </div>
 
-        <h3 class="text-center mb-4 mt-5"><strong> Add this book to your bookshelf !</strong></h3>
+        <h3 class="text-center"><strong> Add this book to your bookshelf !</strong></h3>
 
         <div class="review-input">
           <%= simple_form_for [@book, @review] do |f| %>
@@ -22,7 +26,7 @@
           <div class="review-form mt-4">
               <%= f.input :content, placeholder: "Min 30 characters", label: "Your review" %>
               <div class="post-button">
-                <%= f.submit class: 'btn-review', value: "Post"%>
+                <%= f.submit class: 'btn-review',value: "Post" %>
               </div>
             <% end %>
           </div>
