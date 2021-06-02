@@ -4,7 +4,7 @@
   <% if @books %>
       <ul>
         <% @books.each do |book| %>
-          <li><%= link_to book_path(book) do %>
+          <li><%= link_to new_book_review_path(book) do %>
             <div class="card-product">
               <% if book.photo.attached? %>
                 <%= cl_image_tag book.photo.key, height: 150, crop: :fill %>
@@ -13,7 +13,7 @@
               <% end %>
               <div class="card-product-infos">
                 <h2><%= book.title %></h2>
-                <p><%= book.author.first_name %><strong><%= book.author.last_name %></strong></p>
+                <p><%= book.author.first_name %> <strong><%= book.author.last_name %></strong></p>
               </div>
             </div>
           <% end %>

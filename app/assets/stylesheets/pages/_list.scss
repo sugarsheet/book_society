@@ -11,22 +11,25 @@
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
   object-fit: cover;
+  border-left-radius: 1rem;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
+  opacity: 1;
+  margin: 0;
   margin-top: 8px;
+  color:black!important;
 }
 
 .card-product .card-product-infos {
