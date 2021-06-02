@@ -21,10 +21,12 @@
 
         <div class="review-input">
           <%= simple_form_for [@book, @review] do |f| %>
-            <%= f.input :rating, collection: (1..5).to_a, label: "Give a rating"%>
+            <div class="rating-stars-review">
+            <%= f.input :rating, collection: (1..5).to_a, label: "Give a rating", class:"stars-css"%>
+            </div>
 
-          <div class="review-form mt-4">
-              <%= f.input :content, placeholder: "Min 30 characters", label: "Your review", data: { disable_with: false } %>
+          <div class="review-form mt-3">
+              <%= f.input :content, placeholder: "Min 30 characters", label: "Your opinion matters", data: { disable_with: false } %>
               <div class="post-button">
                 <%= f.submit class: 'btn-review',value: "Post" %>
               </div>
