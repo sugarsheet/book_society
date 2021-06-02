@@ -19,6 +19,8 @@ Specific CSS for your home-page
 .main-container-content {
 
   align-items: center;
+  text-align: left;
+  background-color: whitesmoke;
   text-align: center;
   background-color: #fdfdfd;
   min-height: 100vh;
@@ -28,6 +30,18 @@ Specific CSS for your home-page
 
 }
 
+
+.main-container-content-logo {
+
+  align-items: center;
+  text-align: center;
+  background-color: whitesmoke;
+  min-height: 100vh;
+  max-height: 90vh;
+  overflow: scroll;
+  padding-bottom: 80px;
+
+}
 
 .image-home {
   width: 200px;

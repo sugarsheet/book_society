@@ -28,3 +28,14 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+
+.avatar-user {
+  border-radius: 50%;
+  height: 60px;
+  padding: 4px;
+  display: list-item;
+}
+
+.profile {
+  display: flex;
+}

@@ -1,15 +1,16 @@
 .btn-review {
   background: #000000;
   color: white;
-  width: 349px;
-  height: 38px;
+  width: 110px;
+  height: 58px;
   border-radius: 6px;
-  margin-top: 37px;
+  margin-top: 0px;
+  margin-bottom: 11px;
+
 &:hover {
   background: lightgray;
 }
 }
-
 
 
 .btn-signup {
@@ -21,7 +22,6 @@
   border-radius: 6px;
   text-align: center;
   justify-content: center;
-  font-family: "jost";
   margin-top: 10px;
 &:hover {
   background: lightgray;
@@ -82,4 +82,5 @@
     margin-bottom: 56px;
     align-items: center;
     border-color: black;
+    justify-content: center;
 }

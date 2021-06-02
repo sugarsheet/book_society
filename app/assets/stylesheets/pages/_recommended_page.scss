@@ -8,16 +8,13 @@
 
 .recommended-books p {
   text-align: center;
-  margin-inline-start: 15px;
 }
 
-.recommended-list h1 {
-  margin-bottom: 15px;
-  margin-inline-start: 15px;
-  font-size: 24px;
+.recommended-books h1 {
+  font-size: 28px;
   font-weight: bolder;
+  margin-left: 10px;
 }
-
 
 .recommended-list {
   display : flex;
@@ -25,16 +22,15 @@
   text-align: left;
   align-items: justify;
 }
+
 // ---------CARD-----------
 
 .card-recommended-book{
   background-color: white;
-  display: flex;
   box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .1);
   margin: 10px;
   position: relative;
-  flex-direction: column;
-  align-items: left;
+  height:210px;
 }
 
 .card-recommended-book p {
@@ -42,30 +38,31 @@
 }
 
 .card-recommended-book h1 {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bolder;
   text-align: left;
-
-}
-
-// ---------FOOTER-----------
-.footer-card-recommended-book{
-  margin-top: 35px;
-  padding: 20px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .1);
-}
-
-.footer-card-recommended-book a {
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.footer-card-recommended-book a:hover {
-  text-decoration: none;
-  background-color: black;
-  color: white;
-}
-
-.row {
+  max-width:70%;
+  padding-left:10px;
   margin-left: 0px;
-  margin-right: 0px;
+}
+
+//--------HEART------------
+
+.to-wishlist img {
+  position: absolute;
+  right: 25px;
+  bottom: 130px;
+}
+
+
+//------RATING-----
+.rating {
+  margin-left: 14px;
+}
+.rating p {
+  font-size: 12px;
+  color: lightgrey;
+  margin-left: 0px;
 }
 
