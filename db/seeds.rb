@@ -17,27 +17,19 @@ user_1_jiwon_eun.photo.attach(io: file, filename: "#{user_1_jiwon_eun.email}.jpg
 
 user_2_audrey_lemoine = User.new(email: "user2@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
 user_2_audrey_lemoine.save!
-file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1620056652/rj7gwp6dv72qok59wlmu.jpg")
-user_2_audrey_lemoine.photo.attach(io: file, filename: "#{user_2_audrey_lemoine.email}.jpg", content_type: 'image/jpg')
 
 user_3_eliane_tang = User.new(email: "user3@gmail.com", password: "123456", first_name: "Eliane", last_name:"Tang")
 user_3_eliane_tang.save!
-file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQGSN1eJRlHQ1w/profile-displayphoto-shrink_100_100/0/1595196313902?e=1628121600&v=beta&t=NITOGIsVGqzhG_zjFdrxk83H3lFLibDzmC57i00uX_w
-")
-user_3_eliane_tang.photo.attach(io: file, filename: "#{user_3_eliane_tang.email}.jpg", content_type: 'image/jpg')
-
 
 user_4_marcelo_giovannetti = User.new(email: "user4@gmail.com", password: "123456", first_name: "Marcelo", last_name:"Giovannetti")
 user_4_marcelo_giovannetti.save!
-file = URI.open("https://www.asylos.eu/GetImage.aspx?IDMF=243ff78a-3e7b-44ce-bd63-3914992323b8&w=240&h=236&src=mc")
-user_4_marcelo_giovannetti.photo.attach(io: file, filename: "#{user_4_marcelo_giovannetti.email}.jpg", content_type: 'image/jpg')
 
 user_5_grace_lee = User.new(email: "user5@gmail.com", password: "123456", first_name: "Grace", last_name:"Lee")
 user_5_grace_lee.save!
 
 user_6_anne_lepetit = User.new(email: "user6@gmail.com", password: "123456", first_name: "Anne", last_name:"Lepetit")
 user_6_anne_lepetit.save!
-file = URI.open("https://avatars.githubusercontent.com/u/80514699?v=4")
+file = URI.open("https://pbs.twimg.com/profile_images/1080113281715617792/Ct6pFcZl_400x400.jpg")
 user_6_anne_lepetit.photo.attach(io: file, filename: "#{user_6_anne_lepetit.email}.jpg", content_type: 'image/jpg')
 
 user_7_mathieu_chaplain = User.new(email: "user7@gmail.com", password: "123456", first_name: "Mathieu", last_name:"Chaplain")
@@ -51,10 +43,7 @@ file = URI.open("https://avatars.githubusercontent.com/u/66303954?v=4")
 user_8_johann_bzaih.photo.attach(io: file, filename: "#{user_8_johann_bzaih.email}.jpg", content_type: 'image/jpg')
 
 
-
-
 puts 'Finished!'
-
 
 
 puts 'Creating authors...'
@@ -79,8 +68,10 @@ jk_rowling.save!
 barack_obama = Author.new(first_name: "Barack", last_name:"Obama", bio: "Barack Obama was the 44th president of the United States, elected in November 2008 and holding office for two terms. He is the author of two previous New York Times bestselling books, Dreams from My Father and The Audacity of Hope, and the recipient of the 2009 Nobel Peace Prize. He lives in Washington, D.C., with his wife, Michelle. They have two daughters, Malia and Sasha.")
 barack_obama.save!
 
-puts 'Finished!'
+barbara_oakley = Author.new(first_name: "Barbara", last_name:"Oakley", bio: "Barbara Ann Oakley is an American professor of engineering at Oakland University and McMaster University whose online courses on learning are some of the most popular MOOC classes in the world. She is involved in multiple areas of research, ranging from STEM education, to learning practices.")
+barbara_oakley.save!
 
+puts 'Finished!'
 
 
 puts 'Creating books...'
@@ -88,11 +79,15 @@ atomic_habits = Book.new(title: "Atomic Habits", description:"People think that 
 atomic_habits.author = james_clear
 atomic_habits.save!
 
+mind_numbers = Book.new(title: "A mind for Numbers", description:"Dr. Oakley lets us in on the secrets to learning effectively—secrets that even dedicated and successful students wish they’d known earlier. Contrary to popular belief, math requires creative, as well as analytical, thinking.", isbn: "9780399165245")
+mind_numbers.author = barbara_oakley
+mind_numbers.save!
+
 letting_go = Book.new(title: "Letting go", description:"Hard Times is unusual in several ways. It is by far the shortest of Dickens's novels, barely a quarter of the length of those written immediately before and after it.[1] Also, unlike all but one of his other novels, Hard Times has neither a preface nor illustrations. Moreover, it is his only novel not to have scenes set in London.[1] Instead the story is set in the fictitious Victorian industrial Coketown, a generic Northern English mill-town, in some ways similar to Manchester, though smaller. Coketown may be partially based on 19th-century Preston.", isbn: "9781401945015")
 letting_go.author = david_hawkins
 letting_go.save!
 
-steppenwolf = Book.new(title: "Steppenwolf - a novel", description:"The novel was named after the German name for the steppe wolf. The story in large part reflects a profound crisis in Hesse's spiritual world during the 1920s. Steppenwolf is a poetical self-portrait of a man who felt himself to be half-human and half-wolf. This Faust-like and magical story is evidence of Hesse's searching philosophy and extraordinary sense of humanity as he tells of the humanization of a middle-aged misanthrope. ", isbn: "9783518188125")
+steppenwolf = Book.new(title: "Steppenwolf", description:"The novel was named after the German name for the steppe wolf. The story in large part reflects a profound crisis in Hesse's spiritual world during the 1920s. Steppenwolf is a poetical self-portrait of a man who felt himself to be half-human and half-wolf. This Faust-like and magical story is evidence of Hesse's searching philosophy and extraordinary sense of humanity as he tells of the humanization of a middle-aged misanthrope. ", isbn: "9783518188125")
 steppenwolf.author = hermann_hesse
 steppenwolf.save!
 
@@ -108,7 +103,7 @@ promised_land = Book.new(title: "A promised Land", description:"A riveting, deep
 promised_land.author = barack_obama
 promised_land.save!
 
-harry_potter = Book.new(title: "Harry Potter and the Sorcerer's Stone", description:"It follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.", isbn: "	9780439362139")
+harry_potter = Book.new(title: "Harry Potter and the Sorcerer's Stone", description:"It follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.", isbn: "9780439362139")
 harry_potter.author = jk_rowling
 harry_potter.save!
 
@@ -122,10 +117,15 @@ jiwon_eun_review_meditations.user = user_1_jiwon_eun
 jiwon_eun_review_meditations.book = meditations
 jiwon_eun_review_meditations.save!
 
-jiwon_eun_review_steppenwolf = Review.new(content: "If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me. ", rating: 4, top: true)
+jiwon_eun_review_steppenwolf = Review.new(content: "If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me.", rating: 4, top: true)
 jiwon_eun_review_steppenwolf.user = user_1_jiwon_eun
 jiwon_eun_review_steppenwolf.book = steppenwolf
 jiwon_eun_review_steppenwolf.save!
+
+jiwon_eun_review_mind_numbers = Review.new(content: "It is a practical book that reflects the best knowledge about how our brains process things – both logically and creatively, from the details up AND from the ideas down. I strongly recommend it to anyone who wants to learn better.", rating: 4, top: true)
+jiwon_eun_review_mind_numbers.user = user_1_jiwon_eun
+jiwon_eun_review_mind_numbers.book = mind_numbers
+jiwon_eun_review_mind_numbers.save!
 
 jiwon_eun_review_atomic_habits = Review.new(content: "The impact a 1% improvement per day can make may appear negligible at first, but Clear makes a compelling argument that in the case of habits, thinking small produces the biggest results over time. Habits are the compound interest of self-improvement.", rating: 5, top: true)
 jiwon_eun_review_atomic_habits.user = user_1_jiwon_eun
@@ -271,7 +271,7 @@ end
 
 ratings = [1, 2, 3, 4, 5]
 top = [true, false]
-r_book = Book.find_by title: 'Stillness is the Key'
+r_book = Book.find_by title: 'My Inventions: the autobiography of Nikola Tesla'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book.id)
 
 book_reviewed1 = Book.find_by title: 'The Richest Man in Babylon'
@@ -283,7 +283,7 @@ review_2_user1 = Review.create(content: 'The essence of perennial Stoic wisdom i
 book_reviewed3 = Book.find_by title: 'Demian'
 review_3_user1 = Review.create(content: 'Emil, the main charater s entire existence can be summarized as a struggle between two worlds: the show world of illusion (related to the Hindu concept of maya) and the real world, the world of spiritual truth. In the course of the novel, accompanied and prompted by his mysterious classmate Max Demian, he detaches from and revolts against the superficial ideals of the world of appearances and eventually awakens into a realization of self.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed3)
 
-r_book_1_user1 = Book.find_by title: 'Dream Teams'
+r_book_1_user1 = Book.find_by title: 'How to Lie with Statistics'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_1_user1.id)
 
 r_book_2_user1 = Book.find_by title: 'The Art of Profitability'
@@ -298,7 +298,7 @@ reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book
 r_book_5_user1 = Book.find_by title: 'Outliers: The Story of Success'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_5_user1.id)
 
-r_book_6_user1 = Book.find_by title: 'Just Kids'
+r_book_6_user1 = Book.find_by title: 'Shoe Dog: A Memoir by the Creator of Nike'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_6_user1.id)
 
 r_book_7_user1 = Book.find_by title: 'Intimations of Paradise'
