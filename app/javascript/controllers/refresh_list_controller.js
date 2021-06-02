@@ -11,11 +11,19 @@ export default class extends Controller {
   }
 
   update() {
+    const value = this.searchInputTarget.value;
+    console.log(value);
+
+    if (value!="") {
+      this.element.classList.add("active");
+    } else {
+      this.element.classList.remove("active");
+    }
+
     const url = `${this.formTarget.action}?query=${this.searchInputTarget.value}`
     fetch(url, { headers: { 'Accept': 'text/plain' } })
       .then(response => response.text())
       .then((data) => {
-        console.log(data);
         this.listTarget.outerHTML = data;
       })
   }

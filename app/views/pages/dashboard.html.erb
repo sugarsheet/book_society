@@ -1,6 +1,21 @@
 <div class="main-container-content">
 
-  <div class="title-dashboard"><h1><strong>My library</strong></h1></div>
+  <div class="space-header">
+    <div class="link-dashboard">
+      <% avatar_photo  = current_user.photo.attached? ? current_user.photo.key : "http://placehold.it/40x40" %>
+      <div><%= cl_image_tag avatar_photo, class:"avatar-user", crop: :fill %>
+      </div>
+        <div class="title-user">
+          <a> Hi <%= current_user.first_name%>!</a>
+        </div>
+    </div>
+    <div>
+      <%= link_to search_path do %>
+        <img src="<%= image_path('icons/search_celia.svg') %>" alt="search" class="search_icon">
+      <% end %>
+    </div>
+  </div>
+  <div class="title-dashboard"><h1><strong>My bookshelf</strong></h1></div>
   <div class="card-product-bookshelf">
     <% @reviews.each do |review| %>
         <div class="card-product-book">

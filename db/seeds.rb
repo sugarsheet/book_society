@@ -9,125 +9,173 @@ User.destroy_all
 
 
 puts 'Creating users...'
-user_1_john_irving = User.new(email: "user1@gmail.com", password: "123456", first_name: "John", last_name:"Irving")
-user_1_john_irving.save!
-file = URI.open("http://www.revish.com/usericons/JackP.jpg")
-user_1_john_irving.photo.attach(io: file, filename: "#{user_1_john_irving.email}.jpg", content_type: 'image/jpg')
+user_1_jiwon_eun = User.new(email: "user1@gmail.com", password: "123456", first_name: "Ji-won", last_name:"Eun")
+user_1_jiwon_eun.save!
+file = URI.open("https://avatars.githubusercontent.com/u/77082706?v=4")
+user_1_jiwon_eun.photo.attach(io: file, filename: "#{user_1_jiwon_eun.email}.jpg", content_type: 'image/jpg')
 
 
-user_2_tori_amos = User.new(email: "user2@gmail.com", password: "123456", first_name: "Tori", last_name:"Amos")
-user_2_tori_amos.save!
+user_2_audrey_lemoine = User.new(email: "user2@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
+user_2_audrey_lemoine.save!
+file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1620056652/rj7gwp6dv72qok59wlmu.jpg")
+user_2_audrey_lemoine.photo.attach(io: file, filename: "#{user_2_audrey_lemoine.email}.jpg", content_type: 'image/jpg')
 
-user_3_herbie_hancock = User.new(email: "user3@gmail.com", password: "123456", first_name: "Herbie", last_name:"Hancock")
-user_3_herbie_hancock.save!
-
-user_4_jack_dorsey = User.new(email: "user4@gmail.com", password: "123456", first_name: "Jack", last_name:"Dorsey")
-user_4_jack_dorsey.save!
-
-user_5_james_lebron = User.new(email: "user5@gmail.com", password: "123456", first_name: "James", last_name:"LeBron")
-user_5_james_lebron.save!
-
-user_6_tim_cook = User.new(email: "user6@gmail.com", password: "123456", first_name: "Tim", last_name:"Cook")
-user_6_tim_cook.save!
+user_3_eliane_tang = User.new(email: "user3@gmail.com", password: "123456", first_name: "Eliane", last_name:"Tang")
+user_3_eliane_tang.save!
+file = URI.open("https://media-exp1.licdn.com/dms/image/C4D03AQGSN1eJRlHQ1w/profile-displayphoto-shrink_100_100/0/1595196313902?e=1628121600&v=beta&t=NITOGIsVGqzhG_zjFdrxk83H3lFLibDzmC57i00uX_w
+")
+user_3_eliane_tang.photo.attach(io: file, filename: "#{user_3_eliane_tang.email}.jpg", content_type: 'image/jpg')
 
 
-user_7_mister_king = User.new(email: "user7@gmail.com", password: "123456", first_name: "User", last_name:"King")
-user_7_mister_king.save!
+user_4_marcelo_giovannetti = User.new(email: "user4@gmail.com", password: "123456", first_name: "Marcelo", last_name:"Giovannetti")
+user_4_marcelo_giovannetti.save!
+file = URI.open("https://www.asylos.eu/GetImage.aspx?IDMF=243ff78a-3e7b-44ce-bd63-3914992323b8&w=240&h=236&src=mc")
+user_4_marcelo_giovannetti.photo.attach(io: file, filename: "#{user_4_marcelo_giovannetti.email}.jpg", content_type: 'image/jpg')
+
+user_5_grace_lee = User.new(email: "user5@gmail.com", password: "123456", first_name: "Grace", last_name:"Lee")
+user_5_grace_lee.save!
+
+user_6_anne_lepetit = User.new(email: "user6@gmail.com", password: "123456", first_name: "Anne", last_name:"Lepetit")
+user_6_anne_lepetit.save!
+file = URI.open("https://avatars.githubusercontent.com/u/80514699?v=4")
+user_6_anne_lepetit.photo.attach(io: file, filename: "#{user_6_anne_lepetit.email}.jpg", content_type: 'image/jpg')
+
+user_7_mathieu_chaplain = User.new(email: "user7@gmail.com", password: "123456", first_name: "Mathieu", last_name:"Chaplain")
+user_7_mathieu_chaplain.save!
+file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1617571633/aw6cirb2tut59huiyvcm.jpg")
+user_7_mathieu_chaplain.photo.attach(io: file, filename: "#{user_7_mathieu_chaplain.email}.jpg", content_type: 'image/jpg')
+
+user_8_johann_bzaih = User.new(email: "user8@gmail.com", password: "123456", first_name: "Johann", last_name:"Bzaih")
+user_8_johann_bzaih.save!
+file = URI.open("https://avatars.githubusercontent.com/u/66303954?v=4")
+user_8_johann_bzaih.photo.attach(io: file, filename: "#{user_8_johann_bzaih.email}.jpg", content_type: 'image/jpg')
+
+
+
 
 puts 'Finished!'
 
 
 
 puts 'Creating authors...'
-charles_dickens = Author.new(first_name: "Charles", last_name:"Dickens", bio: "(1812–1870). Charles Dickens was a British author who penned beloved classics such as ‘Hard Times,' 'A Christmas Carol,' 'David Copperfield' and 'Great Expectations.'")
-charles_dickens.save!
+james_clear = Author.new(first_name: "James", last_name:"Clear", bio: "James Clear is an author and speaker focused on habits, decision-making, and continuous improvement.")
+james_clear.save!
 
-john_lewis = Author.new(first_name: "John", last_name:"Lewis", bio: "(1940–2020). He was the chairman of the Student Nonviolent Coordinating Committee (SNCC) from 1963 to 1966. Lewis was one of the 'Big Six' leaders of groups who organized the 1963 March on Washington. He fulfilled many key roles in the civil rights movement and its actions to end legalized racial segregation in the United States.")
-john_lewis.save!
+david_hawkins = Author.new(first_name: "David", last_name:"Hawkins", bio: "He is renowned as a pioneering researcher in the field of consciousness, as well as author, lecturer, clinician, physician, and scientist.")
+david_hawkins.save!
 
-paulo_coelho = Author.new(first_name: "Paulo", last_name:"Coelho", bio: "(1947–...). Paulo Coelho was born in Rio de Janeiro, Brazil, in August 1947. Before he became internationally known and a worldwide bestseller, he had to overcome many obstacles. ... Later, Paulo joined forces with rock star Raul Seixas and together they composed songs that revolutionized Brazilian rock music.")
-paulo_coelho.save!
+hermann_hesse = Author.new(first_name: "Hermann", last_name:"Hesse", bio: "As a Western man profoundly affected by the mysticism of Eastern thought, he wrote many novels, stories, and essays that bear a vital spiritual force that has captured the imagination and loyalty of many generations of readers. In 1946, he won the Nobel Prize for Literature for The Glass Bead Game.")
+hermann_hesse.save!
 
-neil_gaiman = Author.new(first_name: "Neil", last_name:"Gaiman", bio: "(1960–...). Neil Gaiman, in full Neil Richard Gaiman, (born November 10, 1960, Portchester, Hampshire, England), British writer who earned critical praise and popular success with richly imagined fantasy tales that frequently featured a darkly humorous tone. Gaiman grew up in Sussex and attended Whitgift School in Croydon.")
-neil_gaiman.save!
+mark_manson = Author.new(first_name: "Mark", last_name:"Manson", bio: "is an American self-help author and blogger. As of 2019 he had authored three books.")
+mark_manson.save!
+
+marcus_aurelius = Author.new(first_name: "Marcus", last_name:"Aurelius", bio: "Marcus Aurelius was Emperor of Rome from 161 to 180. He ruled with Lucius Verus as co-emperor from 161 until Verus' death in 169. Marcus Aurelius was the last of the so-called Five Good Emperors. He was a practitioner of Stoicism, and his untitled writing, commonly known as Meditations, is the most significant source of the modern understanding of ancient Stoic philosophy, and although it is not as well-known as Plato's Dialogues or Aristotle's Nicomachean Ethics, the Meditations is nevertheless considered by many commentators one of the greatest works of philosophy.")
+marcus_aurelius.save!
+
+jk_rowling = Author.new(first_name: "JK", last_name:"Rowling", bio: "Joanne wanted to be a writer from an early age. She wrote her first book at the age of six – a story about a rabbit, called ‘Rabbit’. At just eleven, she wrote her first novel – about seven cursed diamonds and the people who owned them.")
+jk_rowling.save!
+
+barack_obama = Author.new(first_name: "Barack", last_name:"Obama", bio: "Barack Obama was the 44th president of the United States, elected in November 2008 and holding office for two terms. He is the author of two previous New York Times bestselling books, Dreams from My Father and The Audacity of Hope, and the recipient of the 2009 Nobel Peace Prize. He lives in Washington, D.C., with his wife, Michelle. They have two daughters, Malia and Sasha.")
+barack_obama.save!
 
 puts 'Finished!'
 
 
 
 puts 'Creating books...'
-great_expectations = Book.new(title: "Great Expectations", description:"Great Expectations, novel by Charles Dickens, first published serially in All the Year Round in 1860–61 and issued in book form in 1861. The classic novel was one of its author’s greatest critical and popular successes. It chronicles the coming of age of the orphan Pip while also addressing such issues as social class and human worth.", isbn: "9781503275188")
-great_expectations.author = charles_dickens
-great_expectations.save!
+atomic_habits = Book.new(title: "Atomic Habits", description:"People think that when you want to change your life, you need to think big. But world-renowned habits expert James Clear has discovered another way. He knows that real change comes from the compound effect of hundreds of small decisions: doing two push-ups a day, waking up five minutes early, or holding a single short phone call.", isbn: "9780735211292")
+atomic_habits.author = james_clear
+atomic_habits.save!
 
-hard_times = Book.new(title: "Hard Times", description:"Hard Times is unusual in several ways. It is by far the shortest of Dickens's novels, barely a quarter of the length of those written immediately before and after it.[1] Also, unlike all but one of his other novels, Hard Times has neither a preface nor illustrations. Moreover, it is his only novel not to have scenes set in London.[1] Instead the story is set in the fictitious Victorian industrial Coketown, a generic Northern English mill-town, in some ways similar to Manchester, though smaller. Coketown may be partially based on 19th-century Preston.", isbn: "9781853262326")
-hard_times.author = charles_dickens
-hard_times.save!
+letting_go = Book.new(title: "Letting go", description:"Hard Times is unusual in several ways. It is by far the shortest of Dickens's novels, barely a quarter of the length of those written immediately before and after it.[1] Also, unlike all but one of his other novels, Hard Times has neither a preface nor illustrations. Moreover, it is his only novel not to have scenes set in London.[1] Instead the story is set in the fictitious Victorian industrial Coketown, a generic Northern English mill-town, in some ways similar to Manchester, though smaller. Coketown may be partially based on 19th-century Preston.", isbn: "9781401945015")
+letting_go.author = david_hawkins
+letting_go.save!
 
-march_trilogy = Book.new(title: "March (Trilogy)", description:"The March trilogy is an autobiographical black and white graphic novel trilogy about the Civil rights movement, told through the perspective of civil rights leader and U.S. Congressman John Lewis. The series is written by Lewis and Andrew Aydin, and illustrated and lettered by Nate Powell. The first volume, March: Book One, was published in August 2013, by Top Shelf Productions.[1] and the second volume, March: Book Two, was published in January 2015, with both volumes receiving positive reviews. March: Book Three was published in August 2016 along with a slipcase edition of the March trilogy.", isbn: "9781603093958")
-march_trilogy.author = john_lewis
-march_trilogy.save!
+steppenwolf = Book.new(title: "Steppenwolf - a novel", description:"The novel was named after the German name for the steppe wolf. The story in large part reflects a profound crisis in Hesse's spiritual world during the 1920s. Steppenwolf is a poetical self-portrait of a man who felt himself to be half-human and half-wolf. This Faust-like and magical story is evidence of Hesse's searching philosophy and extraordinary sense of humanity as he tells of the humanization of a middle-aged misanthrope. ", isbn: "9783518188125")
+steppenwolf.author = hermann_hesse
+steppenwolf.save!
 
-the_alchemist = Book.new(title: "The Alchemist", description:"The Alchemist follows the journey of an Andalusian shepherd boy named Santiago. Believing a recurring dream to be prophetic, he asks a Gypsy fortune teller in the nearby town about its meaning. The woman interprets the dream as a prophecy telling the boy that he will discover a treasure at the Egyptian pyramids.", isbn: "9780722532935")
-the_alchemist.author = paulo_coelho
-the_alchemist.save!
+give_fuck = Book.new(title: "The Subtle Art of Not Giving a F*ck", description:"The book is a reaction to the self-help industry and what Manson saw as a culture of mindless positivity that is not practical or helpful for most people. Manson uses many of his own personal experiences to illustrate how life's struggles often give it more meaning, which, he argues, is a better approach than constantly trying to be happy.", isbn: "	9780062457714")
+give_fuck.author = mark_manson
+give_fuck.save!
 
-the_sandman = Book.new(title: "The Sandman", description:"New York Times best-selling author Neil Gaiman's transcendent series The Sandman is often hailed as the definitive Vertigo title and one of the finest achievements in graphic storytelling. Gaiman created an unforgettable tale of the forces that exist beyond life and death by weaving ancient mythology, folklore and fairy tales with his own distinct narrative vision. ", isbn: "8601200479058")
-the_sandman.author = neil_gaiman
-the_sandman.save!
+meditations = Book.new(title: "Meditations", description:"New York Times best-selling author Neil Gaiman's transcendent series The Sandman is often hailed as the definitive Vertigo title and one of the finest achievements in graphic storytelling. Gaiman created an unforgettable tale of the forces that exist beyond life and death by weaving ancient mythology, folklore and fairy tales with his own distinct narrative vision. ", isbn: "8601200479058")
+meditations.author = marcus_aurelius
+meditations.save!
+
+promised_land = Book.new(title: "A promised Land", description:"A riveting, deeply personal account of history in the making—from the president who inspired us to believe in the power of democracy.", isbn: "9781524763169")
+promised_land.author = barack_obama
+promised_land.save!
+
+harry_potter = Book.new(title: "Harry Potter and the Sorcerer's Stone", description:"It follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.", isbn: "	9780439362139")
+harry_potter.author = jk_rowling
+harry_potter.save!
 
 puts 'Finished!'
 
 
 
 puts 'Creating reviews...'
-john_irving_review_great_expectations = Review.new(content: "That Pip imagines the cruel Miss Havisham is his benefactor, when all the while it is the good-hearted escaped convict Magwitch, is absolutely convincing, yet stunning. A salient point of the novel is how disappointing Pip is. He does not live up to his own expectations or ours", rating:5, top: true)
-john_irving_review_great_expectations.user = user_1_john_irving
-p john_irving_review_great_expectations
-john_irving_review_great_expectations.book = great_expectations
-john_irving_review_great_expectations.save!
+jiwon_eun_review_meditations = Review.new(content: "It might have been written centuries ago, however it is still valid today. If you are interested in Stoicism, this book is for you. ", rating:5, top: true)
+jiwon_eun_review_meditations.user = user_1_jiwon_eun
+jiwon_eun_review_meditations.book = meditations
+jiwon_eun_review_meditations.save!
 
 
-tim_cook_review_march_trilogy = Review.new(content: "My hope is that everyone reads this, and I would love to see the day that it is required reading in every school.", rating:5, top: true)
-tim_cook_review_march_trilogy.user = user_6_tim_cook
-tim_cook_review_march_trilogy.book = march_trilogy
-tim_cook_review_march_trilogy.save!
+audrey_lemoine_review_give_fuck = Review.new(content: "Save yourself some money and time. The only valuable lesson in this book is figure out the things that really matter, and not waste your time/energy getting upset about things that don't. There, done. Now you don't have to listen to a drunk dude rant about his explanation of buddhism and why he's so awesome.", rating:1, top: true)
+audrey_lemoine_review_give_fuck.user = user_2_audrey_lemoine
+audrey_lemoine_review_give_fuck.book = give_fuck
+audrey_lemoine_review_give_fuck.save!
 
-james_lebron_the_alchimist = Review.new(content: "As complex as that book is and as deep as that book is – it is so, so deep – I was able to figure out a way to translate it to my life at that point in time where I was like, oh I can remember when I was the 11-year-old kid and I was telling myself ‘Why me?’ some days and I was always telling myself, ‘OK, let’s change the narrative of why me, why us, why are we put in this position? Let’s change the narrative.’", rating:4, top: true)
-james_lebron_the_alchimist.user = user_5_james_lebron
-james_lebron_the_alchimist.book = the_alchemist
-james_lebron_the_alchimist.save!
+eliane_tang_review_meditations = Review.new(content: "It stands the test of time and is required reading in our social media age, where we mistakenly place importance on likes, clicks, and shares. Meditations provides practical information for those wishing to have a successful and fulfilling life.", rating:4, top: true)
+eliane_tang_review_meditations.user = user_3_eliane_tang
+eliane_tang_review_meditations.book = meditations
+eliane_tang_review_meditations.save!
 
-tori_amos_review_the_sandman = Review.new(content: "In 1990 I discovered Neil Gaiman’s comic book series The Sandman and wrote a song that references the Dream King and Neil. He called me up saying he really liked it, and we’ve been pals now for almost 30 years.", rating:4, top: true)
-tori_amos_review_the_sandman.user = user_2_tori_amos
-tori_amos_review_the_sandman.book = the_sandman
-tori_amos_review_the_sandman.save!
-
-
-john_irving_review_great_expectations = Review.new(content: "That Pip imagines the cruel Miss Havisham is his benefactor, when all the while it is the good-hearted escaped convict Magwitch, is absolutely convincing, yet stunning. A salient point of the novel is how disappointing Pip is. He does not live up to his own expectations or ours", rating:5, top: true)
-john_irving_review_great_expectations.user = user_7_mister_king
-john_irving_review_great_expectations.book = great_expectations
-john_irving_review_great_expectations.save!
+mathieu_chaplain_review_meditations = Review.new(content: "There is no reason to feel unhappy, unfulfilled, or unappreciated and Meditations by Marcus Aurelius offers advice to anyone who is looking for self help, self love, and a rational way of directing life.", rating: 4, top: true)
+mathieu_chaplain_review_meditations.user = user_7_mathieu_chaplain
+mathieu_chaplain_review_meditations.book = meditations
+mathieu_chaplain_review_meditations.save!
 
 
-tim_cook_review_march_trilogy = Review.new(content: "My hope is that everyone reads this, and I would love to see the day that it is required reading in every school.", rating:5, top: true)
-tim_cook_review_march_trilogy.user = user_7_mister_king
-tim_cook_review_march_trilogy.book = march_trilogy
-tim_cook_review_march_trilogy.save!
+marcelo_review_steppenwolf = Review.new(content: "If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me.", rating: 4, top: true)
+marcelo_review_steppenwolf.user = user_4_marcelo_giovannetti
+marcelo_review_steppenwolf.book = steppenwolf
+marcelo_review_steppenwolf.save!
 
-james_lebron_the_alchimist = Review.new(content: "As complex as that book is and as deep as that book is – it is so, so deep – I was able to figure out a way to translate it to my life at that point in time where I was like, oh I can remember when I was the 11-year-old kid and I was telling myself ‘Why me?’ some days and I was always telling myself, ‘OK, let’s change the narrative of why me, why us, why are we put in this position? Let’s change the narrative.’", rating:4, top: true)
-james_lebron_the_alchimist.user = user_7_mister_king
-james_lebron_the_alchimist.book = the_alchemist
-james_lebron_the_alchimist.save!
 
-tori_amos_review_the_sandman = Review.new(content: "In 1990 I discovered Neil Gaiman’s comic book series The Sandman and wrote a song that references the Dream King and Neil. He called me up saying he really liked it, and we’ve been pals now for almost 30 years.", rating:4, top: true)
-tori_amos_review_the_sandman.user = user_7_mister_king
-tori_amos_review_the_sandman.book = the_sandman
-tori_amos_review_the_sandman.save!
+jiwon_eun_review_give_fuck = Review.new(content: "The only redeeming value here is that it gives you a glimpse into the mind of a Narcissist. The writing is, at best, at a Middle School level and the depth of content is yet another level below that. It’s so shallow that it’s laughable.", rating: 1, top: true)
+jiwon_eun_review_give_fuck.user = user_1_jiwon_eun
+jiwon_eun_review_give_fuck.book = give_fuck
+jiwon_eun_review_give_fuck.save!
 
+mathieu_chaplain_give_fuck = Review.new(content: "Purchased it after reading all the positive reviews. Overrated and disappointing. ", rating: 1, top: true)
+mathieu_chaplain_give_fuck.user = user_7_mathieu_chaplain
+mathieu_chaplain_give_fuck.book = give_fuck
+mathieu_chaplain_give_fuck.save!
+
+anne_lepetit_review_meditations = Review.new(content: "I read the original of Meditations in Latin many years ago. This annotated edition is excellent for its expansion of historical context and detail. Marcus Aurelius’s ponderings are timeless and provide solace as well as human continuity from a vanished age.", rating: 4, top: true)
+anne_lepetit_review_meditations.user = user_6_anne_lepetit
+anne_lepetit_review_meditations.book = meditations
+anne_lepetit_review_meditations.save!
+
+johann_bzaih_give_fuck = Review.new(content: "If you find yourself addicted to social media, feel obliged to keep up with the Joneses, or think that celebrities are amazing role models and you want to change but don't know how, this book might help ground you. Otherwise I recommend giving it a pass - you probably know most of this stuff already and there are much funnier (and deeper) books out there if you're just looking for an entertaining writer who tells stories about their life while dropping a lot of f-bombs.", rating: 2, top: true)
+johann_bzaih_give_fuck.user = user_8_johann_bzaih
+johann_bzaih_give_fuck.book = give_fuck
+johann_bzaih_give_fuck.save!
+
+johann_bzaih_harry_potter = Review.new(content: "JK Rowling wrote a masterpiece and everyone will fall in love with the wizarding world.  The Harry Potter books are a must for any fantasy, magical readers.", rating: 5, top: true)
+johann_bzaih_harry_potter.user = user_8_johann_bzaih
+johann_bzaih_harry_potter.book = harry_potter
+johann_bzaih_harry_potter.save!
+
+eliane_tang_review_letting_go = Review.new(content: "This book changed my life and offers a process to free yourself from negative thinking that works.", rating: 5, top: true)
+eliane_tang_review_letting_go.user = user_3_eliane_tang
+eliane_tang_review_letting_go.book = letting_go
+eliane_tang_review_letting_go.save!
 
 puts 'Finished!'
-
 
 
 
@@ -203,40 +251,40 @@ end
 
 ratings = [1, 2, 3, 4, 5]
 top = [true, false]
-r_book = Book.find_by title: 'Hard Times'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book.id)
+r_book = Book.find_by title: 'Atomic Habits'
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book.id)
 
-book_reviewed1 = Book.find_by title: 'One Hundred Years of Solitude'
-review_1_user1 = Review.create(content: 'A breathless family epic that made me, like many, fall in love with the style of "Gabo"', rating:"#{ratings.sample}", top: top.sample, user: user_1_john_irving, book: book_reviewed1)
+book_reviewed1 = Book.find_by title: 'Letting go'
+review_1_user1 = Review.create(content: 'Over the years, thousands of students had asked for a practical technique by which to remove the inner blocks to happiness, success, health and, ultimately, Enlightenment. This book provides a mechanism for letting go of those blocks.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed1)
 
-book_reviewed2 = Book.find_by title: 'The Alchemist'
-review_2_user1 = Review.create(content: 'The Alchemist is a fantastic book and the storytelling is beautiful. The choice of words are impeccable, full of wisdom and philosophy . I totally loved it.', rating:"#{ratings.sample}", top: top.sample, user: user_1_john_irving, book: book_reviewed2)
+book_reviewed2 = Book.find_by title: 'Atomic Habits'
+review_2_user1 = Review.create(content: 'The best book I’ve read all year. Life changing.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed2)
 
-book_reviewed3 = Book.find_by title: 'March (Trilogy)'
-review_3_user1 = Review.create(content: 'This is a MUST have for anyone desiring to learn the truth regarding the Civil Rights Movement from and eye witness. Having been involved myself in a different southern state...the astonishing way Congressman Lewis brings everything up close and personal has left me speechless.', rating:"#{ratings.sample}", top: top.sample, user: user_1_john_irving, book: book_reviewed3)
+book_reviewed3 = Book.find_by title: 'Steppenwolf'
+review_3_user1 = Review.create(content: 'If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed3)
 
-r_book_1_user1 = Book.find_by title: 'Skin'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_1_user1.id)
+r_book_1_user1 = Book.find_by title: 'A promised Land'
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_1_user1.id)
 
 r_book_2_user1 = Book.find_by title: 'Blue Bloods'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_2_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_2_user1.id)
 
 r_book_3_user1 = Book.find_by title: 'The Beautiful Things That Heaven Bears'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_3_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_3_user1.id)
 
 r_book_4_user1 = Book.find_by title: 'Peter and the Starcatchers'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_4_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_4_user1.id)
 
 r_book_5_user1 = Book.find_by title: 'The Thirteenth Tale: A Novel'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_5_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_5_user1.id)
 
 r_book_6_user1 = Book.find_by title: 'Stiff: The Curious Lives of Human Cadavers'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_6_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_6_user1.id)
 
 r_book_7_user1 = Book.find_by title: 'Anansi Boys'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_7_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_7_user1.id)
 
 r_book_8_user1 = Book.find_by title: 'The Looking Glass Wars'
-reco_book = RecommendedBook.create(user_id: user_1_john_irving.id, book_id: r_book_8_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_8_user1.id)
 
 p '------------------ finished -------------------'
