@@ -34,7 +34,10 @@
 display: flex;
 justify-content:space-between;
 padding: 2rem;
+background-color: #fdfdfd;
+height: 80px;
 }
+
 .bookshelf-list {
   list-style: none;
   margin-left: 12px;
@@ -47,11 +50,11 @@ padding: 2rem;
 .card-product-bookshelf {
   display: block;
   align-items: center;
-  margin: -1px;
+  margin: 22px;
 }
 .card-product-bookshelf img {
   height: 108%;
-  width: 24%;
+  width: 30%;
   object-fit: cover;
   // box-shadow: 0 0 15px rgb(0 0 0 / 20%);
   border-radius: 5px;
@@ -62,7 +65,7 @@ padding: 2rem;
   margin-left: 13px;
   width: 109%;
   align-items: center;
-  height: 159px;
+  height: 177px;
 }
 
 .date-review {
@@ -71,10 +74,10 @@ padding: 2rem;
 }
 
 .title-dashboard {
-  margin-top: -32px;
+  margin-top: -4px;
   margin-bottom: 30px;
   font-weight: bold;
-  margin-left: 29px;
+  margin-left: 49px;
   text-align: left;
 
 }
@@ -84,17 +87,11 @@ padding: 2rem;
   align-items: center;
 }
 
-.delete-book {
-    margin-top: 0;
-    display: flow-root;
-    width: 54px;
-    height: 15px;
-}
 
 .list-books {
   display: flex;
   flex-direction: column;
-  height: 157px;
+  height: 147px;
 
 }
 
@@ -107,4 +104,18 @@ padding: 2rem;
 .title-user {
  font-size: 17px;
  font-style: bold;
+  margin-left: 52px;
+}
+
+
+.author-dash {
+ color: grey;
+ font-size: 14px;
+ margin-bottom: 0px;
+}
+
+.title-book-dash {
+  color: black;
+  font-size: 17px;
+  margin-bottom: -12px;
 }

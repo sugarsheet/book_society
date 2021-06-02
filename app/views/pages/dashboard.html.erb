@@ -1,4 +1,5 @@
 <div class="main-container-content">
+
   <div class="space-header">
     <div class="link-dashboard">
       <% avatar_photo  = current_user.photo.attached? ? current_user.photo.key : "http://placehold.it/40x40" %>
@@ -27,12 +28,11 @@
               <li class="list-books">
                 <div class="books-desc">
                   <%= link_to book_path(review.book) do %>
-                    <strong><%= review.book.title %></strong>
+                    <strong><h2 class="title-book-dash"><%= review.book.title %></h2></strong>
                   <% end %>
-                  <br><%= review.book.author.name %>
-                  <br><i class="date-review"><%= review.created_at.strftime("%B %d %Y")%></i>
+                  <br><h3 class="author-dash"><%= review.book.author.name %></h3>
+                  <br><i class="date-review">Post on <%= review.created_at.strftime("%d %B %Y")%></i>
                   <br>
-                </div>
                 <div class="rating-stars mt-2">
                   <% review.rating.times do %>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -45,11 +45,7 @@
                     </svg>
                   <% end %>
                 </div>
-                <div class="delete-book">
-                <%= link_to book_path(review.book), method: :delete  do %>
-                <img src="<%= image_path('icons/trash_celia.svg') %>" alt="search" class="trash_celia">
-                <% end %>
-                </div>
+               </div>
               </li>
             </ul>
         </div>
