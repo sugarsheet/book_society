@@ -42,7 +42,7 @@ class BooksController < ApplicationController
     else
       @user.favorite(@book)
     end
-    redirect_to new_book_review_path(@book)
+    redirect_to recommended_books_path
   end
 
   def destroy
