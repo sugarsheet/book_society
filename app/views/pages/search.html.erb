@@ -5,7 +5,7 @@
       <div class="space-header">
         <%= f.text_field :query,
           class: "form-control-dash-search",
-          placeholder: 'Find your book',
+          placeholder: 'Harry Potter ...',
           value: params[:query],
           autocomplete: "off",
           data: {
@@ -16,6 +16,7 @@
       </div>
     <% end %>
     <div data-refresh-list-target="list">
+    <h2 class="style-search-h2"> Add this book to your bookshelf </h2>
     </div>
   </div>
 </div>
