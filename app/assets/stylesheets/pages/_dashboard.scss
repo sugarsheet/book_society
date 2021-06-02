@@ -81,8 +81,10 @@ padding: 2rem;
 
 
 .delete-book {
-  margin-top: 3px;
-  font-size: 9px;
+    margin-top: 0;
+    display: flow-root;
+    width: 54px;
+    height: 15px;
 }
 
 .list-books {
@@ -93,5 +95,13 @@ padding: 2rem;
 }
 
 .rating-stars {
-  flex: 1;
+    flex: 0;
+    margin-bottom: 22px;
+
+}
+
+
+.title-user {
+ font-size: 17px;
+ font-style: bold;
 }

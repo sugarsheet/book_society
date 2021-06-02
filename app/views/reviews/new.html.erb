@@ -24,7 +24,7 @@
             <%= f.input :rating, collection: (1..5).to_a, label: "Give a rating"%>
 
           <div class="review-form mt-4">
-              <%= f.input :content, placeholder: "Min 30 characters", label: "Your review" %>
+              <%= f.input :content, placeholder: "Min 30 characters", label: "Your review", data: { disable_with: false } %>
               <div class="post-button">
                 <%= f.submit class: 'btn-review',value: "Post" %>
               </div>
