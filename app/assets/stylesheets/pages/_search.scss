@@ -1,3 +1,20 @@
+.active {
+  .style-search-h2 {
+    padding: 2rem;
+    text-align: left;
+    font-size: 16px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    margin-top: 0rem;
+  }
+  .space-header{
+    padding-top: 0;
+  }
+  .space-header .search_icon {
+    top: 16px;
+  }
+}
+
 .space-header{
   display: flex;
   justify-content:space-between;
@@ -29,4 +46,10 @@
 .form-control-dash-search:focus {
   border: 1px solid #ced4da!important;
   outline: none!important;
+}
+
+.style-search-h2{
+  margin-top: 5rem;
+  padding: 2rem;
+  text-align: center;
 }
