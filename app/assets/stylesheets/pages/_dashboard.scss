@@ -79,6 +79,10 @@ padding: 2rem;
 
 }
 
+.link-dashboard {
+  display: flex;
+  align-items: center;
+}
 
 .delete-book {
     margin-top: 0;
@@ -99,7 +103,6 @@ padding: 2rem;
     margin-bottom: 14px;
 
 }
-
 
 .title-user {
  font-size: 17px;

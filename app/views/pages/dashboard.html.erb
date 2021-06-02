@@ -1,8 +1,12 @@
 <div class="main-container-content">
   <div class="space-header">
     <div class="link-dashboard">
-    <%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
-      <a class="title-user py-5"> Hi <%= current_user.first_name%>!</a>
+
+      <div><%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
+      </div>
+        <div class="title-user">
+          <a> Hi <%= current_user.first_name%>!</a>
+        </div>
     </div>
     <div>
       <%= link_to search_path do %>
