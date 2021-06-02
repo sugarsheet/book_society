@@ -23,3 +23,10 @@ h2.favorite-title {
   margin-left: 0px;
   text-align: left;
 }
+
+.card-product-favorite img {
+    height: 100%;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
