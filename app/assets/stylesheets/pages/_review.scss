@@ -15,7 +15,7 @@
 .card-product-review {
   background-color: transparent;
   border-radius: 15px;
-  margin: 5px;
+  margin: -1px;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
@@ -51,8 +51,24 @@ textarea.form-control {
 }
 
 .review-input {
-  text-align: left;
+  text-align: center;
   margin: 0;
+}
+
+
+.rating-stars-review {
+  display: inline-flex;
+
+}
+
+.stars-css {
+ font-size: 29px;
+ width: 30%;
+}
+
+.br-theme-css-stars .br-widget a {
+font-size: 29px !important;
+margin-right: 19px !important;
 }
 
 .post-button {
@@ -82,7 +98,7 @@ height: 259px;
 }
 
 .text-center {
-  margin-top: 45px;
-  margin-bottom: 42px;
+  margin-top: 20px;
+  margin-bottom: 31px;
   font-size: 20px;
 }

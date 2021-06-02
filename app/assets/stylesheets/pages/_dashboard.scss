@@ -37,17 +37,17 @@ padding: 2rem;
 }
 .bookshelf-list {
   list-style: none;
-    margin-left: 12px;
-    padding-left: 0;
-    text-align: left;
-    font-size: 12px;
-    font-family: 'Poppins';
-    margin-top: 12px;
+  margin-left: 12px;
+  padding-left: 0;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Poppins';
+  margin-top: 12px;
 }
 .card-product-bookshelf {
   display: block;
   align-items: center;
-  margin: 5px;
+  margin: -1px;
 }
 .card-product-bookshelf img {
   height: 108%;
@@ -59,23 +59,23 @@ padding: 2rem;
 .card-product-book {
   padding: 16px;
   display: flex;
-  margin-left: 15px;
-  width: 100%;
+  margin-left: 13px;
+  width: 109%;
   align-items: center;
-  height: 150px;
+  height: 159px;
 }
 
 .date-review {
   color: grey;
-  font-size: 8px;
+  font-size: 14px;
 }
 
 .title-dashboard {
-    margin-top: -32px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    margin-left: 35px;
-    text-align: left;
+  margin-top: -32px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-left: 29px;
+  text-align: left;
 
 }
 
@@ -90,13 +90,13 @@ padding: 2rem;
 .list-books {
   display: flex;
   flex-direction: column;
-  height: 130px;
+  height: 157px;
 
 }
 
 .rating-stars {
     flex: 0;
-    margin-bottom: 22px;
+    margin-bottom: 14px;
 
 }
 
