@@ -5,7 +5,7 @@
         <% if @book.photo.attached? %>
           <%= cl_image_tag @book.photo.key, height: 300, crop: :fill, class: "photo-book-show" %>
         <% end %>
-        <%# <% if @book.reviews.empty? %>
+
           <% unless current_user.books.include?(@book) %>
           <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
           <%# else %>

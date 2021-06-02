@@ -42,7 +42,7 @@
                   <% end %>
                 </div>
                 <div class="delete-book">
-                <%= link_to book_path(review.book), method: :delete, data: { confirm: "Are you sure you want to remove this book?" }  do %>
+                <%= link_to book_path(review.book), method: :delete  do %>
                 <img src="<%= image_path('icons/trash_celia.svg') %>" alt="search" class="trash_celia">
                 <% end %>
                 </div>
