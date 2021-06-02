@@ -1,6 +1,7 @@
 
-<div class="main-container-content">
-  <div data-controller="refresh-list" class="search-bar">
+<div class="main-container-content" data-controller="refresh-list">
+  <h2 class="style-search-h2"> Add this book to your bookshelf </h2>
+  <div class="search-bar">
     <%= form_with url: dashboard_path, method: :get, html: { data: { refresh_list_target: 'form' } }  do |f| %>
       <div class="space-header">
         <%= f.text_field :query,
@@ -16,7 +17,6 @@
       </div>
     <% end %>
     <div data-refresh-list-target="list">
-    <h2 class="style-search-h2"> Add this book to your bookshelf </h2>
     </div>
   </div>
 </div>
