@@ -34,7 +34,7 @@
 display: flex;
 justify-content:space-between;
 padding: 2rem;
-background-color: #fdfdfd;
+background-color: whitesmoke;
 height: 80px;
 }
 
@@ -70,7 +70,7 @@ height: 80px;
 
 .date-review {
   color: grey;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .title-dashboard {
@@ -85,6 +85,7 @@ height: 80px;
 .link-dashboard {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 
@@ -104,7 +105,7 @@ height: 80px;
 .title-user {
  font-size: 17px;
  font-style: bold;
-  margin-left: 52px;
+  margin-left: 42px;
 }
 
 

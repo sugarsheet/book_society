@@ -17,10 +17,10 @@
                 <li class="list-books">
                   <div class="books-desc">
                     <%= link_to book_path(book) do %>
-                      <strong><%= book.title %></strong>
+                      <strong><h2 class="title-book-dash"><%= book.title %></h2></strong>
                     <% end %>
-                    <br><%= book.author.first_name %>
-                    <%=book.author.last_name%>
+                    <br><h2 class="author-dash"><%= book.author.first_name %>
+                    <%=book.author.last_name%></h2>
                   </div>
                   <%= link_to book_path(book) do %>
                     <div class="image-favorite">
