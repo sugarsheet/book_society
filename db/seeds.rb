@@ -16,11 +16,13 @@ user_1_jiwon_eun.photo.attach(io: file, filename: "#{user_1_jiwon_eun.email}.jpg
 
 user_2_audrey_lemoine = User.new(email: "user2@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
 user_2_audrey_lemoine.save!
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718824/wfwjfw_xhiktf.jpg")
+user_2_audrey_lemoine.photo.attach(io: file, filename: "#{user_2_audrey_lemoine.email}.jpg", content_type: 'image/jpg')
 
 
 user_3_eliane_tang = User.new(email: "user3@gmail.com", password: "123456", first_name: "Eliane", last_name:"Tang")
 user_3_eliane_tang.save!
-file = URI.open("https://static.standard.co.uk/s3fs-public/thumbnails/image/2013/09/11/13/12gemmachan1109.jpg?width=1200")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717958/IMG_8284_pf30vd.jpg")
 user_3_eliane_tang.photo.attach(io: file, filename: "#{user_3_eliane_tang.email}.jpg", content_type: 'image/jpg')
 
 user_4_marcelo_giovannetti = User.new(email: "user4@gmail.com", password: "123456", first_name: "Marcelo", last_name:"Giovannetti")
@@ -30,6 +32,8 @@ user_4_marcelo_giovannetti.photo.attach(io: file, filename: "#{user_3_eliane_tan
 
 user_5_grace_lee = User.new(email: "user5@gmail.com", password: "123456", first_name: "Grace", last_name:"Lee")
 user_5_grace_lee.save!
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718049/Gemma-chan1_ylawhz.jpg")
+user_5_grace_lee.photo.attach(io: file, filename: "#{user_5_grace_lee.email}.jpg", content_type: 'image/jpg')
 
 user_6_anne_lepetit = User.new(email: "user6@gmail.com", password: "123456", first_name: "Anne", last_name:"Lepetit")
 user_6_anne_lepetit.save!
@@ -99,6 +103,9 @@ thomas_sterner.save!
 malcolm_gladwell = Author.new(first_name: "Malcolm", last_name:"Gladwell", bio: "Malcolm Gladwell is the author of five New York Times bestsellers: The Tipping Point,Blink, Outliers,What the Dog Saw, and David and Goliath.")
 malcolm_gladwell.save!
 
+alisa_vitti = Author.new(first_name: "Alisa", last_name:"Vitti", bio: "Alisa Vitti, functional nutritionist and women’s hormone expert.")
+alisa_vitti.save!
+
 puts 'Finished!'
 
 
@@ -106,103 +113,103 @@ puts 'Creating books...'
 atomic_habits = Book.new(title: "Atomic Habits", description:"People think that when you want to change your life, you need to think big. But world-renowned habits expert James Clear has discovered another way. He knows that real change comes from the compound effect of hundreds of small decisions: doing two push-ups a day, waking up five minutes early, or holding a single short phone call.", isbn: "9780735211292")
 atomic_habits.author = james_clear
 atomic_habits.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51vSbWpF+dS._SY344_BO1,204,203,200_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718215/atomic_yz4xfk.jpg")
 atomic_habits.photo.attach(io: file, filename: "#{atomic_habits.title}.jpg", content_type: 'image/jpg')
 
 mind_numbers = Book.new(title: "A mind for Numbers", description:"Dr. Oakley lets us in on the secrets to learning effectively—secrets that even dedicated and successful students wish they’d known earlier. Contrary to popular belief, math requires creative, as well as analytical, thinking.", isbn: "9780399165245")
 mind_numbers.author = barbara_oakley
 mind_numbers.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/41WK-w2fOlL._SX331_BO1,204,203,200_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718136/mind_jlu0ow.jpg")
 mind_numbers.photo.attach(io: file, filename: "#{mind_numbers.title}.jpg", content_type: 'image/jpg')
 
 
 letting_go = Book.new(title: "Letting go", description:"Hard Times is unusual in several ways. It is by far the shortest of Dickens's novels, barely a quarter of the length of those written immediately before and after it.[1] Also, unlike all but one of his other novels, Hard Times has neither a preface nor illustrations. Moreover, it is his only novel not to have scenes set in London.[1] Instead the story is set in the fictitious Victorian industrial Coketown, a generic Northern English mill-town, in some ways similar to Manchester, though smaller. Coketown may be partially based on 19th-century Preston.", isbn: "9781401945015")
 letting_go.author = david_hawkins
 letting_go.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/31sgGYGLxlL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717717/lettinggo_chqcat.png")
 letting_go.photo.attach(io: file, filename: "#{letting_go.title}.jpg", content_type: 'image/jpg')
 
 steppenwolf = Book.new(title: "Steppenwolf", description:"The novel was named after the German name for the steppe wolf. The story in large part reflects a profound crisis in Hesse's spiritual world during the 1920s. Steppenwolf is a poetical self-portrait of a man who felt himself to be half-human and half-wolf. This Faust-like and magical story is evidence of Hesse's searching philosophy and extraordinary sense of humanity as he tells of the humanization of a middle-aged misanthrope. ", isbn: "9783518188125")
 steppenwolf.author = hermann_hesse
 steppenwolf.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51ICDLS2S3L._SX331_BO1,204,203,200_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718256/hermann_lqhg4i.jpg")
 steppenwolf.photo.attach(io: file, filename: "#{steppenwolf.title}.jpg", content_type: 'image/jpg')
 
 
 give_fuck = Book.new(title: "The Subtle Art of Not Giving a F*ck", description:"The book is a reaction to the self-help industry and what Manson saw as a culture of mindless positivity that is not practical or helpful for most people. Manson uses many of his own personal experiences to illustrate how life's struggles often give it more meaning, which, he argues, is a better approach than constantly trying to be happy.", isbn: "	9780062457714")
 give_fuck.author = mark_manson
 give_fuck.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51mN3bY0JjL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717622/manson_uelkir.png")
 give_fuck.photo.attach(io: file, filename: "#{give_fuck.title}.jpg", content_type: 'image/jpg')
 
 meditations = Book.new(title: "Meditations", description:"New York Times best-selling author Neil Gaiman's transcendent series The Sandman is often hailed as the definitive Vertigo title and one of the finest achievements in graphic storytelling. Gaiman created an unforgettable tale of the forces that exist beyond life and death by weaving ancient mythology, folklore and fairy tales with his own distinct narrative vision. ", isbn: "8601200479058")
 meditations.author = marcus_aurelius
 meditations.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51971FRmZrL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717399/Meditations_vhifdt.png")
 meditations.photo.attach(io: file, filename: "#{meditations.title}.jpg", content_type: 'image/jpg')
 
 promised_land = Book.new(title: "A promised Land", description:"A riveting, deeply personal account of history in the making—from the president who inspired us to believe in the power of democracy.", isbn: "9781524763169")
 promised_land.author = barack_obama
 promised_land.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/41L5qgUW2fL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717532/obama_rall9v.png")
 promised_land.photo.attach(io: file, filename: "#{promised_land.title}.jpg", content_type: 'image/jpg')
 
 
 harry_potter = Book.new(title: "Harry Potter and the Sorcerer's Stone", description:"It follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.", isbn: "9780140136296")
 harry_potter.author = jk_rowling
 harry_potter.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51HSkTKlauL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718317/HP_yrydc2.jpg")
 harry_potter.photo.attach(io: file, filename: "#{harry_potter.title}.jpg", content_type: 'image/jpg')
 
 lie_statistics = Book.new(title: "How to Lie with Statistics", description:"The book is a brief, breezy illustrated volume outlining the misuse of statistics and errors in the interpretation of statistics, and how these errors may create incorrect conclusions.", isbn: "9780439362139")
 lie_statistics.author = darrell_huff
 lie_statistics.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51ekZGmxSlL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717442/lie-statistics_mmvfyl.png")
 lie_statistics.photo.attach(io: file, filename: "#{lie_statistics.title}.jpg", content_type: 'image/jpg')
 
 nikola_biography = Book.new(title: "My Inventions: the autobiography of Nikola Tesla", description:"Nikola Tesla (1857-1943) was a revolutionary Serbian scientist who forever changed the scientific fields of electricity and magnetism. His research laid much of the groundwork for modern electrical and communication systems, and his impressive accomplishments include development of the alternating-current electrical system, radio, the Tesla coil transformer, wireless transmission, and fluorescent lighting.", isbn: "9781612930930")
 nikola_biography.author = nikola_tesla
 nikola_biography.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51CyJlSxx9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718566/tesla_tc7pwm.jpg")
 nikola_biography.photo.attach(io: file, filename: "#{nikola_biography.title}.jpg", content_type: 'image/jpg')
 
 
 man_babylon = Book.new(title: "The Richest Man in Babylon", description:"Through these entertaining tales of merchants, tradesmen, and herdsmen, you'll learn how to keep more out what you earn; get out of debt; put your money to work; attract good luck; choose wise investments; and safeguard a lasting fortune.", isbn: "9781508524359")
 man_babylon.author = george_clason
 man_babylon.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51V0RSL8A5L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717748/babylon_atiq6e.png")
 man_babylon.photo.attach(io: file, filename: "#{man_babylon.title}.jpg", content_type: 'image/jpg')
 
 shoe_dog = Book.new(title: "Shoe Dog: A Memoir by the Creator of Nike", description:"The memoir chronicles the history of Nike from its early struggles to its evolution into one of the world's most recognized and profitable companies. It also highlights certain parts of Phil Knight's life.", isbn: "9781471146725")
 shoe_dog.author = phil_knight
 shoe_dog.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51yDI-SlwFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717661/nike_ljo0a6.png")
 shoe_dog.photo.attach(io: file, filename: "#{shoe_dog.title}.jpg", content_type: 'image/jpg')
 
 productivity = Book.new(title: "Getting Things Done: The Art of Stress-Free Productivity", description:"Allen's premise is simple: our productivity is directly proportional to our ability to relax. Only when our minds are clear and our thoughts are organized can we achieve effective productivity and unleash our creative potential.", isbn: "9780142000281")
 productivity.author = david_allen
 productivity.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51KNBNziJXL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622717577/thingsdone_ehwdfb.png")
 productivity.photo.attach(io: file, filename: "#{productivity.title}.jpg", content_type: 'image/jpg')
 
 
 flo = Book.new(title: "In the Flo", description:"In the FLO presents a revolutionary 4-week solution to manage your energy and time according to your female biochemistry. By working with each phase, you’ll support your hormones, unlock peak creativity and performance, and avoid burnout. You’ll know exactly when to eat certain foods, clear your social calendar, or ask for a raise.", isbn: "9780062870490")
-flo.author = christopher_burkett
+flo.author = alisa_vitti
 flo.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51M4YTEKJQL._SY421_BO1,204,203,200_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718622/flo_tvzryj.jpg")
 flo.photo.attach(io: file, filename: "#{flo.title}.jpg", content_type: 'image/jpg')
 
 
 practicind_mind = Book.new(title: "The Practicing Mind", description:"In those times when we want to acquire a new skill or face a formidable challenge we hope to overcome, what we need most are patience, focus, and discipline, traits that seem elusive or difficult to maintain.", isbn: "9780977657209")
 practicind_mind.author = thomas_sterner
 practicind_mind.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/418ln0JJLqL._SX311_BO1,204,203,200_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718686/sterner_erkomv.jpg")
 practicind_mind.photo.attach(io: file, filename: "#{practicind_mind.title}.jpg", content_type: 'image/jpg')
 
 outliers = Book.new(title: "Outliers: The Story of Success", description:"Gladwell's book states early that success doesn't happen in a vacuum. It isn't based on intelligence, but on a variety of factors, and he uses multiple examples to demonstrate that we as a nation could have many more successful people in our country if we were to accept that it takes a village to make successes out of our children. In fact, he shows that hard work and opportunity in almost all cases are more important than intelligence.", isbn: "9780316196956")
-outliers.author = thomas_sterner
+outliers.author = malcolm_gladwell
 outliers.save!
-file = URI.open("https://images-na.ssl-images-amazon.com/images/I/41LO6QRvIuL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg")
+file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718730/jiji_bgscek.jpg")
 outliers.photo.attach(io: file, filename: "#{outliers.title}.jpg", content_type: 'image/jpg')
 
 
