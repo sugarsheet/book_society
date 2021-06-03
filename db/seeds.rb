@@ -9,10 +9,12 @@ User.destroy_all
 
 
 puts 'Creating users...'
-user_1_jiwon_eun = User.new(email: "user1@gmail.com", password: "123456", first_name: "Ji-won", last_name:"Eun")
-user_1_jiwon_eun.save!
-file = URI.open("https://avatars.githubusercontent.com/u/77082706?v=4")
-user_1_jiwon_eun.photo.attach(io: file, filename: "#{user_1_jiwon_eun.email}.jpg", content_type: 'image/jpg')
+
+user_1_anne_lepetit = User.new(email: "user1@gmail.com", password: "123456", first_name: "Anne", last_name:"Lepetit")
+user_1_anne_lepetit.save!
+file = URI.open("https://pbs.twimg.com/profile_images/1080113281715617792/Ct6pFcZl_400x400.jpg")
+user_1_anne_lepetit.photo.attach(io: file, filename: "#{user_1_anne_lepetit.email}.jpg", content_type: 'image/jpg')
+
 
 user_2_audrey_lemoine = User.new(email: "user2@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
 user_2_audrey_lemoine.save!
@@ -28,17 +30,17 @@ user_3_eliane_tang.photo.attach(io: file, filename: "#{user_3_eliane_tang.email}
 user_4_marcelo_giovannetti = User.new(email: "user4@gmail.com", password: "123456", first_name: "Marcelo", last_name:"Giovannetti")
 user_4_marcelo_giovannetti.save!
 file = URI.open("https://3.bp.blogspot.com/-eV-T3ODTb6w/TbKDUcAASjI/AAAAAAAAJh0/JkU0qOIPo8A/s1600/Anthony_Perkins2.jpg")
-user_4_marcelo_giovannetti.photo.attach(io: file, filename: "#{user_3_eliane_tang.email}.jpg", content_type: 'image/jpg')
+user_4_marcelo_giovannetti.photo.attach(io: file, filename: "#{user_4_marcelo_giovannetti.email}.jpg", content_type: 'image/jpg')
 
 user_5_grace_lee = User.new(email: "user5@gmail.com", password: "123456", first_name: "Grace", last_name:"Lee")
 user_5_grace_lee.save!
 file = URI.open("https://res.cloudinary.com/drojktwel/image/upload/v1622718049/Gemma-chan1_ylawhz.jpg")
 user_5_grace_lee.photo.attach(io: file, filename: "#{user_5_grace_lee.email}.jpg", content_type: 'image/jpg')
 
-user_6_anne_lepetit = User.new(email: "user6@gmail.com", password: "123456", first_name: "Anne", last_name:"Lepetit")
-user_6_anne_lepetit.save!
-file = URI.open("https://pbs.twimg.com/profile_images/1080113281715617792/Ct6pFcZl_400x400.jpg")
-user_6_anne_lepetit.photo.attach(io: file, filename: "#{user_6_anne_lepetit.email}.jpg", content_type: 'image/jpg')
+user_6_jiwon_eun = User.new(email: "user6@gmail.com", password: "123456", first_name: "Ji-won", last_name:"Eun")
+user_6_jiwon_eun.save!
+file = URI.open("https://avatars.githubusercontent.com/u/77082706?v=4")
+user_6_jiwon_eun.photo.attach(io: file, filename: "#{user_6_jiwon_eun.email}.jpg", content_type: 'image/jpg')
 
 user_7_mathieu_chaplain = User.new(email: "user7@gmail.com", password: "123456", first_name: "Mathieu", last_name:"Chaplain")
 user_7_mathieu_chaplain.save!
@@ -219,12 +221,12 @@ puts 'Finished!'
 
 puts 'Creating reviews...'
 jiwon_eun_review_meditations = Review.new(content: "It might have been written centuries ago, however it is still valid today. If you are interested in Stoicism, this book is for you. ", rating:5, top: true)
-jiwon_eun_review_meditations.user = user_1_jiwon_eun
+jiwon_eun_review_meditations.user = user_6_jiwon_eun
 jiwon_eun_review_meditations.book = meditations
 jiwon_eun_review_meditations.save!
 
 jiwon_eun_review_steppenwolf = Review.new(content: "If you are an artist, introvert, traveler, loner, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me.", rating: 4, top: true)
-jiwon_eun_review_steppenwolf.user = user_1_jiwon_eun
+jiwon_eun_review_steppenwolf.user = user_6_jiwon_eun
 jiwon_eun_review_steppenwolf.book = steppenwolf
 jiwon_eun_review_steppenwolf.save!
 
@@ -234,7 +236,7 @@ grace_lee_review_mind_numbers.book = mind_numbers
 grace_lee_review_mind_numbers.save!
 
 jiwon_eun_review_atomic_habits = Review.new(content: "The impact a 1% improvement per day can make may appear negligible at first, but Clear makes a compelling argument that in the case of habits, thinking small produces the biggest results over time. Habits are the compound interest of self-improvement.", rating: 5, top: true)
-jiwon_eun_review_atomic_habits.user = user_1_jiwon_eun
+jiwon_eun_review_atomic_habits.user = user_6_jiwon_eun
 jiwon_eun_review_atomic_habits.book = atomic_habits
 jiwon_eun_review_atomic_habits.save!
 
@@ -242,6 +244,11 @@ audrey_lemoine_review_give_fuck = Review.new(content: "Save yourself some money 
 audrey_lemoine_review_give_fuck.user = user_2_audrey_lemoine
 audrey_lemoine_review_give_fuck.book = give_fuck
 audrey_lemoine_review_give_fuck.save!
+
+anne_review_give_fuck = Review.new(content: "It s a very surface level look at Stoicism and western Buddhism. It has some good things to say, and it's a decent introduction to some great concepts, but it's pretty cringe and misogynistic.", rating:2, top: true)
+anne_review_give_fuck.user = user_1_anne_lepetit
+anne_review_give_fuck.book = give_fuck
+anne_review_give_fuck.save!
 
 eliane_tang_review_meditations = Review.new(content: "It stands the test of time and is required reading in our social media age, where we mistakenly place importance on likes, clicks, and shares. Meditations provides practical information for those wishing to have a successful and fulfilling life.", rating:4, top: true)
 eliane_tang_review_meditations.user = user_3_eliane_tang
@@ -263,15 +270,19 @@ mathieu_chaplain_review_meditations.user = user_7_mathieu_chaplain
 mathieu_chaplain_review_meditations.book = meditations
 mathieu_chaplain_review_meditations.save!
 
-
 marcelo_review_steppenwolf = Review.new(content: "If you are an artist, introvert, or simply a deep thinker, this book is for you. Hesse articulates parts of my identity I never knew were there simply because I did not have his language to explain them to me.", rating: 4, top: true)
 marcelo_review_steppenwolf.user = user_4_marcelo_giovannetti
 marcelo_review_steppenwolf.book = steppenwolf
 marcelo_review_steppenwolf.save!
 
+anne_review_steppenwolf = Review.new(content: "It's a quick, easy read, and it includes many poetic passages, but it strikes me as philosophy or psychology lite. I recommend it to young intellectuals and artists.", rating: 4, top: true)
+anne_review_steppenwolf.user = user_1_anne_lepetit
+anne_review_steppenwolf.book = steppenwolf
+anne_review_steppenwolf.save!
+
 
 jiwon_eun_review_give_fuck = Review.new(content: "The only redeeming value here is that it gives you a glimpse into the mind of a Narcissist. The writing is, at best, at a Middle School level and the depth of content is yet another level below that. It’s so shallow that it’s laughable.", rating: 1, top: true)
-jiwon_eun_review_give_fuck.user = user_1_jiwon_eun
+jiwon_eun_review_give_fuck.user = user_6_jiwon_eun
 jiwon_eun_review_give_fuck.book = give_fuck
 jiwon_eun_review_give_fuck.save!
 
@@ -281,7 +292,7 @@ mathieu_chaplain_give_fuck.book = give_fuck
 mathieu_chaplain_give_fuck.save!
 
 anne_lepetit_review_meditations = Review.new(content: "I read the original of Meditations in Latin many years ago. This annotated edition is excellent for its expansion of historical context and detail. Marcus Aurelius’s ponderings are timeless and provide solace as well as human continuity from a vanished age.", rating: 4, top: true)
-anne_lepetit_review_meditations.user = user_6_anne_lepetit
+anne_lepetit_review_meditations.user = user_1_anne_lepetit
 anne_lepetit_review_meditations.book = meditations
 anne_lepetit_review_meditations.save!
 
@@ -317,9 +328,14 @@ eliane_tang_review_lie_statistics.book = lie_statistics
 eliane_tang_review_lie_statistics.save!
 
 jiwon_eun_review_lie_statistics = Review.new(content: "For anyone looking to better understand the tricks used by the media and marketing professionals, this is a great resource. No math required, this was written for the layperson. It's a quick and easy read. It is like putting on a pair of glasses that allow you to suddenly see clearly what you had never realised was blurred.", rating: 5, top: true)
-jiwon_eun_review_lie_statistics.user = user_1_jiwon_eun
+jiwon_eun_review_lie_statistics.user = user_6_jiwon_eun
 jiwon_eun_review_lie_statistics.book = lie_statistics
 jiwon_eun_review_lie_statistics.save!
+
+anne_harry_potter = Review.new(content: "I would definitely recommend this book because it keeps you reading without ever wanting to put the book down. By the end of the book you come to love the characters and you want to read more. You won't be disappointed because the second book in the series, Harry Potter and the Chamber of Secrets is just as great!", rating: 5, top: true)
+anne_harry_potter.user = user_1_anne_lepetit
+anne_harry_potter.book = harry_potter
+anne_harry_potter.save!
 
 puts 'Finished!'
 
@@ -398,39 +414,39 @@ end
 ratings = [1, 2, 3, 4, 5]
 top = [true, false]
 r_book = Book.find_by title: 'My Inventions: the autobiography of Nikola Tesla'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book.id)
 
 book_reviewed1 = Book.find_by title: 'The Richest Man in Babylon'
-review_1_user1 = Review.create(content: 'The ancient Babylonians were the first people to discover the universal laws of prosperity. In his classic bestseller, "The Richest Man in Babylon," George S. Clason reveals their secrets for creating, growing, and preserving wealth.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed1)
+review_1_user1 = Review.create(content: 'The ancient Babylonians were the first people to discover the universal laws of prosperity. In his classic bestseller, "The Richest Man in Babylon," George S. Clason reveals their secrets for creating, growing, and preserving wealth.', rating:"#{ratings.sample}", top: top.sample, user: user_1_anne_lepetit, book: book_reviewed1)
 
 book_reviewed2 = Book.find_by title: 'Meditations'
-review_2_user1 = Review.create(content: 'The essence of perennial Stoic wisdom in aphorisms of stunning insight and simplicity. Book offers thoroughly contemporary and pragmatic reflections on how best to live with serenity and joy.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed2)
+review_2_user1 = Review.create(content: 'The essence of perennial Stoic wisdom in aphorisms of stunning insight and simplicity. Book offers thoroughly contemporary and pragmatic reflections on how best to live with serenity and joy.', rating:"#{ratings.sample}", top: top.sample, user: user_6_jiwon_eun, book: book_reviewed2)
 
 book_reviewed3 = Book.find_by title: 'A mind for Numbers'
-review_3_user1 = Review.create(content: 'Contrary to popular belief, math requires creative, as well as analytical, thinking. Most people think that there’s only one way to do a problem, when in actuality, there are often a number of different solutions—you just need the creativity to see them.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed3)
+review_3_user1 = Review.create(content: 'Contrary to popular belief, math requires creative, as well as analytical, thinking. Most people think that there’s only one way to do a problem, when in actuality, there are often a number of different solutions—you just need the creativity to see them.', rating:"#{ratings.sample}", top: top.sample, user: user_1_anne_lepetit, book: book_reviewed3)
 
 r_book_1_user1 = Book.find_by title: 'How to Lie with Statistics'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_1_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_1_user1.id)
 
 r_book_2_user1 = Book.find_by title: 'A promised Land'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_2_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_2_user1.id)
 
 r_book_3_user1 = Book.find_by title: 'Steppenwolf'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_3_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_3_user1.id)
 
 r_book_4_user1 = Book.find_by title: 'Getting Things Done: The Art of Stress-Free Productivity'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_4_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_4_user1.id)
 
 r_book_5_user1 = Book.find_by title: 'Outliers: The Story of Success'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_5_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_5_user1.id)
 
 r_book_6_user1 = Book.find_by title: 'Shoe Dog: A Memoir by the Creator of Nike'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_6_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_6_user1.id)
 
 r_book_7_user1 = Book.find_by title: 'In the Flo'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_7_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_7_user1.id)
 
 r_book_8_user1 = Book.find_by title: 'The Practicing Mind'
-reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_8_user1.id)
+reco_book = RecommendedBook.create(user_id: user_1_anne_lepetit.id, book_id: r_book_8_user1.id)
 
 '------------------ finished -------------------'
