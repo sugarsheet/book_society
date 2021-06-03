@@ -17,7 +17,7 @@
                 <li class="list-books">
                   <div class="books-desc">
                     <%= link_to book_path(book) do %>
-                      <strong><h2 class="title-book-dash"><%= book.title %></h2></strong>
+                      <strong><h2 class="title-book-dash"><%= book.title.truncate(24) %></h2></strong>
                     <% end %>
                     <br><h2 class="author-dash"><%= book.author.first_name %>
                     <%=book.author.last_name%></h2>
