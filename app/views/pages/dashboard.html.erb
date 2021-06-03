@@ -31,7 +31,7 @@
                     <strong><h2 class="title-book-dash"><%= review.book.title %></h2></strong>
                   <% end %>
                   <br><h3 class="author-dash"><%= review.book.author.name %></h3>
-                  <br><i class="date-review">Post on <%= review.created_at.strftime("%d %B %Y")%></i>
+                  <br><i class="date-review">Posted on <%= review.created_at.strftime("%d %B %Y")%></i>
                   <br>
                 <div class="rating-stars mt-2">
                   <% review.rating.times do %>

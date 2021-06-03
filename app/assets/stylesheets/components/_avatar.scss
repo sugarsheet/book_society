@@ -33,9 +33,19 @@ img {
   border-radius: 50%;
   height: 43px;
   padding: 4px;
-  display: list-item;
+  display: flex;
+  margin-left: 91px;
+}
+
+.avatar-user-show {
+  border-radius: 50%;
+  height: 43px;
+  padding: 4px;
+  display: flex;
+  margin-left: 5px;
 }
 
 .profile {
   display: flex;
+  align-items: center;
 }
