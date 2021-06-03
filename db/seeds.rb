@@ -14,7 +14,6 @@ user_1_jiwon_eun.save!
 file = URI.open("https://avatars.githubusercontent.com/u/77082706?v=4")
 user_1_jiwon_eun.photo.attach(io: file, filename: "#{user_1_jiwon_eun.email}.jpg", content_type: 'image/jpg')
 
-
 user_2_audrey_lemoine = User.new(email: "user2@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
 user_2_audrey_lemoine.save!
 
@@ -74,6 +73,27 @@ barbara_oakley.save!
 nikola_tesla = Author.new(first_name: "Nikola", last_name:"Tesla", bio: "Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the modern alternating current electricity supply system.")
 nikola_tesla.save!
 
+darrell_huff = Author.new(first_name: "Darrell", last_name:"Huff", bio: "Darrell Huff was an American writer and is best known as the author of How to Lie with Statistics (1954), the best-selling statistics book of the second half of the twentieth century and for his use of statistics as a tobacco lobbyist.")
+darrell_huff.save!
+
+george_clason = Author.new(first_name: "George", last_name:"Clason", bio: "George S.Clason was an American author. He is most often associated with his book The Richest Man in Babylon which was first published in 1926.")
+george_clason.save!
+
+phil_knight = Author.new(first_name: "Phil", last_name:"Knight", bio: "In 1962, fresh out of business school, Phil Knight borrowed $50 from his father and created a company with a simple mission: import high-quality, low-cost athletic shoes from Japan.")
+phil_knight.save!
+
+david_allen = Author.new(first_name: "David", last_name:"Allen", bio: "David Allen is an American productivity consultant best known for the creation of a time management method called Getting Things Done.")
+david_allen.save!
+
+christopher_burkett = Author.new(first_name: "Christopher", last_name:"Burkett", bio: "Fine Art Photographer.")
+christopher_burkett.save!
+
+thomas_sterner = Author.new(first_name: "Thomas", last_name:"Sterner", bio: "Founder and CEO of The Practicing Mind Institute. As a successful entrepreneur he is considered an expert in Present Moment Functioning or PMF tm. He is a popular and in demand speaker who works with high performance individuals including, athletes, industry groups and individuals, helping them to operate effectively within high stress situations so that they can break through to new levels of mastery.")
+thomas_sterner.save!
+
+malcolm_gladwell = Author.new(first_name: "Malcolm", last_name:"Gladwell", bio: "Malcolm Gladwell is the author of five New York Times bestsellers: The Tipping Point,Blink, Outliers,What the Dog Saw, and David and Goliath.")
+malcolm_gladwell.save!
+
 puts 'Finished!'
 
 
@@ -106,9 +126,43 @@ promised_land = Book.new(title: "A promised Land", description:"A riveting, deep
 promised_land.author = barack_obama
 promised_land.save!
 
-harry_potter = Book.new(title: "Harry Potter and the Sorcerer's Stone", description:"It follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.", isbn: "9780439362139")
+harry_potter = Book.new(title: "Harry Potter and the Sorcerer's Stone", description:"It follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.", isbn: "9780140136296")
 harry_potter.author = jk_rowling
 harry_potter.save!
+
+lie_statistics = Book.new(title: "How to Lie with Statistics", description:"The book is a brief, breezy illustrated volume outlining the misuse of statistics and errors in the interpretation of statistics, and how these errors may create incorrect conclusions.", isbn: "9780439362139")
+lie_statistics.author = darrell_huff
+lie_statistics.save!
+
+nikola_biography = Book.new(title: "My Inventions: the autobiography of Nikola Tesla", description:"Nikola Tesla (1857-1943) was a revolutionary Serbian scientist who forever changed the scientific fields of electricity and magnetism. His research laid much of the groundwork for modern electrical and communication systems, and his impressive accomplishments include development of the alternating-current electrical system, radio, the Tesla coil transformer, wireless transmission, and fluorescent lighting.", isbn: "9781612930930")
+nikola_biography.author = nikola_tesla
+nikola_biography.save!
+
+man_babylon = Book.new(title: "The Richest Man in Babylon", description:"Through these entertaining tales of merchants, tradesmen, and herdsmen, you'll learn how to keep more out what you earn; get out of debt; put your money to work; attract good luck; choose wise investments; and safeguard a lasting fortune.", isbn: "9781508524359")
+man_babylon.author = george_clason
+man_babylon.save!
+
+shoe_dog = Book.new(title: "Shoe Dog: A Memoir by the Creator of Nike", description:"The memoir chronicles the history of Nike from its early struggles to its evolution into one of the world's most recognized and profitable companies. It also highlights certain parts of Phil Knight's life.", isbn: "9781471146725")
+shoe_dog.author = phil_knight
+shoe_dog.save!
+
+productivity = Book.new(title: "Getting Things Done: The Art of Stress-Free Productivity", description:"Allen's premise is simple: our productivity is directly proportional to our ability to relax. Only when our minds are clear and our thoughts are organized can we achieve effective productivity and unleash our creative potential.", isbn: "9780142000281")
+productivity.author = david_allen
+productivity.save!
+
+paradise = Book.new(title: "Intimations of Paradise", description:" It is a book that reclaims the belief that there must be craftsmanship in great art, that there is great art in craftsmanship, and the belief that God truly is in the details.
+For the last 25 years, Burkett has captured exhilarating, exuberant and worshipful landscapes, with a clarity and brilliance that have established him as one of the premier color photographers of his time.", isbn: "	9780967021607")
+paradise.author = christopher_burkett
+paradise.save!
+
+practicind_mind = Book.new(title: "The Practicing Mind", description:"In those times when we want to acquire a new skill or face a formidable challenge we hope to overcome, what we need most are patience, focus, and discipline, traits that seem elusive or difficult to maintain.", isbn: "9780977657209")
+practicind_mind.author = thomas_sterner
+practicind_mind.save!
+
+outliers = Book.new(title: "Outliers: The Story of Success", description:"Gladwell's book states early that success doesn't happen in a vacuum. It isn't based on intelligence, but on a variety of factors, and he uses multiple examples to demonstrate that we as a nation could have many more successful people in our country if we were to accept that it takes a village to make successes out of our children. In fact, he shows that hard work and opportunity in almost all cases are more important than intelligence.", isbn: "9780316196956")
+outliers.author = thomas_sterner
+outliers.save!
+
 
 puts 'Finished!'
 
@@ -134,7 +188,6 @@ jiwon_eun_review_atomic_habits = Review.new(content: "The impact a 1% improvemen
 jiwon_eun_review_atomic_habits.user = user_1_jiwon_eun
 jiwon_eun_review_atomic_habits.book = atomic_habits
 jiwon_eun_review_atomic_habits.save!
-
 
 audrey_lemoine_review_give_fuck = Review.new(content: "Save yourself some money and time. The only valuable lesson in this book is figure out the things that really matter, and not waste your time/energy getting upset about things that don't. There, done. Now you don't have to listen to a drunk dude rant about his explanation of buddhism and why he's so awesome.", rating:1, top: true)
 audrey_lemoine_review_give_fuck.user = user_2_audrey_lemoine
@@ -195,7 +248,7 @@ johann_bzaih_harry_potter.save!
 
 johann_bzaih_nikola_tesla = Review.new(content: "He invented the wireless system that led to today's cell phones. He tells how he used his imagination first and than did the actual hands on experiments that led to his breakthroughs.", rating: 5, top: true)
 johann_bzaih_nikola_tesla.user = user_8_johann_bzaih
-johann_bzaih_nikola_tesla.book = nikola_tesla
+johann_bzaih_nikola_tesla.book = nikola_biography
 johann_bzaih_nikola_tesla.save!
 
 eliane_tang_review_letting_go = Review.new(content: "This book changed my life and offers a process to free yourself from negative thinking that works.", rating: 5, top: true)
@@ -206,8 +259,18 @@ eliane_tang_review_letting_go.save!
 eliane_tang_review_nikola_tesla = Review.new(content: "I highly recommend this book for the insight it gives into the fascinating and prolific mind of one of the greatest and most unique figures of the 20th century whose inventions immeasurably transformed our world.
 ", rating: 5, top: true)
 eliane_tang_review_nikola_tesla.user = user_3_eliane_tang
-eliane_tang_review_nikola_tesla.book = nikola_tesla
+eliane_tang_review_nikola_tesla.book = nikola_biography
 eliane_tang_review_nikola_tesla.save!
+
+eliane_tang_review_lie_statistics = Review.new(content: "The reader already well-versed in statistics will not find any new information but will still be pleased by the book's artful presentation of known ideas. Readers who are not so well-versed in statistics should consider this book required reading because it succinctly explains how the information we all consume every day may have been manipulated - intentionally or otherwise - to give us false impressions.", rating: 5, top: true)
+eliane_tang_review_lie_statistics.user = user_3_eliane_tang
+eliane_tang_review_lie_statistics.book = lie_statistics
+eliane_tang_review_lie_statistics.save!
+
+jiwon_eun_review_lie_statistics = Review.new(content: "For anyone looking to better understand the tricks used by the media and marketing professionals, this is a great resource. No math required, this was written for the layperson. It's a quick and easy read. It is like putting on a pair of glasses that allow you to suddenly see clearly what you had never realised was blurred.", rating: 5, top: true)
+jiwon_eun_review_lie_statistics.user = user_1_jiwon_eun
+jiwon_eun_review_lie_statistics.book = lie_statistics
+jiwon_eun_review_lie_statistics.save!
 
 puts 'Finished!'
 
@@ -291,19 +354,19 @@ reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book
 book_reviewed1 = Book.find_by title: 'The Richest Man in Babylon'
 review_1_user1 = Review.create(content: 'The ancient Babylonians were the first people to discover the universal laws of prosperity. In his classic bestseller, "The Richest Man in Babylon," George S. Clason reveals their secrets for creating, growing, and preserving wealth.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed1)
 
-book_reviewed2 = Book.find_by title: 'Manual for Living'
+book_reviewed2 = Book.find_by title: 'Meditations'
 review_2_user1 = Review.create(content: 'The essence of perennial Stoic wisdom in aphorisms of stunning insight and simplicity. Book offers thoroughly contemporary and pragmatic reflections on how best to live with serenity and joy.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed2)
 
-book_reviewed3 = Book.find_by title: 'Demian'
+book_reviewed3 = Book.find_by title: 'A mind for Numbers'
 review_3_user1 = Review.create(content: 'Emil, the main charater s entire existence can be summarized as a struggle between two worlds: the show world of illusion (related to the Hindu concept of maya) and the real world, the world of spiritual truth. In the course of the novel, accompanied and prompted by his mysterious classmate Max Demian, he detaches from and revolts against the superficial ideals of the world of appearances and eventually awakens into a realization of self.', rating:"#{ratings.sample}", top: top.sample, user: user_1_jiwon_eun, book: book_reviewed3)
 
 r_book_1_user1 = Book.find_by title: 'How to Lie with Statistics'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_1_user1.id)
 
-r_book_2_user1 = Book.find_by title: 'The Art of Profitability'
+r_book_2_user1 = Book.find_by title: 'A promised Land'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_2_user1.id)
 
-r_book_3_user1 = Book.find_by title: 'Dream Teams'
+r_book_3_user1 = Book.find_by title: 'Steppenwolf'
 reco_book = RecommendedBook.create(user_id: user_1_jiwon_eun.id, book_id: r_book_3_user1.id)
 
 r_book_4_user1 = Book.find_by title: 'Getting Things Done: The Art of Stress-Free Productivity'
