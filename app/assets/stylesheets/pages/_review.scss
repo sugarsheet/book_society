@@ -15,11 +15,11 @@
 .card-product-review {
   background-color: transparent;
   border-radius: 15px;
-  margin: -1px;
+  margin: -25px;
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  padding: 8px 10px;
+  margin-bottom: 9px;
+  padding: 1px 11px;
   justify-content: space-evenly;
 }
 
@@ -35,6 +35,7 @@
   font-size: 14px;
   color: grey;
   margin-top: -19px;
+  margin-right: 44px;
 }
 
 p {
@@ -120,4 +121,8 @@ height: 259px;
 
 .rating-show {
   margin-left: 9px;
+}
+
+.review-title {
+  margin-right: 37px;
 }
