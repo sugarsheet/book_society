@@ -24,7 +24,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+  <% if user_signed_in? && params['action'] != 'home' %>
+      <%= render 'shared/navbar' %>
+  <% end %>
+
     <%= render 'shared/flashes' %>
 
   <%= yield %>
