@@ -1,5 +1,4 @@
 meta_product_name: "Book Society"
-meta_title: "Book Society"
+meta_title: "Book Society . Get recommendations from people you trust"
 meta_description: "Track the books you read, discover great titles thanks to the reviews left by people you trust."
 meta_image: "bs-logo.png" # should exist in `app/assets/images/`
-meta_url: "https://www.booksociety.me"
