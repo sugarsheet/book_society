@@ -71,6 +71,9 @@ barack_obama.save!
 barbara_oakley = Author.new(first_name: "Barbara", last_name:"Oakley", bio: "Barbara Ann Oakley is an American professor of engineering at Oakland University and McMaster University whose online courses on learning are some of the most popular MOOC classes in the world. She is involved in multiple areas of research, ranging from STEM education, to learning practices.")
 barbara_oakley.save!
 
+nikola_tesla = Author.new(first_name: "Nikola", last_name:"Tesla", bio: "Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the modern alternating current electricity supply system.")
+nikola_tesla.save!
+
 puts 'Finished!'
 
 
@@ -190,10 +193,21 @@ johann_bzaih_harry_potter.user = user_8_johann_bzaih
 johann_bzaih_harry_potter.book = harry_potter
 johann_bzaih_harry_potter.save!
 
+johann_bzaih_nikola_tesla = Review.new(content: "He invented the wireless system that led to today's cell phones. He tells how he used his imagination first and than did the actual hands on experiments that led to his breakthroughs.", rating: 5, top: true)
+johann_bzaih_nikola_tesla.user = user_8_johann_bzaih
+johann_bzaih_nikola_tesla.book = nikola_tesla
+johann_bzaih_nikola_tesla.save!
+
 eliane_tang_review_letting_go = Review.new(content: "This book changed my life and offers a process to free yourself from negative thinking that works.", rating: 5, top: true)
 eliane_tang_review_letting_go.user = user_3_eliane_tang
 eliane_tang_review_letting_go.book = letting_go
 eliane_tang_review_letting_go.save!
+
+eliane_tang_review_nikola_tesla = Review.new(content: "I highly recommend this book for the insight it gives into the fascinating and prolific mind of one of the greatest and most unique figures of the 20th century whose inventions immeasurably transformed our world.
+", rating: 5, top: true)
+eliane_tang_review_nikola_tesla.user = user_3_eliane_tang
+eliane_tang_review_nikola_tesla.book = nikola_tesla
+eliane_tang_review_nikola_tesla.save!
 
 puts 'Finished!'
 
