@@ -1,25 +1,29 @@
 <div class="main-container-content">
 
   <div class="flex-box-book-show">
-      <div class="col rounded p-5">
+    <div class="col rounded p-5 show-card">
         <% if @book.photo.attached? %>
           <%= cl_image_tag @book.photo.key, height: 300, crop: :fill, class: "photo-book-show" %>
         <% end %>
 
-          <% unless current_user.books.include?(@book) %>
+        <% unless current_user.books.include?(@book) %>
           <%= link_to "Add a review", new_book_review_path(@book), class: "btn btn-book"  %>
-          <%# else %>
-          <%#= link_to "Edit my review", update_book_review_path(@book), class: "btn btn-primary"  %>
-          <% end %>
-          <%# <% if @book.reviews.empty? %>
+        <% end %>
 
-          <%# <p>There is nos review for this book</p> %>
-          <%# <% else %>
           <div class="title-review">
-          <h1><strong><%= @book.title %></strong></h1>
+            <h1><strong><%= @book.title %></strong></h1>
           </div>
           <div class="subtitle-review">
             <%= @book.author.first_name %> <%= @book.author.last_name %>
+          </div>
+          <div class="to-wishlist">
+            <%= link_to toggle_favorite_book_path(@book), remote: true do %>
+              <% if current_user.favorited?(@book) %>
+                <img width="25" height="25" src="<%= image_path('icons/heart-red-celia.svg') %>">
+              <% else %>
+                <img width="25" height="25" src="<%= image_path('icons/heart_celia.svg') %>">
+              <% end %>
+            <% end %>
           </div>
 
 
@@ -33,6 +37,8 @@
                   <% end %>
                   </div>
                   <div class="aligner-2">
+
+
                     <br><strong><%= review.user.first_name %></strong>
                       <div class="rating-show">
                         <% review.rating.times do %>
@@ -47,6 +53,7 @@
                         <% end %>
                       </div>
                   </div>
+
             </div>
               <div class="review-content">
                 <%= review.content %>

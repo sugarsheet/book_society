@@ -8,6 +8,16 @@
 
 }
 
+.show-card {
+  position: relative;
+}
+
+.to-wishlist img {
+  position: absolute;
+  right: 42px;
+  top: 460px;
+}
+
 .reviews {
   overflow: hidden;
   height: 120px;
