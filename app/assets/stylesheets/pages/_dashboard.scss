@@ -56,8 +56,8 @@ height: 80px;
   height: 108%;
   width: 30%;
   object-fit: cover;
-  // box-shadow: 0 0 15px rgb(0 0 0 / 20%);
   border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 .card-product-book {
   padding: 16px;

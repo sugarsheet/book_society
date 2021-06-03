@@ -28,12 +28,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 172px;
   width: 120px;
-  margin: 5px;
+  margin: 32px;
 }
 
 .subtitle-review-new {
   font-size: 14px;
   color: grey;
+  margin-top: -19px;
 }
 
 p {
@@ -115,4 +116,8 @@ height: 259px;
 
 .aligner-2{
   display: flex;
+}
+
+.rating-show {
+  margin-left: 9px;
 }

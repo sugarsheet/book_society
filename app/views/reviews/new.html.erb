@@ -9,16 +9,15 @@
             <% unless current_user.books.include?(@book) %>
           <% end %>
           <div>
-              <h5><strong><%=@book.title%></strong></h5>
+              <h5 class="review-title"><strong><%=@book.title%></strong></h5>
               <br>
                 <div class="subtitle-review-new">
-                  <%=@book.author.first_name%>             
+                  <%=@book.author.first_name%>
                   <span><%=@book.author.last_name %></span>
                 </div>
           </div>
         </div>
 
-        <h3 class="text-center"><strong> Add this book to your bookshelf !</strong></h3>
 
         <div class="review-input">
           <%= simple_form_for [@book, @review] do |f| %>
