@@ -1,11 +1,13 @@
- img.search_icon {
-    width: 30px;
-    height: 30px;
-
+ img.logo_icon {
+    width: 81px;
+    height: 51px;
     display: inline;
-    margin-top: 4px;
+    margin-top: -9px;
+    margin-right: 14px;
+    margin-left: -22px;
 
 }
+
 
 
 .profile_icon {
@@ -28,9 +30,7 @@
 
 .trash_celia {
 color: grey;
-width: 15px;
-&:hover {
-  color: black;
-  width: 15px;
-}
+width: 16px;
+margin-left: 270px;
+
 }

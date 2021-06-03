@@ -34,7 +34,10 @@
 display: flex;
 justify-content:space-between;
 padding: 2rem;
+background-color: whitesmoke;
+height: 80px;
 }
+
 .bookshelf-list {
   list-style: none;
   margin-left: 12px;
@@ -42,19 +45,19 @@ padding: 2rem;
   text-align: left;
   font-size: 16px;
   font-family: 'Poppins';
-  margin-top: 12px;
+  margin-top: -19px;
 }
 .card-product-bookshelf {
   display: block;
   align-items: center;
-  margin: -1px;
+  margin: 9px;
 }
 .card-product-bookshelf img {
   height: 108%;
-  width: 24%;
+  width: 30%;
   object-fit: cover;
-  // box-shadow: 0 0 15px rgb(0 0 0 / 20%);
   border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 .card-product-book {
   padding: 16px;
@@ -62,19 +65,20 @@ padding: 2rem;
   margin-left: 13px;
   width: 109%;
   align-items: center;
-  height: 159px;
+  height: 177px;
 }
 
 .date-review {
   color: grey;
-  font-size: 12px;
+  font-size: 11px;
+
 }
 
 .title-dashboard {
-  margin-top: -32px;
-  margin-bottom: 30px;
+  margin-top: -4px;
+  margin-bottom: 19px;
   font-weight: bold;
-  margin-left: 29px;
+  margin-left: 41px;
   text-align: left;
 
 }
@@ -82,19 +86,15 @@ padding: 2rem;
 .link-dashboard {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
-.delete-book {
-    margin-top: 0;
-    display: flow-root;
-    width: 54px;
-    height: 15px;
-}
 
 .list-books {
   display: flex;
   flex-direction: column;
-  height: 157px;
+  height: 147px;
+  margin-top: 41px;
 
 }
 
@@ -107,6 +107,20 @@ padding: 2rem;
 .title-user {
  font-size: 17px;
  font-style: bold;
+  margin-left: 42px;
+}
+
+
+.author-dash {
+ color: grey;
+ font-size: 14px;
+ margin-bottom: 0px;
+}
+
+.title-book-dash {
+  color: black;
+  font-size: 17px;
+  margin-bottom: -18px;
 }
 
 .books-desc a {

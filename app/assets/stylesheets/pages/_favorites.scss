@@ -4,28 +4,29 @@ h2.favorite-title {
 }
 
 .image-favorite {
-  margin-top: 68px;
+  margin-top: 51px;
 }
 
-  .card-product-favorite {
-  padding: 16px;
-  display: flex;
-  margin-left: -17px;
-  width: 109%;
-  align-items: center;
-  height: 159px;
+.card-product-favorite {
+padding: 16px;
+display: flex;
+margin-left: 5px;
+width: 109%;
+align-items: center;
+height: 159px;
 }
 
 .title-favorite {
-  margin-top: -32px;
-  margin-bottom: 30px;
+  margin-top: -4px;
+  margin-bottom: 20px;
   font-weight: bold;
-  margin-left: 0px;
+  margin-left: 32px;
   text-align: left;
 }
 
+
 .card-product-favorite img {
-    height: 100%;
+    height: 108%;
     width: 100px;
     object-fit: cover;
     border-radius: 5px;

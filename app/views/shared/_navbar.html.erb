@@ -1,11 +1,19 @@
-<% if user_signed_in?%>
 
-
+  <div class="space-header">
+      <div class="link-dashboard">
+        <div>
+          <%= image_tag "bs-logo.png", class: "logo_icon" %>
+        </div>
+          <div class="title-user">
+            <a> Hi <%= current_user.first_name%>!</a>
+          </div>
+           <div>
+          <%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
+          </div>
+      </div>
+  </div>
 
     <div class="nav nav-tabs">
-
-
-
         <%= link_to dashboard_path do %>
             <% if params[:controller] == "pages" && params[:action] == "dashboard" %>
                 <img src="<%= image_path('icons/book-open_celia.svg') %>" alt="search" class="book-open_celia">
@@ -13,7 +21,6 @@
                 <img src="<%= image_path('icons/book-open-grey_celia.svg') %>" alt="search" class="book-open-grey_celia">
             <% end %>
           <% end %>
-
 
         <%= link_to recommended_books_path do %>
             <% if params[:controller] == "books" && params[:action] == "recommended" %>
@@ -38,7 +45,7 @@
 
         <div class="link">
           <div class="dropdown dropup">
-          <img src="<%= image_path('icons/settings-grey_celia.svg') %>"  class="settings-grey_celia dropdown-toggle" data-toggle="dropdown">
+            <img src="<%= image_path('icons/settings-grey_celia.svg') %>"  class="settings-grey_celia dropdown-toggle" data-toggle="dropdown">
             <div class="dropdown-menu">
               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
             </div>
@@ -46,5 +53,6 @@
         </div>
     </div>
 
-<% end %>
+
+
 

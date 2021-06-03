@@ -15,11 +15,11 @@
 .card-product-review {
   background-color: transparent;
   border-radius: 15px;
-  margin: -1px;
+  margin: -25px;
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  padding: 8px 10px;
+  margin-bottom: 9px;
+  padding: 1px 11px;
   justify-content: space-evenly;
 }
 
@@ -28,12 +28,14 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 172px;
   width: 120px;
-  margin: 5px;
+  margin: 32px;
 }
 
 .subtitle-review-new {
   font-size: 14px;
   color: grey;
+  margin-top: -19px;
+  margin-right: 44px;
 }
 
 p {
@@ -55,12 +57,22 @@ textarea.form-control {
   margin: 0;
 }
 
+.delete-book {
+    margin-top: 0;
+    display: flex;
+    width: 54px;
+    height: 15px;
+}
 
 .rating-stars-review {
   display: inline-flex;
 
 }
+.throw {
+  font-size: 12px;
+  color: grey;
 
+}
 .stars-css {
  font-size: 29px;
  width: 30%;
@@ -101,4 +113,16 @@ height: 259px;
   margin-top: 20px;
   margin-bottom: 31px;
   font-size: 20px;
+}
+
+.aligner-2{
+  display: flex;
+}
+
+.rating-show {
+  margin-left: 9px;
+}
+
+.review-title {
+  margin-right: 37px;
 }

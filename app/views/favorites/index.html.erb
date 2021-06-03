@@ -1,11 +1,10 @@
 <div class="main-container-content">
-  <div class="space-header">
     <div class="link-dashboard">
       <div class="favorite-books">
 
 
 
-        <div class="title-favorite"><h1><strong>My favorites books</strong></h1></div>
+        <div class="title-favorite"><h1><strong>My favorite books</strong></h1></div>
         <div class="card-product-bookshelf">
           <% current_user.favorited_by_type('Book').each do |book| %>
             <div class="card-product-favorite">
@@ -18,10 +17,10 @@
                 <li class="list-books">
                   <div class="books-desc">
                     <%= link_to book_path(book) do %>
-                      <strong><%= book.title %></strong>
+                      <strong><h2 class="title-book-dash"><%= book.title.truncate(24) %></h2></strong>
                     <% end %>
-                    <br><%= book.author.first_name %>
-                    <%=book.author.last_name%>
+                    <br><h2 class="author-dash"><%= book.author.first_name %>
+                    <%=book.author.last_name%></h2>
                   </div>
                   <%= link_to book_path(book) do %>
                     <div class="image-favorite">
@@ -35,5 +34,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>

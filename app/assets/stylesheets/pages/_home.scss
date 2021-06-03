@@ -12,7 +12,7 @@ Specific CSS for your home-page
 
 .main-content {
 
-  background-color: rgb(237, 220, 210);
+  background-color: #fdfdfd;
   min-height: 100vh;
 }
 
@@ -20,13 +20,13 @@ Specific CSS for your home-page
 
   align-items: center;
   text-align: left;
-  background-color: whitesmoke;
   text-align: center;
   background-color: #fdfdfd;
   min-height: 100vh;
   max-height: 90vh;
   overflow: scroll;
   padding-bottom: 80px;
+  overflow-x: hidden;
 
 }
 
@@ -44,9 +44,9 @@ Specific CSS for your home-page
 }
 
 .image-home {
-  width: 200px;
-  height: 200px;
-  margin-top: 200px;
+  width: 258px;
+  height: 170px;
+  margin-top: 225px;
   margin-bottom: 20px;
   justify-content: center;
 }
@@ -65,7 +65,7 @@ Specific CSS for your home-page
 
 a {
   color: rgb(102, 102, 102);
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: transparent;
 }
 
