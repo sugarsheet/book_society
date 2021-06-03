@@ -13,12 +13,7 @@
       </div>
   </div>
 
-
-
     <div class="nav nav-tabs">
-
-
-
         <%= link_to dashboard_path do %>
             <% if params[:controller] == "pages" && params[:action] == "dashboard" %>
                 <img src="<%= image_path('icons/book-open_celia.svg') %>" alt="search" class="book-open_celia">
@@ -26,7 +21,6 @@
                 <img src="<%= image_path('icons/book-open-grey_celia.svg') %>" alt="search" class="book-open-grey_celia">
             <% end %>
           <% end %>
-
 
         <%= link_to recommended_books_path do %>
             <% if params[:controller] == "books" && params[:action] == "recommended" %>
