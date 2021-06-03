@@ -1,10 +1,5 @@
 <div class="main-container">
-  <div class="space-header">
-    <div class="link-dashboard mb-1">
-      <img class="round-img-dashboard" src="https://www.gravatar.com/avatar/6b844ee7b315c16675d09696731e369e.jpg" alt="jiwon">
-      <a class="h1-dashboard py-2"> Hi <%= current_user.first_name%>!</a>
-    </div>
-  </div>
+
   <div class="container recommended-books px-4 mb-2">
     <h1 class="text-left"><strong> <%= "You have #{@recommended_books.count} recommendations" %></strong></h1>
     <p class="text-left"> <%= "Good work #{current_user.first_name} ! Be inspired to read something you really like." %> </p>
