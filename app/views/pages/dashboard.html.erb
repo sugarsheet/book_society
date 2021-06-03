@@ -1,20 +1,4 @@
 <div class="main-container-content">
-
-  <div class="space-header">
-    <div class="link-dashboard">
-      <% avatar_photo  = current_user.photo.attached? ? current_user.photo.key : "http://placehold.it/40x40" %>
-      <div><%= cl_image_tag avatar_photo, class:"avatar-user", crop: :fill %>
-      </div>
-        <div class="title-user">
-          <a> Hi <%= current_user.first_name%>!</a>
-        </div>
-    </div>
-    <div>
-      <%= link_to search_path do %>
-        <img src="<%= image_path('icons/search_celia.svg') %>" alt="search" class="search_icon">
-      <% end %>
-    </div>
-  </div>
   <div class="title-dashboard"><h1><strong>My bookshelf</strong></h1></div>
   <div class="card-product-bookshelf">
     <% @reviews.each do |review| %>
@@ -28,7 +12,7 @@
               <li class="list-books">
                 <div class="books-desc">
                   <%= link_to book_path(review.book) do %>
-                    <strong><h2 class="title-book-dash"><%= review.book.title %></h2></strong>
+                    <strong><h2 class="title-book-dash"><%= review.book.title.truncate(24) %></h2></strong>
                   <% end %>
                   <br><h3 class="author-dash"><%= review.book.author.name %></h3>
                   <br><i class="date-review">Posted on <%= review.created_at.strftime("%d %B %Y")%></i>
