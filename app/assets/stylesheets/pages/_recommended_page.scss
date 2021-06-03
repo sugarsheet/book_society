@@ -16,6 +16,15 @@
   margin-left: 10px;
 }
 
+.text-left a {
+  color: black;
+}
+
+.author {
+  color: grey;
+  margin-bottom: 35px;
+}
+
 .recommended-list {
   display : flex;
   flex-direction: column;
@@ -25,12 +34,13 @@
 
 // ---------CARD-----------
 
-.card-recommended-book{
+.card-recommended-book {
   background-color: white;
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .1);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .3);
   margin: 10px;
   position: relative;
-  height:210px;
+  height: auto;
+  float:right;
 }
 
 .card-recommended-book p {
@@ -49,16 +59,22 @@
 
 //--------HEART------------
 
-.to-wishlist img {
+.to-wishlist-reco img {
   position: absolute;
-  right: 25px;
-  bottom: 130px;
+  right: 20px;
+  top: 15px;
 }
 
 
 //------RATING-----
 .rating {
-  margin-left: 14px;
+  margin-left: 20px;
+  margin-top: 9px;
+  padding-bottom: 12px;
+  max-width: 70%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
 }
 .rating p {
   font-size: 12px;
@@ -66,3 +82,24 @@
   margin-left: 0px;
 }
 
+///----MATCHING-----
+
+.matching {
+  display: flex;
+  align-items: stretch;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.number-of-reviews {
+  font-size: 24px;
+  color: red;
+  margin-left: 14px;
+  max-width: 42%;
+}
+
+.second-phrase {
+  font-size: 14px;
+  margin-left: 14px;
+  max-width: 42%;
+}

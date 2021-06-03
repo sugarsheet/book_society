@@ -1,0 +1,7 @@
+<%= link_to toggle_favorite_book_path(book), data: {favorite_target: "fav", action: "click->favorite#toggleFavorite"} do %>
+  <% if current_user.favorited?(book) %>
+    <img width="25" height="25" src="<%= image_path('icons/heart-red-celia.svg') %>">
+  <% else %>
+    <img width="25" height="25" src="<%= image_path('icons/heart_celia.svg') %>">
+  <% end %>
+<% end %>

@@ -42,7 +42,11 @@ class BooksController < ApplicationController
     else
       @user.favorite(@book)
     end
-    redirect_to recommended_books_path
+    respond_to do |format|
+      format.html { redirect_to recommended_books_path }
+      format.json {render json: { html: render_to_string(partial: 'books/toggle_favorite.html', formats: :html, locals: {book: @book})}}
+    end
+
   end
 
   def destroy
