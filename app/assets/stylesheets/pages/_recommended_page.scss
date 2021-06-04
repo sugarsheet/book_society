@@ -36,7 +36,7 @@
 
 .card-recommended-book {
   background-color: white;
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .3);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .1);
   margin: 10px;
   position: relative;
   height: auto;
@@ -93,7 +93,7 @@
 
 .number-of-reviews {
   font-size: 24px;
-  color: red;
+  color: green;
   margin-left: 14px;
   max-width: 42%;
 }
