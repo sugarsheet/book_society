@@ -8,7 +8,12 @@
             <a> Hi <%= current_user.first_name%>!</a>
           </div>
            <div>
-          <%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
+          <% if current_user.photo.attached? %>
+            <img src="<%= url_for(current_user.photo) %>" class="avatar_user">
+            <%# <%= cl_image_tag current_user.photo.key, class:"avatar-user", crop: :fill %>
+          <% else %>
+            <img src="<%= image_path('icons/user_icon.svg') %>" class="new_user_photo">
+          <% end %>
           </div>
       </div>
   </div>

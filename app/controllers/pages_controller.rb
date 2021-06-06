@@ -26,9 +26,10 @@ class PagesController < ApplicationController
     if user_signed_in?
       redirect_to dashboard_path(@book)
     else
-     redirect_to signup_path
+     redirect_to  sign_up_path
+
     end
   end
 
-  
+
 end
