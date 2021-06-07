@@ -16,14 +16,8 @@
           <div class="subtitle-review">
             <%= @book.author.first_name %> <%= @book.author.last_name %>
           </div>
-          <div class="to-wishlist">
-            <%= link_to toggle_favorite_book_path(@book), remote: true do %>
-              <% if current_user.favorited?(@book) %>
-                <img width="25" height="25" src="<%= image_path('icons/heart-red-celia.svg') %>">
-              <% else %>
-                <img width="25" height="25" src="<%= image_path('icons/heart_celia.svg') %>">
-              <% end %>
-            <% end %>
+          <div class="to-wishlist" data-controller="favorite">
+            <%= render 'books/toggle_favorite', book: @book %>
           </div>
 
 
