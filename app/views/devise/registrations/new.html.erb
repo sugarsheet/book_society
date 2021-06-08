@@ -24,11 +24,16 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
+
+          <div class="upload_photo my-3">
+            <% image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+            <%= f.label "Profile photo" %>
+            <%= f.file_field :avatar %><br>
+          </div>
       </div>
-      <div class="upload_photo my-3">
-        <%= f.label "Profile photo" %>
-        <%= f.file_field :photo %><br>
-      </div>
+
+
+
       <div class="form-actions">
         <%= f.button :submit, "Sign up", class: "btn btn-signup" %>
       </div>

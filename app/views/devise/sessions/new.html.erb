@@ -17,11 +17,7 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
       </div>
-       </div>
-      <div class="upload_photo my-3">
-        <%= f.label "Profile photo" %>
-        <%= f.file_field :photo %><br>
-      </div>
+
 
       <div class="form-actions">
         <%= f.button :submit, "Log in", class: "btn btn-signup3" %>
