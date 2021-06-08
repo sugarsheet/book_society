@@ -7,10 +7,15 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   has_one_attached :photo
-  
+  has_one_attached :avatar
+
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def photo_thumbnail
+    photo.variant(resize: `60x60!`).processed
+  end
 end
