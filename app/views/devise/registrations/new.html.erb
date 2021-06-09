@@ -26,9 +26,9 @@
                     input_html: { autocomplete: "new-password" } %>
 
           <div class="upload_photo my-3">
-            <% image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+            <% image_tag(resource.photo_thumbnail) if resource.photo.attached? %>
             <%= f.label "Profile photo" %>
-            <%= f.file_field :avatar %><br>
+            <%= f.file_field :photo %><br>
           </div>
       </div>
 

@@ -30,11 +30,14 @@ img {
 }
 
 .avatar-user {
-  border-radius: 50%;
-  height: 50px;
+  border-radius: 57%;
+  height: 47px;
   padding: 4px;
   display: flex;
-  margin-left: 72px;
+  margin-left: 92px;
+  width: 53px;
+  object-fit: cover;
+
 }
 
 .avatar-user-show {
