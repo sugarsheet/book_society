@@ -1,7 +1,35 @@
 .card-entry img {
-  height: 160px;
-  width: 150px;
+  height: 210px;
+  width: 263px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 9px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: 0.3s ease-out;
+}
+
+
+.card-product-pitch {
+  height: 422px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: block;
+  align-items: center;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.main-container-content-entry  {
+    align-items: center;
+    text-align: center;
+    background-color: #fdfdfd;
+    min-height: 100vh;
+    max-height: 90vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-inline: 53px;
+}
+
+.heart_celia {
+   animation: pulse 2s cubic-bezier(.5,.5,0,1);
+   height: 18Px;
 }
