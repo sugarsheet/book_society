@@ -27,8 +27,8 @@
 
           <div class="review-form mt-3">
               <%= f.input :content, placeholder: "Min 30 characters", label: "Your opinion matters", data: { disable_with: false } %>
-              <div class="post-button">
-                <%= f.submit class: 'btn-review',value: "Post" %>
+              <div class="post-button" >
+                <%= f.submit class: 'btn-review',value: "Post", data: { disable_with: false }%>
               </div>
             <% end %>
           </div>
