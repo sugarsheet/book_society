@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/entry', to: 'pages#entry'
   get '/dashboard', to: 'pages#dashboard'
+  get '/profile', to: 'pages#profile'
   get '/signup', to: 'pages#signup'
   get '/search', to: 'pages#search'
   resources :books, only: [:index, :show, :destroy] do

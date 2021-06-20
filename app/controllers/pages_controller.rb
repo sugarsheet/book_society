@@ -9,6 +9,9 @@ class PagesController < ApplicationController
 
   end
 
+  def profile
+  end
+
   def dashboard
     @user = current_user
     @my_read_books = current_user.books
@@ -34,6 +37,5 @@ class PagesController < ApplicationController
      redirect_to   entry_path
     end
   end
-
 
 end

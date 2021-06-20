@@ -33,7 +33,9 @@
                 <% if review.user.photo.attached? %>
                 <div class='profile'>
                   <div>
+                     <%= link_to profile_path do %>
                       <%= cl_image_tag review.user.photo.key, class:"avatar-user-show", crop: :fill %>
+                      <% end %>
                   <% end %>
                   </div>
                   <div class="aligner-2">

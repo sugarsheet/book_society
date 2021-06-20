@@ -1,0 +1,26 @@
+ <div class="main-container-content">
+  <div class="title-dashboard">
+
+   <% @current_user.favorited_by_type(`Book`) do |review| %>
+            <div class="review-card">
+                <% if review.user.photo.attached? %>
+                <div class='profile'>
+                  <div>
+                     <%= link_to profile_path do %>
+                      <%= cl_image_tag review.user.photo.key, class:"avatar-user-show", crop: :fill %>
+                      <% end %>
+                  <% end %>
+                  </div>
+                   <% end %>
+                  <div class="aligner-2">
+
+
+                    <br><strong><%= review.user.first_name %></strong>
+          <div class="to-wishlist-reco">
+              <%= render 'books/toggle_favorite'%>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
