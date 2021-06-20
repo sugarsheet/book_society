@@ -5,10 +5,24 @@
     </div>
 </div>
 
+<% if user_signed_in? %>
+<script>
+
+  if(window.location.pathname === '/') {
+  setTimeout(function(){  window.location = '/dashboard'; }, 3000);
+}
+
+</script>
+
+
+<% else %>
 
 <script>
+
   if(window.location.pathname === '/') {
   setTimeout(function(){  window.location = '/entry'; }, 3000);
 }
+
 </script>
 
+<% end %>

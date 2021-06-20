@@ -9,27 +9,42 @@
 
 
 .card-product-pitch {
-  height: 422px;
+  height: 369px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: block;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 7px;
 }
 
 .main-container-content-entry  {
-    align-items: center;
-    text-align: center;
-    background-color: #fdfdfd;
-    min-height: 100vh;
-    max-height: 90vh;
-    overflow: scroll;
-    overflow-x: hidden;
-    padding-inline: 53px;
+  align-items: center;
+  text-align: center;
+  background-color: #fdfdfd;
+  min-height: 100vh;
+  max-height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-inline: 53px;
 }
 
 .heart_celia {
-   animation: pulse 2s cubic-bezier(.5,.5,0,1);
-   height: 18Px;
+  animation: pulse 2s cubic-bezier(.5,.5,0,1);
+  height: 18Px;
+}
+
+
+.text-entry {
+  line-height: 1.7;
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+.text-entry p {
+  margin-top: 29px;
+}
+
+.card-product-pitch ul {
+  padding: 11px;
 }

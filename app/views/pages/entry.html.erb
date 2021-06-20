@@ -3,7 +3,7 @@
     <%= link_to "Join us!", signup_path, class: "btn btn-reach"  %>
   </div>
 
-      <div class="text-entry mb-4">
+      <div class="text-entry">
         <h1>Let's find the right book for you !</h1>
           <p> You don't know what to read ? You are looking for the perfect book matching your interests but no idea of where you can find it?</p>
           <a>Our app is dedicated to book lover and help you to organise your bookshelf</a>
@@ -16,14 +16,14 @@
 
             <li> Search for the book that you read and add a review</li>
               <img src="<%= image_path('icons/arrow_icon.svg') %>" alt="search" class="arrow_icon">
-            <li> Go to a book description and read the reviews that other reader left. If it sounds great for you add it to your favorites book ! <img src="<%= image_path('icons/heart-red-celia.svg') %>"  class="heart_celia" Id="heart"></li>
+            <li> Go to a book description and read the reviews that other reader left. </li>
 
               <img src="<%= image_path('icons/arrow_icon.svg') %>" alt="search" class="arrow_icon">
-            <li> Follow the readers that you like to be noticed of all the book they read </li>
+            <li> If it sounds great for you add it to your favorites book ! <img src="<%= image_path('icons/heart-red-celia.svg') %>"  class="heart_celia" Id="heart"></li>
           </ul>
       </div>
 
-    <h1> Ready to start ? Join our community !</h1>
+    <h1 style="margin-top: 56px;"> Ready to start ? Join our community !</h1>
 
 
 
@@ -34,18 +34,3 @@
     </div>
 </div>
 
- <script type="text/javascript">
-
-
-
-jQuery(document).ready(function($){
-
-
-
-});
-      function move(){
-       document.getElementById('heart').rotate }
-        window.requestAnimationFrame(move);
-
-
- </script>
