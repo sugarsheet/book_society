@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Book Society is an application for book lovers, built by 4 graduates of le Wagon Paris.
+
+It aims to solve the issue of "discoverability problem" - guiding you to find the next book to read.
+You can rate, leave a review and follow libraries of your friends and people you admire.
+
